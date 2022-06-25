@@ -7,145 +7,15 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Comments {
-  coid     Int     @id @default(autoincrement()) @db.UnsignedInt
-  cid      Int?    @default(0) @db.UnsignedInt
-  created  Int?    @default(0) @db.UnsignedInt
-  author   String? @db.VarChar(200)
-  authorId Int?    @default(0) @db.UnsignedInt
-  ownerId  Int?    @default(0) @db.UnsignedInt
-  mail     String? @db.VarChar(200)
-  url      String? @db.VarChar(200)
-  ip       String? @db.VarChar(64)
-  agent    String? @db.VarChar(200)
-  text     String? @db.MediumText
-  type     String? @default("comment") @db.VarChar(16)
-  status   String? @default("approved") @db.VarChar(16)
-  parent   Int?    @default(0) @db.UnsignedInt
-  stars    Int?    @default(0)
+model log {
+  logid     Int       @id @default(autoincrement()) @db.UnsignedInt
+  jsonid    String?   @db.Text
+  time      DateTime? @db.DateTime(0)
+  spotId    Int?
+  spotName  String?   @db.Text
+  num       Int?      @db.UnsignedInt
+  maxnum    Int?
+  closeTime String?   @db.Text
 
-  @@index([cid], name: "cid")
-  @@index([created], name: "created")
-  @@map("typecho_comments")
-}
-
-model Contents {
-  /// this is cid
-  cid          Int             @id @default(autoincrement()) @db.UnsignedInt
-  title        String?         @db.VarChar(200)
-  slug         String?         @unique @db.VarChar(200)
-  created      Int?            @default(0) @db.UnsignedInt
-  modified     Int?            @default(0) @db.UnsignedInt
-  text         String?         @db.MediumText
-  order        Int?            @default(0) @db.UnsignedInt
-  authorId     Int?            @default(0) @db.UnsignedInt
-  template     String?         @db.VarChar(32)
-  type         String?         @default("post") @db.VarChar(16)
-  status       String?         @default("publish") @db.VarChar(16)
-  password     String?         @db.VarChar(32)
-  commentsNum  Int?            @default(0) @db.UnsignedInt
-  allowComment String?         @default("0") @db.Char(1)
-  allowPing    String?         @default("0") @db.Char(1)
-  allowFeed    String?         @default("0") @db.Char(1)
-  parent       Int?            @default(0) @db.UnsignedInt
-  views        Int?            @default(0)
-  user         Users?          @relation(fields: [authorId], references: [uid])
-  // Uuid           Int
-  relationship Relationships[]
-  fields       Fields[]
-
-  @@index([authorId], name: "authorId")
-  @@index([created], name: "created")
-  @@map("typecho_contents")
-}
-
-model Fields {
-  cid         Int      @db.UnsignedInt
-  name        String   @db.VarChar(200)
-  type        String?  @default("str") @db.VarChar(8)
-  str_value   String?  @db.MediumText
-  int_value   Int?     @default(0)
-  float_value Float?   @default(0) @db.Float
-  content     Contents @relation(fields: [cid], references: [cid])
-
-  @@id([cid, name])
-  @@index([float_value], name: "float_value")
-  @@index([int_value], name: "int_value")
-  @@map("typecho_fields")
-}
-
-model Gallery {
-  gid         Int     @id @default(autoincrement()) @db.UnsignedInt
-  thumb       String? @db.VarChar(200)
-  image       String? @db.VarChar(200)
-  sort        Int?    @default(0)
-  name        String? @db.VarChar(200)
-  description String? @db.VarChar(200)
-  order       Int?    @default(0) @db.UnsignedInt
-
-  @@map("typecho_gallery")
-}
-
-model Links {
-  lid         Int     @id @default(autoincrement()) @db.UnsignedInt
-  name        String? @db.VarChar(200)
-  url         String? @db.VarChar(200)
-  sort        String? @db.VarChar(200)
-  image       String? @db.VarChar(200)
-  description String? @db.VarChar(200)
-  user        String? @db.VarChar(200)
-  order       Int?    @default(0) @db.UnsignedInt
-
-  @@map("typecho_links")
-}
-
-model Metas {
-  mid         Int     @id @default(autoincrement()) @db.UnsignedInt
-  name        String? @db.VarChar(200)
-  slug        String? @db.VarChar(200)
-  type        String  @db.VarChar(32)
-  description String? @db.VarChar(200)
-  count       Int?    @default(0) @db.UnsignedInt
-  order       Int?    @default(0) @db.UnsignedInt
-  parent      Int?    @default(0) @db.UnsignedInt
-
-  Relationships Relationships[]
-  @@index([slug], name: "slug")
-  @@map("typecho_metas")
-}
-
-model Options {
-  name  String  @db.VarChar(32)
-  user  Int     @default(0) @db.UnsignedInt
-  value String? @db.MediumText
-
-  @@id([name, user])
-  @@map("typecho_options")
-}
-
-model Relationships {
-  cid     Int      @db.UnsignedInt
-  mid     Int      @db.UnsignedInt
-  content Contents @relation(fields: [cid], references: [cid])
-  meta    Metas    @relation(fields: [mid], references: [mid])
-
-  @@id([cid, mid])
-  @@map("typecho_relationships")
-}
-
-model Users {
-  uid              Int        @id @default(autoincrement()) @db.UnsignedInt
-  name             String?    @unique @db.VarChar(32)
-  password         String?    @db.VarChar(64)
-  mail             String?    @unique @db.VarChar(200)
-  url              String?    @db.VarChar(200)
-  screenName       String?    @db.VarChar(32)
-  created          Int?       @default(0) @db.UnsignedInt
-  activated        Int?       @default(0) @db.UnsignedInt
-  logged           Int?       @default(0) @db.UnsignedInt
-  group            String?    @default("visitor") @db.VarChar(16)
-  authCode         String?    @db.VarChar(64)
-  typecho_contents Contents[]
-
-  @@map("typecho_users")
+  @@index([time], map: "time")
 }
