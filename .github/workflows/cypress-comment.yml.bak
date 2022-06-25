@@ -1,0 +1,32 @@
+name: Capture Vercel preview URL
+
+on:
+  issue_comment:
+    types: [created, edited]
+
+jobs:
+  capture_vercel_preview_url_and_cypress:
+    name: run cypress from comment url
+    runs-on: ubuntu-20.04
+    steps:
+      - name: get preview url from comment
+        uses: aaimio/vercel-preview-url-action@v1
+        id: vercel_preview_url
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with: 
+          # build: npm run build
+          # start: npm run start
+          browser: chrome
+          record: true
+        env:
+          CYPRESS_BASE_URL: ${{ steps.vercel_preview_url.outputs.vercel_preview_url }}
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # DATABASE_URL: ${{ secrets.DATABASE_URL }}

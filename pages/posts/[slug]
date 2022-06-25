@@ -1,0 +1,86 @@
+import { GetStaticPaths, GetStaticProps } from 'next'
+import { getAllPostUrl, getAPostBySlug } from '../../lib/post'
+import { ParsedUrlQuery } from 'querystring'
+import React, { FC } from 'react'
+import { Contents, Users } from '@prisma/client'
+import Head from 'next/head'
+
+import { makeTitle } from '../../lib/utils'
+import Layout from '../../components/layout'
+import { markedStr } from '../../lib/marked'
+import { formatTime } from '../../lib/dayjs'
+
+interface Post extends Contents {
+  user: {
+    screenName: string | null
+    uid: number
+  } | null
+}
+interface Props {
+  post: Post | null
+}
+const Post: FC<Props> = ({ post }) => {
+  console.log(post)
+  if (!post) {
+    return <div>404</div>
+  }
+  return (
+    <>
+      {/* <Layout> */}
+      <Head>
+        <title>{makeTitle(post.title)}</title>
+      </Head>
+      <div>
+        <h1 className=" prose prose-xl">{post.title}</h1>
+        <div className="flex my-4">
+          <div>author: {post.user?.screenName}</div>
+          <div>created: {formatTime(post.created!, 'YYYY-MM HH:mm')}</div>
+          <div>modified: {formatTime(post.modified!, 'YYYY-MM HH:mm')}</div>
+        </div>
+
+        <article
+          dangerouslySetInnerHTML={{ __html: post.text ?? '' }}
+          className="prose lg:prose-xl"
+        ></article>
+        {/* <code lang="js">{JSON.stringify(post)}</code>
+        <style jsx>{`
+          div {
+            width: 100%;
+          }
+          code {
+            word-break: break-all;
+          }
+        `}</style> */}
+      </div>
+      {/* </Layout> */}
+    </>
+  )
+}
+
+export default Post
+
+interface UrlSlug extends ParsedUrlQuery {
+  slug: string
+}
+export const getStaticProps: GetStaticProps<Props, UrlSlug> = async ({
+  params,
+}) => {
+  const { slug } = params!
+  const post = await getAPostBySlug(slug)
+  return {
+    props: { post },
+  }
+}
+export const getStaticPaths: GetStaticPaths = async (context) => {
+  let urls = await getAllPostUrl()
+  const paths = urls.map((e) => ({
+    params: {
+      slug: e,
+    },
+  }))
+  console.log(paths)
+  return {
+    paths,
+    fallback: true,
+  }
+}

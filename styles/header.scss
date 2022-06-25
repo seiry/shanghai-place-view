@@ -1,0 +1,32 @@
+@property --tw-bg-opacity {
+  syntax: '<number>'; /* <- defined as type number for the transition to work */
+  initial-value: 0;
+  inherits: false;
+}
+
+@property --topnav-bg-blur {
+  syntax: '<length>';
+  initial-value: 0;
+  inherits: false;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  header {
+    .navbar {
+      @keyframes breathOpacity {
+        0% {
+          --tw-bg-opacity: 0.6;
+          --topnav-bg-blur: 20px;
+        }
+        100% {
+          --tw-bg-opacity: 0.4;
+          --topnav-bg-blur: 12px;
+        }
+      }
+      --tw-bg-opacity: 0.6;
+      --topnav-bg-blur: 20px;
+      animation: breathOpacity 2s ease-in-out infinite alternate;
+      backdrop-filter: saturate(140%) blur(var(--topnav-bg-blur));
+    }
+  }
+}

@@ -1,0 +1,34 @@
+
+name: End-to-end tests
+
+# https://glebbahmutov.com/blog/develop-preview-test/
+# https://docs.github.com/en/actions/reference/events-that-trigger-workflows
+on: [deployment_status]
+jobs:
+  cypress:
+    if: github.event_name == 'deployment_status' && github.event.deployment_status.state == 'success'
+    runs-on: ubuntu-20.04
+    steps:
+      - run: |
+          sudo apt-get -y install ttf-wqy-zenhei
+      - name: Checkout
+        uses: actions/checkout@v2
+      - run: echo ${{ github.event.deployment_status.target_url }}
+      - name: Cypress run
+        uses: cypress-io/github-action@v4
+        with: 
+          # build: npm run build
+          # start: npm run start
+          browser: chrome
+          record: true
+        env:
+          CYPRESS_BASE_URL: ${{ github.event.deployment_status.target_url }}
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      - name: upload cypress video
+        uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: cypress-videos
+          path: cypress/videos
