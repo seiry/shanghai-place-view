@@ -1,113 +1,95 @@
-import { useInterval, useTimeout } from 'beautiful-react-hooks'
+import {
+  CategoryScale,
+  Chart as ChartJS,
+  ChartOptions,
+  Legend,
+  LinearScale,
+  LineElement,
+  PointElement,
+  Title,
+  Tooltip,
+} from 'chart.js'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import React, { FC, useEffect, useState } from 'react'
+import { FC } from 'react'
+import { Line } from 'react-chartjs-2'
 import useSWR from 'swr'
 import { fetcher, Params, TrendResp } from '../../lib/fetch'
 import { makeTitleTag } from '../../lib/utils'
+// install (please make sure versions match peerDependencies)
+import dynamic from 'next/dynamic'
+import styled from 'styled-components'
+import dayjs from 'dayjs'
 
-// export interface Params {
-//   name: string
-//   spotId: number
-// }
+const Wrap = styled.div`
+  height: 100px;
+`
 
-const DataPage: FC<React.PropsWithChildren<unknown>> = () => {
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+)
+
+export const options: ChartOptions = {
+  responsive: true,
+  // animation: false,
+  plugins: {
+    legend: {
+      position: 'top' as const,
+    },
+    title: {
+      display: false,
+      text: 'Chart.js Line Chart',
+    },
+  },
+}
+
+const DataPage: FC = () => {
   const router = useRouter()
   const { query } = router
   // const name: Params['name'] = query.name?.[0] ?? query.name ?? ''
   // const spotId = query.spotId ?? ''
-  const { data } = useSWR<TrendResp, any, Params>(
+  const { data } = useSWR<TrendResp[], any, Params>(
     {
       name: '上海欢乐谷',
     },
     fetcher
   )
+
+  const lineData = {
+    labels: data?.map((d) => dayjs(d.time).format('HH:mm')),
+    datasets: [
+      {
+        label: data?.[0].spotName,
+        data: data?.map((d) => d.num),
+        borderColor: 'rgb(255, 99, 132)',
+        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+      },
+    ],
+  }
   return (
     <>
       <Head>
         <title>{makeTitleTag`好东西`}</title>
       </Head>
-      <span>广阔无垠的大草原上，奔跑着一只大板板</span>
-      <span>{JSON.stringify(data)}</span>
-      <br />
+      <Wrap>
+        <Line options={options} data={lineData} />;
+      </Wrap>
     </>
   )
 }
-
-// install (please make sure versions match peerDependencies)
-import { ResponsiveLine } from '@nivo/line'
 
 // make sure parent container have a defined height when using
 // responsive component, otherwise height will be 0 and
 // no chart will be rendered.
 // website examples showcase many properties,
 // you'll often use just a few of them.
-const MyResponsiveLine = ({ data /* see data tab */ }) => (
-  <ResponsiveLine
-    data={data}
-    margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
-    xScale={{ type: 'point' }}
-    yScale={{
-      type: 'linear',
-      min: 'auto',
-      max: 'auto',
-      stacked: true,
-      reverse: false,
-    }}
-    yFormat=" >-.2f"
-    axisTop={null}
-    axisRight={null}
-    axisBottom={{
-      orient: 'bottom',
-      tickSize: 5,
-      tickPadding: 5,
-      tickRotation: 0,
-      legend: 'transportation',
-      legendOffset: 36,
-      legendPosition: 'middle',
-    }}
-    axisLeft={{
-      orient: 'left',
-      tickSize: 5,
-      tickPadding: 5,
-      tickRotation: 0,
-      legend: 'count',
-      legendOffset: -40,
-      legendPosition: 'middle',
-    }}
-    pointSize={10}
-    pointColor={{ theme: 'background' }}
-    pointBorderWidth={2}
-    pointBorderColor={{ from: 'serieColor' }}
-    pointLabelYOffset={-12}
-    useMesh={true}
-    legends={[
-      {
-        anchor: 'bottom-right',
-        direction: 'column',
-        justify: false,
-        translateX: 100,
-        translateY: 0,
-        itemsSpacing: 0,
-        itemDirection: 'left-to-right',
-        itemWidth: 80,
-        itemHeight: 20,
-        itemOpacity: 0.75,
-        symbolSize: 12,
-        symbolShape: 'circle',
-        symbolBorderColor: 'rgba(0, 0, 0, .5)',
-        effects: [
-          {
-            on: 'hover',
-            style: {
-              itemBackground: 'rgba(0, 0, 0, .03)',
-              itemOpacity: 1,
-            },
-          },
-        ],
-      },
-    ]}
-  />
-)
 
-export default DataPage
+export default dynamic(() => Promise.resolve(DataPage), {
+  ssr: false,
+})

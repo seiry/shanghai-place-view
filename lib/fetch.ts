@@ -5,7 +5,10 @@ export interface Params {
 }
 
 export interface TrendResp {
-  [name: string]: any
+  spotName: string
+  spotId: number
+  time: string
+  num: number
 }
 
 export const fetcher = async (params: Params) => {
