@@ -13,9 +13,9 @@ export const Footer = () => {
           </div>
         </span>
         <p>
-          板板养猪场
+          平哥和强哥的养猪场
           <br />
-          2012 - {dayjs().format('YYYY')}
+          1949 - {dayjs().format('YYYY')}
         </p>
       </div>
       {/* <div className="md:place-self-center md:justify-self-end" /> */}

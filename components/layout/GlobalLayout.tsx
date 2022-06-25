@@ -43,7 +43,7 @@ export const GlobalLayout: FC<React.PropsWithChildren<unknown>> = (props) => {
           onChange={onCheckedChange}
         />
         <div className="flex ">
-          <div
+          {/* <div
             id="sideBar"
             className={clsx(
               'bg-secondary fixed flex-none z-40 inset-0 h-full pt-16 md:static md:h-auto md:overflow-y-visible md:pt-0 lg:block  w-80 md:w-80 md:shadow-none transition-all md:translate-x-0',
@@ -54,7 +54,7 @@ export const GlobalLayout: FC<React.PropsWithChildren<unknown>> = (props) => {
             <div className="h-full overflow-y-auto md:h-auto md:block relative md:sticky md:bg-transparent overflow-hidden md:top-14">
               <Aside />
             </div>
-          </div>
+          </div> */}
 
           <div
             className={clsx(
