@@ -1,4 +1,4 @@
-export const spots = [
+export const badSpots: SpotItem[] = [
   {
     name: '迪士尼乐园',
     id: 95015,
@@ -290,10 +290,6 @@ export const spots = [
   {
     name: '上海金山嘴渔村景区',
     id: 65,
-  },
-  {
-    name: '迪士尼乐园',
-    id: 95015,
   },
   {
     name: '星愿公园',
@@ -756,3 +752,16 @@ export const spots = [
     id: 97,
   },
 ]
+
+export interface SpotItem {
+  name: string
+  id: number
+}
+
+export const spots: SpotItem[] = []
+badSpots.forEach((item) => {
+  if (spots.find((s) => s.id === item.id)) {
+  } else {
+    spots.push(item)
+  }
+})

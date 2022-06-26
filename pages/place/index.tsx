@@ -27,7 +27,7 @@ import { useFilterStore } from '../../store/filter'
 import { useLineData } from '../../lib/data'
 
 const Wrap = styled.div`
-  height: 100px;
+  height: 300px;
   position: relative;
 `
 

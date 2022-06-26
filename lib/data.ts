@@ -1,14 +1,15 @@
 import dayjs from 'dayjs'
 import { useMemo } from 'react'
 import useSWR from 'swr'
-import { useFilterStore } from '../store/filter'
+import { useFilterStore, useSelectedIds } from '../store/filter'
 import { TrendResp, Params, fetcher } from './fetch'
 
 export const useLineData = () => {
   const { timeFrame } = useFilterStore()
+  const selectedIds = useSelectedIds()
   const { data } = useSWR<TrendResp[][], any, Params>(
     {
-      spotId: [66, 70],
+      spotId: selectedIds,
       from: timeFrame.value.from,
       before: timeFrame.value.before,
     },
