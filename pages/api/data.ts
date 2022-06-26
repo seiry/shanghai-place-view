@@ -5,22 +5,27 @@ import prisma from '../../lib/prisma'
 
 const handler: NextApiHandler = async (req, res) => {
   const params: Params = req.body
-  if (!params.name) {
+  if (!params.spotId) {
     res.status(500).json(errorMsg('wrong input'))
   }
-  const data = await prisma.log.findMany({
-    select: {
-      spotName: true,
-      spotId: true,
-      time: true,
-      num: true,
-    },
-    where: {
-      spotName: params.name,
-    },
-  })
+  if (params.spotId instanceof Array) {
+    const data = await prisma.log.findMany({
+      select: {
+        spotName: true,
+        spotId: true,
+        time: true,
+        num: true,
+      },
+      where: {
+        spotId: {
+          in: params.spotId,
+        },
+      },
+    })
 
-  res.status(200).json(data)
+    res.status(200).json(data)
+    return
+  }
 }
 
 export default handler

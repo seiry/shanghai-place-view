@@ -54,23 +54,24 @@ const DataPage: FC = () => {
   const { query } = router
   // const name: Params['name'] = query.name?.[0] ?? query.name ?? ''
   // const spotId = query.spotId ?? ''
-  const { data } = useSWR<TrendResp[], any, Params>(
+
+  const { data } = useSWR<TrendResp[][], any, Params>(
     {
-      name: '上海欢乐谷',
+      spotId: [66, 70],
     },
     fetcher
   )
 
   const lineData = {
-    labels: data?.map((d) => dayjs(d.time).format('HH:mm')),
-    datasets: [
-      {
-        label: data?.[0].spotName,
-        data: data?.map((d) => d.num),
+    labels: data?.[0]?.map((d) => dayjs(d.time).format('HH:mm')),
+    datasets:
+      data?.map((singleLine) => ({
+        label: singleLine?.[0]?.spotName,
+        data: singleLine?.map((d) => d.num),
         borderColor: 'rgb(255, 99, 132)',
         backgroundColor: 'rgba(255, 99, 132, 0.5)',
-      },
-    ],
+        // TODO: colors,
+      })) ?? [],
   }
   return (
     <>
