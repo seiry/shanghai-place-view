@@ -18,7 +18,6 @@ const ToolBar = styled.div`
   gap: 1rem;
   width: 100%;
   .btn-group {
-    width: 14rem;
   }
 `
 const pinyinList = new Pinyin(spots, ['name'])
@@ -97,7 +96,7 @@ export const Filter: FC = () => {
         </label>
         <ul
           tabIndex={0}
-          className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 max-h-[300px] overflow-y-auto"
+          className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 max-h-[400px] overflow-y-auto"
         >
           {filteredSpotList.map((spot) => (
             <li key={spot.id} onClick={() => addSeleted(spot)}>
@@ -107,7 +106,7 @@ export const Filter: FC = () => {
         </ul>
       </div>
 
-      <ul className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 max-h-[300px] overflow-y-auto">
+      <ul className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-72 max-h-[150px] overflow-y-auto">
         {selected.map((spot) => (
           <li key={spot.id} onClick={() => rmSeleted(spot)}>
             <a>{spot.name}</a>
@@ -118,7 +117,7 @@ export const Filter: FC = () => {
       <div className="btn-group btn-group-vertical">
         {timeFrames.map((time) => (
           <button
-            className={clsx('btn', {
+            className={clsx('btn btn-sm', {
               'btn-active': timeFrame.name === time.name,
             })}
             key={time.name}
@@ -161,4 +160,6 @@ const pickFormat = 'YYYY-MM-DD HH:mm:ss'
 const DateTime = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `
