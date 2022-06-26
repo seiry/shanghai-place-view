@@ -8,35 +8,40 @@ export interface TimeFrame {
   name: string
   value: TimeParams
 }
+
+export enum TimeFrameName {
+  'last 24 hours' = 'last 24 hours',
+  'last 48 hours' = 'last 48 hours',
+  'last 72 hours' = 'last 72 hours',
+  'custom' = 'custom',
+}
+
 export const timeFrames: TimeFrame[] = [
   {
-    name: 'last 24 hours',
+    name: TimeFrameName['last 24 hours'],
     value: {
       from: dayjs().subtract(1, 'day').toDate(),
       before: dayjs().toDate(),
     },
   },
-  // {
-  //   name: 'yesterday',
-  //   value: {
-  //     // TODO:精准的昨天？
-  //     from: dayjs().subtract(1, 'day').toDate(),
-  //     before: dayjs().subtract(2, 'day').toDate(),
-  //   },
-  // },
+
   {
-    name: 'last 48 hours',
+    name: TimeFrameName['last 48 hours'],
     value: {
       from: dayjs().subtract(2, 'day').toDate(),
       before: dayjs().toDate(),
     },
   },
   {
-    name: 'last 72 hours',
+    name: TimeFrameName['last 72 hours'],
     value: {
       from: dayjs().subtract(3, 'day').toDate(),
       before: dayjs().toDate(),
     },
+  },
+  {
+    name: TimeFrameName['custom'],
+    value: {},
   },
 ]
 
@@ -53,6 +58,21 @@ interface FilterState {
 export const useSelectedIds = (): number[] => {
   const { selected } = useFilterStore()
   return selected.map((item) => item.id)
+}
+export const useTimeFrame = (): TimeFrame => {
+  const { timeFrame, timeRangePickerValue } = useFilterStore()
+
+  if (timeFrame.name !== TimeFrameName.custom) {
+    return timeFrame
+  } else {
+    return {
+      ...timeFrame,
+      value: {
+        from: timeRangePickerValue[0],
+        before: timeRangePickerValue[1],
+      },
+    }
+  }
 }
 
 export const useFilterStore = create<FilterState>()(

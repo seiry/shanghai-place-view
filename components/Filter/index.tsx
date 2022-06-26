@@ -1,15 +1,21 @@
 import clsx from 'clsx'
 import dayjs from 'dayjs'
-import { FC, useMemo, useState } from 'react'
+import flatpickr from 'flatpickr'
+import 'flatpickr/dist/themes/confetti.css'
+import Pinyin from 'pinyin-engine'
+import { FC, useEffect, useMemo, useRef, useState } from 'react'
 import styled from 'styled-components'
 import { SpotItem, spots } from '../../lib/list'
-import { timeFrames, useFilterStore } from '../../store/filter'
-import Pinyin from 'pinyin-engine'
-import Flatpickr from 'react-flatpickr'
-import 'flatpickr/dist/themes/material_green.css'
+import {
+  TimeFrameName,
+  timeFrames,
+  useFilterStore,
+  useTimeFrame,
+} from '../../store/filter'
 
 const ToolBar = styled.div`
   display: flex;
+  gap: 1rem;
   width: 100%;
   .btn-group {
     width: 14rem;
@@ -18,7 +24,6 @@ const ToolBar = styled.div`
 const pinyinList = new Pinyin(spots, ['name'])
 export const Filter: FC = () => {
   const {
-    timeFrame,
     setTimeFrame,
     addSeleted,
     selected,
@@ -26,6 +31,7 @@ export const Filter: FC = () => {
     timeRangePickerValue,
     setTimeRage,
   } = useFilterStore()
+  const timeFrame = useTimeFrame()
 
   const [searchText, setSearchText] = useState('')
   const [showDropdown, setShowDropdown] = useState(false)
@@ -37,6 +43,25 @@ export const Filter: FC = () => {
     }
   }, [searchText])
 
+  const dateTimeRef = useRef(null)
+
+  useEffect(() => {
+    if (!dateTimeRef.current) {
+      return
+    }
+    flatpickr(dateTimeRef.current, {
+      enableTime: true,
+      mode: 'range',
+      onClose: (selectedDates) => {
+        setTimeRage(selectedDates as [Date, Date])
+      },
+      clickOpens: timeFrame.name === TimeFrameName.custom,
+    })
+
+    return () => {}
+  }, [setTimeRage, timeFrame.name])
+
+  const isPicking = timeFrame.name === TimeFrameName.custom
   return (
     <ToolBar>
       <div className={clsx('dropdown', { 'dropdown-open': showDropdown })}>
@@ -104,17 +129,36 @@ export const Filter: FC = () => {
         ))}
       </div>
 
-      <Flatpickr
-        data-enable-time
-        options={{
-          mode: 'range',
-        }}
-        // value={}
-        onClose={(selectedDates) => {
-          setTimeRage(selectedDates as [Date, Date])
-        }}
-      />
-      {JSON.stringify(timeRangePickerValue)}
+      <DateTime
+        ref={dateTimeRef}
+        className={clsx('text-base transition-colors', {
+          'text-primary': isPicking,
+          'text-gray-300 !cursor-not-allowed': !isPicking,
+        })}
+      >
+        {timeRangePickerValue?.[0] && (
+          <span>
+            {dayjs(
+              isPicking ? timeRangePickerValue?.[0] : timeFrame.value.from
+            ).format(pickFormat)}
+          </span>
+        )}
+        <span>-</span>
+        {timeRangePickerValue?.[1] && (
+          <span>
+            {' '}
+            {dayjs(
+              isPicking ? timeRangePickerValue?.[1] : timeFrame.value.before
+            ).format(pickFormat)}
+          </span>
+        )}
+      </DateTime>
     </ToolBar>
   )
 }
+
+const pickFormat = 'YYYY-MM-DD HH:mm:ss'
+const DateTime = styled.div`
+  display: flex;
+  flex-direction: column;
+`

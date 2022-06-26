@@ -1,7 +1,7 @@
 import dayjs from 'dayjs'
 import { useMemo } from 'react'
 import useSWR from 'swr'
-import { useFilterStore, useSelectedIds } from '../store/filter'
+import { useFilterStore, useSelectedIds, useTimeFrame } from '../store/filter'
 import { TrendResp, Params, fetcher } from './fetch'
 
 const colors = [
@@ -15,7 +15,7 @@ const colors = [
 ]
 
 export const useLineData = () => {
-  const { timeFrame } = useFilterStore()
+  const timeFrame = useTimeFrame()
   const selectedIds = useSelectedIds()
   const { data } = useSWR<TrendResp[][], any, Params>(
     {
