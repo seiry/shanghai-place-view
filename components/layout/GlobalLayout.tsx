@@ -69,7 +69,7 @@ export const GlobalLayout: FC<React.PropsWithChildren<unknown>> = (props) => {
             >
               {props.children}
             </main>
-            <Footer />
+            {/* <Footer /> */}
           </div>
 
           {/* <main className="min-h-[calc(100vh-100px)]">{props.children}</main> */}

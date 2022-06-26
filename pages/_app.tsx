@@ -2,7 +2,7 @@ import ProgressBar from '@badrap/bar-of-progress'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import Router from 'next/router'
-
+import '../lib/dayjs.init'
 import { Eruda } from '../components/Eruda'
 
 import 'tailwindcss/tailwind.css'

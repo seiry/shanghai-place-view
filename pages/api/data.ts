@@ -1,3 +1,4 @@
+import dayjs from 'dayjs'
 import { NextApiHandler } from 'next'
 import { errorMsg } from '../../lib/error'
 import { Params } from '../../lib/fetch'
@@ -17,9 +18,19 @@ const handler: NextApiHandler = async (req, res) => {
         num: true,
       },
       where: {
-        spotId: {
-          in: params.spotId,
-        },
+        AND: [
+          {
+            spotId: {
+              in: params.spotId,
+            },
+          },
+          {
+            time: {
+              lte: params.before ?? dayjs().toDate(),
+              gte: params.from ?? undefined,
+            },
+          },
+        ],
       },
     })
 
