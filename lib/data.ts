@@ -4,6 +4,16 @@ import useSWR from 'swr'
 import { useFilterStore, useSelectedIds } from '../store/filter'
 import { TrendResp, Params, fetcher } from './fetch'
 
+const colors = [
+  '#65c3c8',
+  '#ef9fbc',
+  '#eeaf3a',
+  '#291334',
+  '#4AA8C0',
+  '#823290',
+  '#EE8133',
+]
+
 export const useLineData = () => {
   const { timeFrame } = useFilterStore()
   const selectedIds = useSelectedIds()
@@ -21,11 +31,11 @@ export const useLineData = () => {
       // TODO:special map label for across day
       labels: data?.[0]?.map((d) => dayjs(d.time).format('HH:mm')),
       datasets:
-        data?.map((singleLine) => ({
+        data?.map((singleLine, i) => ({
           label: singleLine?.[0]?.spotName,
           data: singleLine?.map((d) => d.num),
-          borderColor: 'rgb(255, 99, 132)',
-          backgroundColor: 'rgba(255, 99, 132, 0.5)',
+          borderColor: colors[i % colors.length],
+          backgroundColor: colors[i % colors.length] + '7f', //50alpha
           // TODO: colors,
         })) ?? [],
     }),

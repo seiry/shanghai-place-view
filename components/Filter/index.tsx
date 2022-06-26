@@ -5,6 +5,8 @@ import styled from 'styled-components'
 import { SpotItem, spots } from '../../lib/list'
 import { timeFrames, useFilterStore } from '../../store/filter'
 import Pinyin from 'pinyin-engine'
+import Flatpickr from 'react-flatpickr'
+import 'flatpickr/dist/themes/material_green.css'
 
 const ToolBar = styled.div`
   display: flex;
@@ -15,8 +17,15 @@ const ToolBar = styled.div`
 `
 const pinyinList = new Pinyin(spots, ['name'])
 export const Filter: FC = () => {
-  const { timeFrame, setTimeFrame, addSeleted, selected, rmSeleted } =
-    useFilterStore()
+  const {
+    timeFrame,
+    setTimeFrame,
+    addSeleted,
+    selected,
+    rmSeleted,
+    timeRangePickerValue,
+    setTimeRage,
+  } = useFilterStore()
 
   const [searchText, setSearchText] = useState('')
   const [showDropdown, setShowDropdown] = useState(false)
@@ -94,6 +103,18 @@ export const Filter: FC = () => {
           </button>
         ))}
       </div>
+
+      <Flatpickr
+        data-enable-time
+        options={{
+          mode: 'range',
+        }}
+        // value={}
+        onClose={(selectedDates) => {
+          setTimeRage(selectedDates as [Date, Date])
+        }}
+      />
+      {JSON.stringify(timeRangePickerValue)}
     </ToolBar>
   )
 }

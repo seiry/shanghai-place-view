@@ -52,6 +52,9 @@ export const options: ChartOptions = {
       display: false,
       text: 'Chart.js Line Chart',
     },
+    // colorschemes: {
+    //   scheme: 'brewer.Paired12'
+    // }
   },
 }
 

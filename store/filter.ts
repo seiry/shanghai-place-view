@@ -42,10 +42,12 @@ export const timeFrames: TimeFrame[] = [
 
 interface FilterState {
   timeFrame: TimeFrame
-  selected: SpotItem[]
   setTimeFrame: (to: TimeFrame) => void
-  rmSeleted: (item: SpotItem) => void
+  selected: SpotItem[]
   addSeleted: (item: SpotItem) => void
+  rmSeleted: (item: SpotItem) => void
+  timeRangePickerValue: [Date, Date]
+  setTimeRage: (value: [Date, Date]) => void
 }
 
 export const useSelectedIds = (): number[] => {
@@ -59,6 +61,14 @@ export const useFilterStore = create<FilterState>()(
       (set, get) => ({
         timeFrame: timeFrames[0],
         selected: [],
+        timeRangePickerValue: [
+          timeFrames[0].value.from!,
+          timeFrames[0].value.before!,
+        ],
+        setTimeRage: (value: [Date, Date]) =>
+          set((state) => ({
+            timeRangePickerValue: value,
+          })),
         setTimeFrame: (to) => set((state) => ({ timeFrame: to })),
         rmSeleted: (rm) =>
           set((state) => ({
