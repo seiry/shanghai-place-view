@@ -2,7 +2,6 @@ import dayjs from 'dayjs'
 import create from 'zustand'
 import { devtools, persist } from 'zustand/middleware'
 import { SpotResp, TimeParams } from '../lib/fetch'
-import { SpotItem } from '../lib/list'
 
 export interface TimeFrame {
   name: string
@@ -57,7 +56,9 @@ interface FilterState {
 
 export const useSelectedIds = (): number[] => {
   const { selected } = useFilterStore()
-  return selected.map((item) => item.spotid)
+  return selected
+    .map((item) => item.spotid)
+    .filter((item) => item !== undefined)
 }
 export const useTimeFrame = (): TimeFrame => {
   const { timeFrame, timeRangePickerValue } = useFilterStore()

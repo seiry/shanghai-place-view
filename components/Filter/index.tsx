@@ -34,7 +34,7 @@ export const Filter: FC = () => {
 
   const { data: spots } = useSWR<SpotResp[]>({}, spotFetcher)
 
-  const pinyinList = useMemo(() => new Pinyin(spots ?? [{}], ['name']), [spots])
+  const pinyinList = useMemo(() => new Pinyin(spots ?? [], ['name']), [spots])
 
   const [searchText, setSearchText] = useState('')
   const [showDropdown, setShowDropdown] = useState(false)
@@ -45,7 +45,7 @@ export const Filter: FC = () => {
       return spots
     }
   }, [pinyinList, searchText, spots])
-  console.log(filteredSpotList)
+
   const dateTimeRef = useRef(null)
 
   useEffect(() => {

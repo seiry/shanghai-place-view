@@ -11,10 +11,12 @@ export interface TimeParams {
   before?: Date
 }
 export interface TrendResp {
-  spotName: string
-  spotId: number
   time: string
   num: number
+  spot: {
+    spotid: number
+    name: string
+  }
 }
 
 export const dataFetcher = async (params: Params): Promise<TrendResp[][]> => {
@@ -25,7 +27,7 @@ export const dataFetcher = async (params: Params): Promise<TrendResp[][]> => {
   })
   const result: TrendResp[][] = []
   for (const id of params.spotId) {
-    const data = res.data.filter((d) => d.spotId === id)
+    const data = res.data.filter((d) => d.spot.spotid === id)
     result.push(data)
   }
   return result

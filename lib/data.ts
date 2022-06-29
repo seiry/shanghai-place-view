@@ -17,6 +17,7 @@ const colors = [
 export const useLineData = () => {
   const timeFrame = useTimeFrame()
   const selectedIds = useSelectedIds()
+  console.log(selectedIds)
   const { data } = useSWR<TrendResp[][], any, Params>(
     {
       spotId: selectedIds,
@@ -31,7 +32,7 @@ export const useLineData = () => {
       labels: data?.[0]?.map((d) => dayjs(d.time).format('HH:mm')),
       datasets:
         data?.map((singleLine, i) => ({
-          label: singleLine?.[0]?.spotName,
+          label: singleLine?.[0]?.spot.name,
           data: singleLine?.map((d) => d.num),
           borderColor: colors[i % colors.length],
           backgroundColor: colors[i % colors.length] + '7f', //50alpha
