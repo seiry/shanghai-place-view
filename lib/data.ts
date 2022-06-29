@@ -2,7 +2,7 @@ import dayjs from 'dayjs'
 import { useMemo } from 'react'
 import useSWR from 'swr'
 import { useFilterStore, useSelectedIds, useTimeFrame } from '../store/filter'
-import { TrendResp, Params, fetcher } from './fetch'
+import { TrendResp, Params, dataFetcher } from './fetch'
 
 const colors = [
   '#65c3c8',
@@ -23,9 +23,8 @@ export const useLineData = () => {
       from: timeFrame.value.from,
       before: timeFrame.value.before,
     },
-    fetcher
+    dataFetcher
   )
-
   const lineData = useMemo(
     () => ({
       // TODO:special map label for across day

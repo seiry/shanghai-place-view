@@ -5,7 +5,8 @@ import 'flatpickr/dist/themes/confetti.css'
 import Pinyin from 'pinyin-engine'
 import { FC, useEffect, useMemo, useRef, useState } from 'react'
 import styled from 'styled-components'
-import { SpotItem, spots } from '../../lib/list'
+import useSWR from 'swr'
+import { spotFetcher, SpotResp } from '../../lib/fetch'
 import {
   TimeFrameName,
   timeFrames,
@@ -20,7 +21,6 @@ const ToolBar = styled.div`
   .btn-group {
   }
 `
-const pinyinList = new Pinyin(spots, ['name'])
 export const Filter: FC = () => {
   const {
     setTimeFrame,
@@ -32,16 +32,20 @@ export const Filter: FC = () => {
   } = useFilterStore()
   const timeFrame = useTimeFrame()
 
+  const { data: spots } = useSWR<SpotResp[]>({}, spotFetcher)
+
+  const pinyinList = useMemo(() => new Pinyin(spots ?? [{}], ['name']), [spots])
+
   const [searchText, setSearchText] = useState('')
   const [showDropdown, setShowDropdown] = useState(false)
   const filteredSpotList = useMemo(() => {
     if (searchText) {
-      return pinyinList.query(searchText) as unknown as SpotItem[]
+      return pinyinList.query(searchText) as unknown as SpotResp[]
     } else {
       return spots
     }
-  }, [searchText])
-
+  }, [pinyinList, searchText, spots])
+  console.log(filteredSpotList)
   const dateTimeRef = useRef(null)
 
   useEffect(() => {
@@ -98,8 +102,8 @@ export const Filter: FC = () => {
           tabIndex={0}
           className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 max-h-[400px] overflow-y-auto"
         >
-          {filteredSpotList.map((spot) => (
-            <li key={spot.id} onClick={() => addSeleted(spot)}>
+          {filteredSpotList?.map((spot) => (
+            <li key={spot.spotid} onClick={() => addSeleted(spot)}>
               <a>{spot.name}</a>
             </li>
           ))}
@@ -108,7 +112,7 @@ export const Filter: FC = () => {
 
       <ul className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-72 max-h-[150px] overflow-y-auto">
         {selected.map((spot) => (
-          <li key={spot.id} onClick={() => rmSeleted(spot)}>
+          <li key={spot.spotid} onClick={() => rmSeleted(spot)}>
             <a>{spot.name}</a>
           </li>
         ))}

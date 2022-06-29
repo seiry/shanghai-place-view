@@ -17,7 +17,7 @@ export interface TrendResp {
   num: number
 }
 
-export const fetcher = async (params: Params): Promise<TrendResp[][]> => {
+export const dataFetcher = async (params: Params): Promise<TrendResp[][]> => {
   const res = await axios.post<TrendResp[]>('/api/data', {
     spotId: params.spotId,
     from: params.from,
@@ -29,4 +29,15 @@ export const fetcher = async (params: Params): Promise<TrendResp[][]> => {
     result.push(data)
   }
   return result
+}
+
+export interface SpotResp {
+  spotid: number
+  name: string
+}
+
+export const spotFetcher = async (params: Params): Promise<SpotResp[]> => {
+  const res = await axios.post<SpotResp[]>('/api/spots')
+
+  return res.data
 }

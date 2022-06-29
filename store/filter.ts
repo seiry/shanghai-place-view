@@ -1,7 +1,7 @@
 import dayjs from 'dayjs'
 import create from 'zustand'
 import { devtools, persist } from 'zustand/middleware'
-import { TimeParams } from '../lib/fetch'
+import { SpotResp, TimeParams } from '../lib/fetch'
 import { SpotItem } from '../lib/list'
 
 export interface TimeFrame {
@@ -48,16 +48,16 @@ export const timeFrames: TimeFrame[] = [
 interface FilterState {
   timeFrame: TimeFrame
   setTimeFrame: (to: TimeFrame) => void
-  selected: SpotItem[]
-  addSeleted: (item: SpotItem) => void
-  rmSeleted: (item: SpotItem) => void
+  selected: SpotResp[]
+  addSeleted: (item: SpotResp) => void
+  rmSeleted: (item: SpotResp) => void
   timeRangePickerValue: [Date, Date]
   setTimeRage: (value: [Date, Date]) => void
 }
 
 export const useSelectedIds = (): number[] => {
   const { selected } = useFilterStore()
-  return selected.map((item) => item.id)
+  return selected.map((item) => item.spotid)
 }
 export const useTimeFrame = (): TimeFrame => {
   const { timeFrame, timeRangePickerValue } = useFilterStore()
@@ -92,11 +92,13 @@ export const useFilterStore = create<FilterState>()(
         setTimeFrame: (to) => set((state) => ({ timeFrame: to })),
         rmSeleted: (rm) =>
           set((state) => ({
-            selected: state.selected.filter((item) => item.id !== rm.id),
+            selected: state.selected.filter(
+              (item) => item.spotid !== rm.spotid
+            ),
           })),
         addSeleted: (add) =>
           set((state) => {
-            if (state.selected.find((item) => item.id === add.id)) {
+            if (state.selected.find((item) => item.spotid === add.spotid)) {
               return state
             }
             return {
