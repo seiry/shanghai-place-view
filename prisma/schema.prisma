@@ -8,14 +8,21 @@ datasource db {
 }
 
 model log {
-  logid     Int       @id @default(autoincrement()) @db.UnsignedInt
-  jsonid    String?   @db.Text
-  time      DateTime? @db.DateTime(0)
-  spotId    Int?
-  spotName  String?   @db.Text
-  num       Int?      @db.UnsignedInt
-  maxnum    Int?
-  closeTime String?   @db.Text
+  logid  Int      @id @default(autoincrement()) @db.UnsignedInt
+  spotid Int      @db.UnsignedSmallInt
+  num    Int
+  daynum Int
+  time   DateTime @db.DateTime(0)
+  spot   spot     @relation(fields: [spotid], references: [spotid], onDelete: NoAction, onUpdate: NoAction, map: "realname")
 
   @@index([time], map: "time")
+  @@index([spotid], map: "realname")
+}
+
+model spot {
+  spotid Int    @id @db.UnsignedSmallInt
+  name   String @default("") @db.VarChar(255)
+  log    log[]
+
+  @@index([spotid, name], map: "spotid")
 }

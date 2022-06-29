@@ -12,15 +12,14 @@ const handler: NextApiHandler = async (req, res) => {
   if (params.spotId instanceof Array) {
     const data = await prisma.log.findMany({
       select: {
-        spotName: true,
-        spotId: true,
         time: true,
         num: true,
+        spot: true,
       },
       where: {
         AND: [
           {
-            spotId: {
+            spotid: {
               in: params.spotId,
             },
           },
