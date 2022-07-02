@@ -38,8 +38,8 @@ export interface SpotResp {
   name: string
 }
 
-export const spotFetcher = async (params: Params): Promise<SpotResp[]> => {
-  const res = await axios.post<SpotResp[]>('/api/spots')
+export const getFetcher = async <T>(path: string): Promise<T> => {
+  const res = await axios.post<T>(`/api/${path}`)
 
   return res.data
 }

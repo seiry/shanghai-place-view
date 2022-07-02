@@ -6,7 +6,7 @@ import Pinyin from 'pinyin-engine'
 import { FC, useEffect, useMemo, useRef, useState } from 'react'
 import styled from 'styled-components'
 import useSWR from 'swr'
-import { spotFetcher, SpotResp } from '../../lib/fetch'
+import { getFetcher, SpotResp, TrendResp } from '../../lib/fetch'
 import {
   TimeFrameName,
   timeFrames,
@@ -32,8 +32,8 @@ export const Filter: FC = () => {
   } = useFilterStore()
   const timeFrame = useTimeFrame()
 
-  const { data: spots } = useSWR<SpotResp[]>({}, spotFetcher)
-
+  const { data: spots } = useSWR('spots', getFetcher<SpotResp[]>)
+  const { data: maxList } = useSWR('max', getFetcher<TrendResp[]>)
   const pinyinList = useMemo(
     () => new Pinyin(spots ?? [], ['name', 'id']),
     [spots]
@@ -117,6 +117,17 @@ export const Filter: FC = () => {
         {selected.map((spot) => (
           <li key={spot.spotid} onClick={() => rmSeleted(spot)}>
             <a>{spot.name}</a>
+          </li>
+        ))}
+      </ul>
+
+      <ul className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-72 max-h-[150px] overflow-y-auto">
+        max list
+        {maxList?.map((spot) => (
+          <li key={spot.spot.spotid} className="py-0">
+            <a className="py-0">
+              {spot.spot.name} {spot.num}
+            </a>
           </li>
         ))}
       </ul>
