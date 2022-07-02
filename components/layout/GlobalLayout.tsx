@@ -62,7 +62,7 @@ export const GlobalLayout: FC<React.PropsWithChildren<unknown>> = (props) => {
             )}
           >
             <main
-              className="min-h-[calc(100vh-64px-130px)] pt-5"
+              className="h-[calc(100vh-64px-130px)] pt-5 relative"
               onClick={(event) => {
                 closeSideBarWhenCould()
               }}

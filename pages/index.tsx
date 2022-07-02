@@ -19,8 +19,9 @@ import styled from 'styled-components'
 import { Filter } from '../components/Filter'
 import { useLineData } from '../lib/data'
 
-const Wrap = styled.div`
-  height: 300px;
+const LineWrap = styled.div`
+  /* height: 300px; */
+  flex: 1;
   position: relative;
 `
 
@@ -50,21 +51,27 @@ export const options: ChartOptions = {
 
 const DataPage: FC = () => {
   const lineData = useLineData()
-
   return (
-    <>
+    <Page>
       <Head>
         <title>{makeTitleTag`trends`}</title>
       </Head>
 
       <Filter />
-      <Wrap>
-        <Line options={options} data={lineData} />
-      </Wrap>
-    </>
+      <LineWrap>
+        <Line options={options} data={lineData} height="100%" />
+      </LineWrap>
+    </Page>
   )
 }
 
+const Page = styled.div`
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+`
 export default dynamic(() => Promise.resolve(DataPage), {
   ssr: false,
 })
