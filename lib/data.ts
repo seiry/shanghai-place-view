@@ -26,20 +26,36 @@ export const useLineData = () => {
     },
     dataFetcher
   )
-  const lineData = useMemo(
-    () => ({
+  const lineData = useMemo(() => {
+    if (!data) {
+      return {
+        labels: [],
+        datasets: [],
+      }
+    }
+    const lengths = data.map((d) => d.length)
+    const maxLength = Math.max(...lengths)
+    const maxOne = data.find((d) => d.length === maxLength)!
+    for (const e of data) {
+      if (e.length < maxLength) {
+        const length = maxLength - e.length
+        const addPart = Array(length).fill({
+          spot: { name: e[0].spot.name },
+          num: 0,
+        })
+        e.unshift(...addPart)
+      }
+    }
+    return {
       // TODO:special map label for across day
-      labels: data?.[0]?.map((d) => dayjs(d.time).format('HH:mm')),
-      datasets:
-        data?.map((singleLine, i) => ({
-          label: singleLine?.[0]?.spot.name,
-          data: singleLine?.map((d) => d.num),
-          borderColor: colors[i % colors.length],
-          backgroundColor: colors[i % colors.length] + '7f', //50alpha
-          // TODO: colors,
-        })) ?? [],
-    }),
-    [data]
-  )
+      labels: maxOne?.map((d) => dayjs(d.time).format('HH:mm')),
+      datasets: data?.map((singleLine, i) => ({
+        label: singleLine?.[0]?.spot.name,
+        data: singleLine?.map((d) => d.num),
+        borderColor: colors[i % colors.length],
+        backgroundColor: colors[i % colors.length] + '7f', //50alpha
+      })),
+    }
+  }, [data])
   return lineData
 }
