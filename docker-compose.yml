@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  shanghai-place-view:
+    container_name: shanghai-place-view
+    build:
+      context: .
+      dockerfile: dockerfile
+    ports:
+      - 1803:3000
+    

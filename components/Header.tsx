@@ -32,7 +32,7 @@ export const Header = () => {
           <Link href="/" aria-label="Homepage">
             <a className="px-2 flex-0 btn btn-ghost md:px-4 ">
               <div className="inline-block text-3xl font-title text-primary-content">
-                <span className="">shanghai!</span>
+                <span className="">强哥勇敢飞，雷子永相随</span>
               </div>
             </a>
           </Link>
