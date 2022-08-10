@@ -21,7 +21,7 @@
     "beautiful-react-hooks": "^3.6.2",
     "chart.js": "^3.9.1",
     "clsx": "^1.2.1",
-    "cypress": "^10.3.0",
+    "cypress": "^10.4.0",
     "daisyui": "^2.22.0",
     "dayjs": "^1.11.4",
     "flatpickr": "^4.6.13",
