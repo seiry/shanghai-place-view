@@ -1,10 +1,6 @@
 import clsx from 'clsx'
 import React, { ChangeEvent, FC, useCallback, useEffect, useState } from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
-import { Aside } from '../Aside'
 import { Header } from '../Header'
-import { Footer } from '../Footer'
 
 /**
  * close sider bar

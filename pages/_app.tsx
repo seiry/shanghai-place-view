@@ -55,10 +55,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="theme-color" content="#3a3f51" />
 
         <link rel="icon" type="image/ico" href="/favicon.ico" />
-        <link
-          rel="stylesheet"
-          href="https://fastly.jsdelivr.net/combine/npm/prismjs@1/plugins/line-numbers/prism-line-numbers.min.css,npm/prismjs@1/themes/prism-tomorrow.min.css,npm/prismjs@1/plugins/inline-color/prism-inline-color.min.css,npm/prismjs@1/plugins/match-braces/prism-match-braces.min.css"
-        />
       </Head>
       <Eruda />
 
