@@ -23,6 +23,7 @@ const LineWrap = styled.div`
   /* height: 300px; */
   flex: 1;
   position: relative;
+  user-select: none;
 `
 
 ChartJS.register(
