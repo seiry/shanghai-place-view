@@ -121,7 +121,7 @@ export const Filter: FC = () => {
         ))}
       </ul>
 
-      <ul className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-72 max-h-[150px] overflow-y-auto">
+      <ul className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-72 max-h-[150px] overflow-y-auto flex-nowrap">
         max list
         {maxList?.map((spot) => (
           <li
