@@ -17,7 +17,7 @@ const colors = [
 export const useLineData = () => {
   const timeFrame = useTimeFrame()
   const selectedIds = useSelectedIds()
-  console.log(selectedIds)
+  // console.log(selectedIds)
   const { data } = useSWR<TrendResp[][], any, Params>(
     {
       spotId: selectedIds,

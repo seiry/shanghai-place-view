@@ -124,7 +124,11 @@ export const Filter: FC = () => {
       <ul className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-72 max-h-[150px] overflow-y-auto">
         max list
         {maxList?.map((spot) => (
-          <li key={spot.spot.spotid} className="py-0">
+          <li
+            key={spot.spot.spotid}
+            className="py-0"
+            // onClick={() => addSeleted(spot as SpotResp)}
+          >
             <a className="py-0">
               {spot.spot.name} {spot.num}
             </a>
