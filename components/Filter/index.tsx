@@ -114,7 +114,7 @@ export const Filter: FC = () => {
       </div>
 
       <ul className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-72 max-h-[150px] overflow-y-auto">
-        {selected.map((spot) => (
+        {selected?.map((spot) => (
           <li key={spot.spotid} onClick={() => rmSeleted(spot)}>
             <a>{spot.name}</a>
           </li>
@@ -127,7 +127,9 @@ export const Filter: FC = () => {
           <li
             key={spot.spot.spotid}
             className="py-0"
-            // onClick={() => addSeleted(spot as SpotResp)}
+            onClick={() =>
+              addSeleted({ spotid: spot.spot.spotid, name: spot.spot.name })
+            }
           >
             <a className="py-0">
               {spot.spot.name} {spot.num}
