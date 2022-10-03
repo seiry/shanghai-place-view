@@ -4,7 +4,7 @@ import { devtools, persist } from 'zustand/middleware'
 import { SpotResp, TimeParams } from '../lib/fetch'
 
 export interface TimeFrame {
-  name: string
+  name: TimeFrameName
   value: TimeParams
 }
 
