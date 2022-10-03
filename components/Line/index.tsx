@@ -4,7 +4,6 @@ import { FC } from 'react'
 import { Line } from 'react-chartjs-2'
 import styled from 'styled-components'
 import { useLineData } from '../../lib/data'
-import { useTimeFrame } from '../../store/filter'
 
 const LineWrap = styled.div`
   /* height: 300px; */
