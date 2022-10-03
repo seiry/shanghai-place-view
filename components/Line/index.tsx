@@ -57,7 +57,6 @@ const options: ChartOptions<'line'> = {
 
 export const LineChart: FC = () => {
   const lineData = useLineData()
-  const { name: timeFrameName } = useTimeFrame()
 
   return (
     <LineWrap>
