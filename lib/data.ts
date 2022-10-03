@@ -1,3 +1,4 @@
+import { ChartData } from 'chart.js'
 import dayjs from 'dayjs'
 import { useMemo } from 'react'
 import useSWR from 'swr'
@@ -14,7 +15,7 @@ const colors = [
   '#EE8133',
 ]
 
-export const useLineData = () => {
+export const useLineData = (): ChartData<'line', number[], string> => {
   const timeFrame = useTimeFrame()
   const selectedIds = useSelectedIds()
   // console.log(selectedIds)
@@ -48,7 +49,7 @@ export const useLineData = () => {
     }
     return {
       // TODO:special map label for across day
-      labels: maxOne?.map((d) => dayjs(d.time).format('HH:mm')),
+      labels: maxOne?.map((d) => dayjs(d.time).format('YYYY-MM-DD HH:mm')),
       datasets: data?.map((singleLine, i) => ({
         label: singleLine?.[0]?.spot.name,
         data: singleLine?.map((d) => d.num),

@@ -2,6 +2,7 @@ import {
   CategoryScale,
   Chart as ChartJS,
   ChartOptions,
+  ChartTypeRegistry,
   Legend,
   LinearScale,
   LineElement,
@@ -18,6 +19,7 @@ import dynamic from 'next/dynamic'
 import styled from 'styled-components'
 import { Filter } from '../components/Filter'
 import { useLineData } from '../lib/data'
+import dayjs from 'dayjs'
 
 const LineWrap = styled.div`
   /* height: 300px; */
@@ -36,7 +38,7 @@ ChartJS.register(
   Legend
 )
 
-export const options: ChartOptions = {
+export const options: ChartOptions<'line'> = {
   responsive: true,
   // animation: false,
   plugins: {
@@ -46,6 +48,15 @@ export const options: ChartOptions = {
     title: {
       display: false,
       text: 'Chart.js Line Chart',
+    },
+    tooltip: {
+      callbacks: {
+        footer(tooltipItems) {
+          const time = tooltipItems[0].label
+          return dayjs(time).format('dddd')
+          //TODO: maybe weather?
+        },
+      },
     },
   },
 }
