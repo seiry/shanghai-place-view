@@ -1,5 +1,4 @@
 import axios from 'axios'
-import { number } from 'ts-pattern/dist/patterns'
 
 export type Params = IdParams & TimeParams
 

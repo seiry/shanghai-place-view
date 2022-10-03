@@ -1,11 +1,10 @@
 import { ChartOptions } from 'chart.js'
 import dayjs from 'dayjs'
-import { FC, useMemo } from 'react'
+import { FC } from 'react'
 import { Line } from 'react-chartjs-2'
 import styled from 'styled-components'
-import { match } from 'ts-pattern'
 import { useLineData } from '../../lib/data'
-import { TimeFrameName, useTimeFrame } from '../../store/filter'
+import { useTimeFrame } from '../../store/filter'
 
 const LineWrap = styled.div`
   /* height: 300px; */
