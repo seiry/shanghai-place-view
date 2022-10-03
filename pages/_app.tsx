@@ -2,11 +2,10 @@ import ProgressBar from '@badrap/bar-of-progress'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import Router from 'next/router'
-import '../lib/dayjs.init'
 import { Eruda } from '../components/Eruda'
+import '../lib/dayjs.init'
 
 import 'tailwindcss/tailwind.css'
-import '../lib/dayjs.init'
 import '../styles/animation.css'
 import '../styles/globals.css'
 import '../styles/header.scss'
@@ -17,6 +16,7 @@ import {
   GlobalLayout,
 } from '../components/layout/GlobalLayout'
 
+// TODO: bar of progress
 const progress = new ProgressBar({
   size: 2,
   color: '#f1f8f9',

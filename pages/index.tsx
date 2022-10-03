@@ -1,68 +1,31 @@
 import {
   CategoryScale,
   Chart as ChartJS,
-  ChartOptions,
-  ChartTypeRegistry,
   Legend,
   LinearScale,
   LineElement,
   PointElement,
-  Title,
   Tooltip,
 } from 'chart.js'
-import Head from 'next/head'
-import { useRouter } from 'next/router'
-import { FC } from 'react'
-import { Line } from 'react-chartjs-2'
-import { makeTitleTag } from '../lib/utils'
 import dynamic from 'next/dynamic'
+import Head from 'next/head'
+import { FC } from 'react'
 import styled from 'styled-components'
 import { Filter } from '../components/Filter'
-import { useLineData } from '../lib/data'
-import dayjs from 'dayjs'
-
-const LineWrap = styled.div`
-  /* height: 300px; */
-  flex: 1;
-  position: relative;
-  user-select: none;
-`
+import { LineChart } from '../components/Line'
+import { makeTitleTag } from '../lib/utils'
 
 ChartJS.register(
   CategoryScale,
   LinearScale,
   PointElement,
   LineElement,
-  Title,
+  // Title,
   Tooltip,
   Legend
 )
 
-export const options: ChartOptions<'line'> = {
-  responsive: true,
-  // animation: false,
-  plugins: {
-    legend: {
-      position: 'top' as const,
-    },
-    title: {
-      display: false,
-      text: 'Chart.js Line Chart',
-    },
-    tooltip: {
-      callbacks: {
-        footer(tooltipItems) {
-          const time = tooltipItems[0].label
-          return dayjs(time).format('dddd')
-          //TODO: maybe weather?
-        },
-      },
-    },
-  },
-}
-
 const DataPage: FC = () => {
-  const lineData = useLineData()
   return (
     <Page>
       <Head>
@@ -70,9 +33,7 @@ const DataPage: FC = () => {
       </Head>
 
       <Filter />
-      <LineWrap>
-        <Line options={options} data={lineData} height="100%" />
-      </LineWrap>
+      <LineChart />
     </Page>
   )
 }
