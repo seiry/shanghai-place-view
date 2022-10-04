@@ -1,12 +1,3 @@
-import {
-  CategoryScale,
-  Chart as ChartJS,
-  Legend,
-  LinearScale,
-  LineElement,
-  PointElement,
-  Tooltip,
-} from 'chart.js'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import { FC } from 'react'
@@ -14,16 +5,6 @@ import styled from 'styled-components'
 import { Filter } from '../components/Filter'
 import { LineChart } from '../components/Line'
 import { makeTitleTag } from '../lib/utils'
-
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  // Title,
-  Tooltip,
-  Legend
-)
 
 const DataPage: FC = () => {
   return (

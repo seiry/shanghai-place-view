@@ -1,4 +1,16 @@
-import { ChartOptions } from 'chart.js'
+import {
+  ChartOptions,
+  Decimation,
+  TimeScale,
+  CategoryScale,
+  Chart as ChartJS,
+  Legend,
+  LinearScale,
+  LineElement,
+  PointElement,
+  Tooltip,
+} from 'chart.js'
+
 import dayjs from 'dayjs'
 import { FC } from 'react'
 import { Line } from 'react-chartjs-2'
@@ -12,8 +24,22 @@ const LineWrap = styled.div`
   user-select: none;
 `
 
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  // Title,
+  Tooltip,
+  Legend,
+  Decimation,
+  TimeScale
+)
+
 const options: ChartOptions<'line'> = {
   responsive: true,
+  // parsing: false,
+
   // animation: false,
   plugins: {
     legend: {
@@ -28,10 +54,16 @@ const options: ChartOptions<'line'> = {
         },
       },
     },
+    decimation: {
+      // enabled: true,
+      algorithm: 'lttb',
+      samples: 300,
+    },
   },
   scales: {
     x: {
       ticks: {
+        // source: 'auto',
         callback: function (val, index, ticks) {
           const date = dayjs(this.getLabelForValue(index))
           /*
@@ -50,13 +82,13 @@ const options: ChartOptions<'line'> = {
         maxRotation: 45,
         autoSkipPadding: 14,
       },
+      // type: 'linear',
     },
   },
 }
 
 export const LineChart: FC = () => {
   const lineData = useLineData()
-
   return (
     <LineWrap>
       <Line options={options} data={lineData} height="100%" />
