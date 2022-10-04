@@ -1,4 +1,5 @@
-import { useInterval, useTimeout } from 'beautiful-react-hooks'
+import useInterval from 'beautiful-react-hooks/useInterval'
+import useTimeout from 'beautiful-react-hooks/useTimeout'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import React, { FC, useEffect, useState } from 'react'
