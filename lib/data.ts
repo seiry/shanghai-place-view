@@ -1,4 +1,4 @@
-import { ChartData } from 'chart.js'
+import { ChartData, ScatterDataPoint } from 'chart.js'
 import dayjs from 'dayjs'
 import { useMemo } from 'react'
 import useSWR from 'swr'
@@ -73,7 +73,8 @@ const fixData = (data: TrendResp[][]) => {
   const finalData = removePaddingMock(paddedData)
   return finalData
 }
-export const useLineData = (): ChartData<'line', number[], string> => {
+
+export const useLineData = () => {
   const timeFrame = useTimeFrame()
   const selectedIds = useSelectedIds()
   // console.log(selectedIds)
@@ -85,7 +86,7 @@ export const useLineData = (): ChartData<'line', number[], string> => {
     },
     dataFetcher
   )
-  const lineData = useMemo(() => {
+  const lineData = useMemo<ChartData<'line'>>(() => {
     if (!originData) {
       return {
         labels: [],
@@ -98,12 +99,15 @@ export const useLineData = (): ChartData<'line', number[], string> => {
       labels: data[0]?.map((d) => d.time),
       datasets: data?.map((singleLine, i) => ({
         label: singleLine?.[0]?.spot.name,
-        data: singleLine?.map((d) => d.num),
+        data: singleLine?.map((d) => ({
+          x: dayjs(d.time).valueOf(),
+          y: d.num,
+        })),
         borderColor: colors[i % colors.length],
         backgroundColor: colors[i % colors.length] + '7f', //50alpha
       })),
     }
   }, [originData])
-  // console.log(lineData)
+
   return lineData
 }
