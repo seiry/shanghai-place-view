@@ -8,7 +8,7 @@
 const moduleExports = {
   reactStrictMode: true,
   poweredByHeader: false,
-  swcMinify: true,
+  // swcMinify: true,
   compiler: {
     // ssr and displayName are configured by default
     styledComponents: true,
