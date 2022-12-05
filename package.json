@@ -14,7 +14,7 @@
     "@prisma/client": "^4.3.1",
     "@sentry/nextjs": "^7.9.0",
     "@types/styled-components": "^5.1.26",
-    "axios": "^0.27.2",
+    "axios": "^1.2.1",
     "beautiful-react-hooks": "^3.10.0",
     "chart.js": "^3.9.1",
     "clsx": "^1.2.1",
