@@ -12,7 +12,7 @@
   "dependencies": {
     "@badrap/bar-of-progress": "^0.2.1",
     "@prisma/client": "^4.3.1",
-    "@sentry/nextjs": "^7.9.0",
+    "@sentry/nextjs": "^7.31.1",
     "@types/styled-components": "^5.1.26",
     "axios": "^0.27.2",
     "beautiful-react-hooks": "^3.10.0",
