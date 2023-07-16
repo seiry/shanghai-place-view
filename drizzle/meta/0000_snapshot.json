@@ -1,14 +1,14 @@
 {
   "version": "5",
   "dialect": "sqlite",
-  "id": "b57e42d9-fdfc-4e7a-b062-6539c4268f9f",
+  "id": "dc410c2b-5ba7-48d0-8604-5ac2e27258fe",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
-    "cities": {
-      "name": "cities",
+    "spot": {
+      "name": "spot",
       "columns": {
-        "id": {
-          "name": "id",
+        "spotId": {
+          "name": "spotId",
           "type": "integer",
           "primaryKey": true,
           "notNull": true,
@@ -19,27 +19,36 @@
           "type": "text",
           "primaryKey": false,
           "notNull": false,
-          "autoincrement": false
+          "autoincrement": false,
+          "default": "''"
         },
-        "country_id": {
-          "name": "country_id",
+        "logId": {
+          "name": "logId",
           "type": "integer",
           "primaryKey": false,
           "notNull": false,
           "autoincrement": false
         }
       },
-      "indexes": {},
+      "indexes": {
+        "spot_spotId_unique": {
+          "name": "spot_spotId_unique",
+          "columns": [
+            "spotId"
+          ],
+          "isUnique": true
+        }
+      },
       "foreignKeys": {
-        "cities_country_id_countries_id_fk": {
-          "name": "cities_country_id_countries_id_fk",
-          "tableFrom": "cities",
-          "tableTo": "countries",
+        "spot_logId_log_spotId_fk": {
+          "name": "spot_logId_log_spotId_fk",
+          "tableFrom": "spot",
+          "tableTo": "log",
           "columnsFrom": [
-            "country_id"
+            "logId"
           ],
           "columnsTo": [
-            "id"
+            "spotId"
           ],
           "onDelete": "no action",
           "onUpdate": "no action"
@@ -48,31 +57,66 @@
       "compositePrimaryKeys": {},
       "uniqueConstraints": {}
     },
-    "countries": {
-      "name": "countries",
+    "log": {
+      "name": "log",
       "columns": {
-        "id": {
-          "name": "id",
+        "logId": {
+          "name": "logId",
           "type": "integer",
           "primaryKey": true,
           "notNull": true,
           "autoincrement": false
         },
-        "name": {
-          "name": "name",
-          "type": "text",
+        "spotId": {
+          "name": "spotId",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "num": {
+          "name": "num",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "dayNum": {
+          "name": "dayNum",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "time": {
+          "name": "time",
+          "type": "integer",
           "primaryKey": false,
           "notNull": false,
           "autoincrement": false
         }
       },
       "indexes": {
-        "nameIdx": {
-          "name": "nameIdx",
+        "log_logId_unique": {
+          "name": "log_logId_unique",
           "columns": [
-            "name"
+            "logId"
           ],
           "isUnique": true
+        },
+        "spotIdIndex": {
+          "name": "spotIdIndex",
+          "columns": [
+            "spotId"
+          ],
+          "isUnique": false
+        },
+        "timeIndex": {
+          "name": "timeIndex",
+          "columns": [
+            "time"
+          ],
+          "isUnique": false
         }
       },
       "foreignKeys": {},

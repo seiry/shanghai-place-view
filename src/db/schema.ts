@@ -3,21 +3,27 @@ import {
   text,
   integer,
   uniqueIndex,
+  index,
 } from 'drizzle-orm/sqlite-core'
 
-export const countries = sqliteTable(
-  'countries',
+export const log = sqliteTable(
+  'log',
   {
-    id: integer('id').primaryKey(),
-    name: text('name'),
+    logId: integer('logId').unique().primaryKey(),
+    spotId: integer('spotId'),
+    num: integer('num'),
+    dayNum: integer('dayNum'),
+    time: integer('time'), //datetime
   },
-  (countries) => ({
-    nameIdx: uniqueIndex('nameIdx').on(countries.name),
+  (log) => ({
+    spotIdIndex: index('spotIdIndex').on(log.spotId),
+    timeIndex: index('timeIndex').on(log.time),
   }),
 )
 
-export const cities = sqliteTable('cities', {
-  id: integer('id').primaryKey(),
-  name: text('name'),
-  countryId: integer('country_id').references(() => countries.id),
+export const cities = sqliteTable('spot', {
+  spotId: integer('spotId').unique().primaryKey(),
+  name: text('name').default(''),
+
+  logId: integer('logId').references(() => log.spotId),
 })
