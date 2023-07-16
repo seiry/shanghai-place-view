@@ -4473,6 +4473,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dotenv@npm:^16.3.1":
+  version: 16.3.1
+  resolution: "dotenv@npm:16.3.1"
+  checksum: 15d75e7279018f4bafd0ee9706593dd14455ddb71b3bcba9c52574460b7ccaf67d5cf8b2c08a5af1a9da6db36c956a04a1192b101ee102a3e0cf8817bbcf3dfd
+  languageName: node
+  linkType: hard
+
 "dreamopt@npm:~0.8.0":
   version: 0.8.0
   resolution: "dreamopt@npm:0.8.0"
@@ -8827,6 +8834,7 @@ __metadata:
     cypress: ^12.17.1
     daisyui: ^3.2.1
     dayjs: ^1.11.5
+    dotenv: ^16.3.1
     drizzle-kit: ^0.19.5
     drizzle-orm: ^0.27.2
     drizzle-zod: ^0.4.4
