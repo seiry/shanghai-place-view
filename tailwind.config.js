@@ -1,7 +1,7 @@
 // tailwind.config.js
 module.exports = {
   // purge: [],
-  content: ['./pages/**/*.tsx', './components/**/*.tsx'],
+  content: ['./src/**/*.tsx'],
   theme: {
     extend: {},
   },
@@ -9,5 +9,9 @@ module.exports = {
   plugins: [require('daisyui')],
   daisyui: {
     themes: ['cupcake'],
+    base: true,
+    styled: true,
+    utils: true,
+    logs: false,
   },
 }
