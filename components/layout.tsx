@@ -42,17 +42,15 @@ const Layout: FC<React.PropsWithChildren<Props>> = ({ children, home }) => {
         ) : (
           <>
             <Link href="/">
-              <a>
-                <img
-                  src="/images/profile.jpg"
-                  className={` ${styles.headerImage} ${utilStyles.borderCircle} animate-bounce`}
-                  alt={name}
-                />
-              </a>
+              <img
+                src="/images/profile.jpg"
+                className={` ${styles.headerImage} ${utilStyles.borderCircle} animate-bounce`}
+                alt={name}
+              />
             </Link>
             <h2 className={utilStyles.headingLg}>
-              <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
+              <Link href="/" className={utilStyles.colorInherit}>
+                {name}
               </Link>
             </h2>
           </>
@@ -61,9 +59,7 @@ const Layout: FC<React.PropsWithChildren<Props>> = ({ children, home }) => {
       <main>{children}</main>
       {!home && (
         <div className={styles.backToHome}>
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
+          <Link href="/">← Back to home</Link>
         </div>
       )}
     </div>
