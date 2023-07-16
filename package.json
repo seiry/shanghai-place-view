@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@badrap/bar-of-progress": "^0.2.2",
+    "@libsql/client": "^0.3.0",
     "@prisma/client": "^5.0.0",
     "@sentry/nextjs": "^7.58.1",
     "@types/styled-components": "^5.1.26",
@@ -21,7 +22,10 @@
     "cypress": "^12.17.1",
     "daisyui": "^3.2.1",
     "dayjs": "^1.11.5",
+    "drizzle-orm": "^0.27.2",
+    "drizzle-zod": "^0.4.4",
     "flatpickr": "^4.6.13",
+    "jotai": "^2.2.2",
     "next": "^13.4.7",
     "pinyin-engine": "^1.2.2",
     "postcss-flexbugs-fixes": "^5.0.2",
@@ -35,6 +39,7 @@
     "styled-components": "^6.0.4",
     "swr": "^2.2.0",
     "ts-pattern": "^5.0.1",
+    "zod": "^3.21.4",
     "zustand": "^4.1.4"
   },
   "devDependencies": {
@@ -45,6 +50,7 @@
     "@types/react-dom": "^18.2.6",
     "@types/react-flatpickr": "^3.8.8",
     "autoprefixer": "^10.4.8",
+    "drizzle-kit": "^0.19.5",
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.10",
     "eslint-config-prettier": "^8.8.0",
