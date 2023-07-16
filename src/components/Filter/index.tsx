@@ -32,8 +32,12 @@ export const Filter: FC = () => {
   } = useFilterStore()
   const timeFrame = useTimeFrame()
 
-  const { data: spots } = useSWR('spots', getFetcher<SpotResp[]>)
-  const { data: maxList } = useSWR('max', getFetcher<TrendResp[]>)
+  const { data: spots } = useSWR('spots', getFetcher<SpotResp[]>, {
+    suspense: true,
+  })
+  const { data: maxList } = useSWR('max', getFetcher<TrendResp[]>, {
+    suspense: true,
+  })
   const pinyinList = useMemo(
     () => new Pinyin(spots ?? [], ['name', 'id']),
     [spots]

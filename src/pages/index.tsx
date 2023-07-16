@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
-import { FC } from 'react'
+import { FC, Suspense } from 'react'
 import styled from 'styled-components'
 import { Filter } from '@/components/Filter'
 import { LineChart } from '@/components/Line'
@@ -13,8 +13,12 @@ const DataPage: FC = () => {
         <title>{makeTitleTag`trends`}</title>
       </Head>
 
-      <Filter />
-      <LineChart />
+      <Suspense fallback={<>loading...</>}>
+        <Filter />
+      </Suspense>
+      <Suspense fallback={<>loading...</>}>
+        <LineChart />
+      </Suspense>
     </Page>
   )
 }
