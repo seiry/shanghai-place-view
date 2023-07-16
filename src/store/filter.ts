@@ -1,7 +1,7 @@
 import dayjs from 'dayjs'
 import { create } from 'zustand'
 import { devtools, persist } from 'zustand/middleware'
-import { SpotResp, TimeParams } from '../lib/fetch'
+import { SpotResp, TimeParams } from '@/lib/fetch'
 
 export interface TimeFrame {
   name: TimeFrameName

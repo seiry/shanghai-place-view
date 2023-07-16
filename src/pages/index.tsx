@@ -2,9 +2,9 @@ import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import { FC } from 'react'
 import styled from 'styled-components'
-import { Filter } from '../components/Filter'
-import { LineChart } from '../components/Line'
-import { makeTitleTag } from '../lib/utils'
+import { Filter } from '@/components/Filter'
+import { LineChart } from '@/components/Line'
+import { makeTitleTag } from '@/lib/utils'
 
 const DataPage: FC = () => {
   return (

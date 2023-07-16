@@ -1,3 +1,5 @@
+'use client'
+
 import {
   ChartOptions,
   Decimation,
@@ -12,10 +14,11 @@ import {
 } from 'chart.js'
 
 import dayjs from 'dayjs'
-import { FC } from 'react'
+import { Component, FC, Suspense } from 'react'
 import { Line } from 'react-chartjs-2'
 import styled from 'styled-components'
 import { useLineData } from '../../lib/data'
+import { ErrorBoundary } from '@sentry/nextjs'
 
 const LineWrap = styled.div`
   /* height: 300px; */
@@ -90,8 +93,10 @@ const options: ChartOptions<'line'> = {
 export const LineChart: FC = () => {
   const lineData = useLineData()
   return (
-    <LineWrap>
-      <Line options={options} data={lineData} height="100%" />
-    </LineWrap>
+    <Suspense fallback={<>loading</>}>
+      <LineWrap>
+        <Line options={options} data={lineData} height="100%" />
+      </LineWrap>
+    </Suspense>
   )
 }

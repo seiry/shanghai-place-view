@@ -85,6 +85,7 @@ export const useLineData = () => {
       before: timeFrame.value.before,
     },
     dataFetcher
+    // { suspense: true }
   )
   const lineData = useMemo<ChartData<'line'>>(() => {
     if (!originData) {
