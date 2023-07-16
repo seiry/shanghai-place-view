@@ -40,7 +40,7 @@ export const Filter: FC = () => {
   })
   const pinyinList = useMemo(
     () => new Pinyin(spots ?? [], ['name', 'id']),
-    [spots]
+    [spots],
   )
 
   const [searchText, setSearchText] = useState('')
@@ -166,7 +166,7 @@ export const Filter: FC = () => {
         {timeRangePickerValue?.[0] && (
           <span>
             {dayjs(
-              isPicking ? timeRangePickerValue?.[0] : timeFrame.value.from
+              isPicking ? timeRangePickerValue?.[0] : timeFrame.value.from,
             ).format(pickFormat)}
           </span>
         )}
@@ -175,7 +175,7 @@ export const Filter: FC = () => {
           <span>
             {' '}
             {dayjs(
-              isPicking ? timeRangePickerValue?.[1] : timeFrame.value.before
+              isPicking ? timeRangePickerValue?.[1] : timeFrame.value.before,
             ).format(pickFormat)}
           </span>
         )}

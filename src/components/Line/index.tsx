@@ -1,24 +1,23 @@
 'use client'
 
 import {
-  ChartOptions,
-  Decimation,
-  TimeScale,
   CategoryScale,
   Chart as ChartJS,
+  ChartOptions,
+  Decimation,
   Legend,
-  LinearScale,
   LineElement,
+  LinearScale,
   PointElement,
+  TimeScale,
   Tooltip,
 } from 'chart.js'
 
 import dayjs from 'dayjs'
-import { Component, FC, Suspense } from 'react'
+import { FC, Suspense } from 'react'
 import { Line } from 'react-chartjs-2'
 import styled from 'styled-components'
 import { useLineData } from '../../lib/data'
-import { ErrorBoundary } from '@sentry/nextjs'
 
 const LineWrap = styled.div`
   /* height: 300px; */
@@ -36,7 +35,7 @@ ChartJS.register(
   Tooltip,
   Legend,
   Decimation,
-  TimeScale
+  TimeScale,
 )
 
 const options: ChartOptions<'line'> = {

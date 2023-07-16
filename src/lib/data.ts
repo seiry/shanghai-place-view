@@ -1,9 +1,9 @@
-import { ChartData, ScatterDataPoint } from 'chart.js'
+import { ChartData } from 'chart.js'
 import dayjs from 'dayjs'
 import { useMemo } from 'react'
 import useSWR from 'swr'
 import { useSelectedIds, useTimeFrame } from '../store/filter'
-import { dataFetcher, Params, TrendResp } from './fetch'
+import { Params, TrendResp, dataFetcher } from './fetch'
 
 const colors = [
   '#65c3c8',
@@ -85,7 +85,7 @@ export const useLineData = () => {
       before: timeFrame.value.before,
     },
     dataFetcher,
-    { suspense: true }
+    { suspense: true },
   )
   const lineData = useMemo<ChartData<'line'>>(() => {
     if (!originData) {
