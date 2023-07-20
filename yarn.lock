@@ -2427,25 +2427,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@libsql/client@npm:^0.3.0":
-  version: 0.3.0
-  resolution: "@libsql/client@npm:0.3.0"
+"@libsql/client@npm:^0.3.1":
+  version: 0.3.1
+  resolution: "@libsql/client@npm:0.3.1"
   dependencies:
-    "@libsql/hrana-client": ^0.4.2
+    "@libsql/hrana-client": ^0.4.3
     better-sqlite3: ^8.0.1
     js-base64: ^3.7.5
-  checksum: de8083c12cbf0f3517c60f8fc790ff3b8cccecb70c313e4f0dbd1bff376de24920e1972c67014ab61fb01157998093ee459329e29e5e2e771da2e43c86e0ad65
+  checksum: 6faa7573bb6f69e8a645d77547f8457ced6f174031ea8bcbe71604187ec28f0722d7dbd0fc1c9186c3de730b8c4035ca30f003d839061dae55e188dccd4d7fee
   languageName: node
   linkType: hard
 
-"@libsql/hrana-client@npm:^0.4.2":
-  version: 0.4.2
-  resolution: "@libsql/hrana-client@npm:0.4.2"
+"@libsql/hrana-client@npm:^0.4.3":
+  version: 0.4.3
+  resolution: "@libsql/hrana-client@npm:0.4.3"
   dependencies:
     "@libsql/isomorphic-fetch": ^0.1.1
     "@libsql/isomorphic-ws": ^0.1.2
     js-base64: ^3.7.5
-  checksum: e2fc438f09110e872ab588320174be62ea1ab04f07fa8c7fb7ca069fd8ff5a49ae5c7e113efeba98169508d635d7aec68a8a0efa5db08cbec2b28f56cff4e611
+  checksum: 8901eef441f4b773c7428108d4a6d5a8758ea320be4cc2964bb3ac077be2c20c58508703167a153c02f6673410bc9e6f0b6b73d75a7d319ac40ed540613a3f9a
   languageName: node
   linkType: hard
 
@@ -8816,7 +8816,7 @@ __metadata:
   resolution: "shanghai-place-view@workspace:."
   dependencies:
     "@badrap/bar-of-progress": ^0.2.2
-    "@libsql/client": ^0.3.0
+    "@libsql/client": ^0.3.1
     "@prisma/client": ^5.0.0
     "@sentry/nextjs": ^7.58.1
     "@total-typescript/ts-reset": ^0.4.2
