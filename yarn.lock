@@ -1932,10 +1932,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@drizzle-team/studio@npm:^0.0.1":
-  version: 0.0.1
-  resolution: "@drizzle-team/studio@npm:0.0.1"
-  checksum: 352b02200e51fceff48cadf6080276a5f6c48a47786ae067f883de38fa6cd0ed546c3517c9a4e88aa62966fb2315171a49a0dc0246c74e05a584910b44e0dd20
+"@drizzle-team/studio@npm:^0.0.5":
+  version: 0.0.5
+  resolution: "@drizzle-team/studio@npm:0.0.5"
+  checksum: 0b8883f326aebe6f9c8912fca33be6369568a5617fb1a0f4211add5f2f05c4db9450ffd265de29ac1a5891b592b99dc54893131ac43e3c72517c4978c02811fd
   languageName: node
   linkType: hard
 
@@ -4489,11 +4489,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"drizzle-kit@npm:^0.19.5":
-  version: 0.19.5
-  resolution: "drizzle-kit@npm:0.19.5"
+"drizzle-kit@npm:^0.19.10":
+  version: 0.19.10
+  resolution: "drizzle-kit@npm:0.19.10"
   dependencies:
-    "@drizzle-team/studio": ^0.0.1
+    "@drizzle-team/studio": ^0.0.5
     "@esbuild-kit/esm-loader": ^2.5.5
     camelcase: ^7.0.1
     chalk: ^5.2.0
@@ -4507,7 +4507,7 @@ __metadata:
     zod: ^3.20.2
   bin:
     drizzle-kit: index.cjs
-  checksum: e34d2a7dbd7682b2aaceb6774c54d24b630e1cbb9c27fa31623e4314cb22ec056e54dac340cab5a2dc8447e267ad79abf6ef1f3d522753d051a84a0b998dc0ac
+  checksum: 7461f412d05bcf0ce7dd3eb7be12b3522275c43da73f8cbe73d7ca1957cf3f2f45d3d7554c342d2c3a7d1289ba41b36242fa8aa65bc18a6fcd6f53b975a85e43
   languageName: node
   linkType: hard
 
@@ -8835,7 +8835,7 @@ __metadata:
     daisyui: ^3.2.1
     dayjs: ^1.11.5
     dotenv: ^16.3.1
-    drizzle-kit: ^0.19.5
+    drizzle-kit: ^0.19.10
     drizzle-orm: ^0.27.2
     drizzle-zod: ^0.4.4
     eslint: 8.45.0
