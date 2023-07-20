@@ -21,7 +21,7 @@
     "chart.js": "^4.3.0",
     "clsx": "^2.0.0",
     "cypress": "^12.17.1",
-    "daisyui": "^3.2.1",
+    "daisyui": "^3.3.1",
     "dayjs": "^1.11.5",
     "drizzle-orm": "^0.27.2",
     "drizzle-zod": "^0.4.4",
