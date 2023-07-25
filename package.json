@@ -47,7 +47,7 @@
     "@total-typescript/ts-reset": "^0.4.2",
     "@types/pinyin-engine": "^1.1.0",
     "@types/prismjs": "^1.26.0",
-    "@types/react": "18.2.15",
+    "@types/react": "18.2.16",
     "@types/react-dom": "^18.2.6",
     "@types/react-flatpickr": "^3.8.8",
     "autoprefixer": "^10.4.8",
