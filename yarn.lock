@@ -8864,7 +8864,7 @@ __metadata:
     react-flatpickr: ^3.10.13
     sass: ^1.64.2
     sharp: ^0.32.4
-    styled-components: ^6.0.4
+    styled-components: ^6.0.7
     swr: ^2.2.0
     tailwindcss: ^3.2.7
     ts-pattern: ^5.0.5
@@ -9250,9 +9250,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"styled-components@npm:^6.0.4":
-  version: 6.0.4
-  resolution: "styled-components@npm:6.0.4"
+"styled-components@npm:^6.0.7":
+  version: 6.0.7
+  resolution: "styled-components@npm:6.0.7"
   dependencies:
     "@babel/cli": ^7.21.0
     "@babel/core": ^7.21.0
@@ -9280,7 +9280,7 @@ __metadata:
   peerDependenciesMeta:
     babel-plugin-styled-components:
       optional: true
-  checksum: 15c5701c2606cc343d1d7a9369bca96e76d3be755dfc61198ba8fcd2961a568f4230ffbfb9dda67691cd31cf40a0e455ba6379e26a33700f3c6e69d12814ff29
+  checksum: 38645f38f145225e456f8f9303f5be1d988180e0e3d84d1f3e1d14fb006c7deb69704745e266d61016616a154938697d011a0bff6eaeb7dd25dbba659e2411f7
   languageName: node
   linkType: hard
 
