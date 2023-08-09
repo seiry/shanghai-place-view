@@ -6,7 +6,6 @@ const handler: NextApiHandler = async (req, res) => {
   const data = await db.select().from(spot).run()
 
   res.status(200).json(data.rows)
-  return
 }
 
 export default handler
