@@ -8,9 +8,7 @@ CREATE TABLE `log` (
 --> statement-breakpoint
 CREATE TABLE `spot` (
 	`spotId` integer PRIMARY KEY NOT NULL,
-	`name` text DEFAULT '',
-	`logId` integer,
-	FOREIGN KEY (`logId`) REFERENCES `log`(`spotId`) ON UPDATE no action ON DELETE no action
+	`name` text DEFAULT ''
 );
 --> statement-breakpoint
 CREATE UNIQUE INDEX `log_logId_unique` ON `log` (`logId`);--> statement-breakpoint

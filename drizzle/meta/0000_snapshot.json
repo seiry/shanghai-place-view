@@ -1,7 +1,7 @@
 {
   "version": "5",
   "dialect": "sqlite",
-  "id": "e0817fef-ed1f-4d11-9770-6c54ea60e673",
+  "id": "fe2507b7-04ab-4c78-bf8d-2d91a55d0d9a",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "log": {
@@ -87,13 +87,6 @@
           "notNull": false,
           "autoincrement": false,
           "default": "''"
-        },
-        "logId": {
-          "name": "logId",
-          "type": "integer",
-          "primaryKey": false,
-          "notNull": false,
-          "autoincrement": false
         }
       },
       "indexes": {
@@ -119,21 +112,7 @@
           "isUnique": false
         }
       },
-      "foreignKeys": {
-        "spot_logId_log_spotId_fk": {
-          "name": "spot_logId_log_spotId_fk",
-          "tableFrom": "spot",
-          "tableTo": "log",
-          "columnsFrom": [
-            "logId"
-          ],
-          "columnsTo": [
-            "spotId"
-          ],
-          "onDelete": "no action",
-          "onUpdate": "no action"
-        }
-      },
+      "foreignKeys": {},
       "compositePrimaryKeys": {},
       "uniqueConstraints": {}
     }
