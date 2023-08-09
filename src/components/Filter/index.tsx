@@ -13,6 +13,7 @@ import {
   useFilterStore,
   useTimeFrame,
 } from '../../store/filter'
+import { selectLogSchema, selectSpotSchema } from '@/db/schema'
 
 const ToolBar = styled.div`
   display: flex;
@@ -32,9 +33,10 @@ export const Filter: FC = () => {
   } = useFilterStore()
   const timeFrame = useTimeFrame()
 
-  const { data: spots } = useSWR('spots', getFetcher<SpotResp[]>, {
+  const { data: spotsData } = useSWR('spots', getFetcher<any[]>, {
     suspense: true,
   })
+  const spots = spotsData?.map((e) => selectSpotSchema.parse(e))
   const { data: maxList } = useSWR('max', getFetcher<TrendResp[]>, {
     suspense: true,
   })
