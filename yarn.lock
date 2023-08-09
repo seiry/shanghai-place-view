@@ -1980,10 +1980,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@drizzle-team/studio@npm:^0.0.1":
-  version: 0.0.1
-  resolution: "@drizzle-team/studio@npm:0.0.1"
-  checksum: 352b02200e51fceff48cadf6080276a5f6c48a47786ae067f883de38fa6cd0ed546c3517c9a4e88aa62966fb2315171a49a0dc0246c74e05a584910b44e0dd20
+"@drizzle-team/studio@npm:^0.0.5":
+  version: 0.0.5
+  resolution: "@drizzle-team/studio@npm:0.0.5"
+  checksum: 0b8883f326aebe6f9c8912fca33be6369568a5617fb1a0f4211add5f2f05c4db9450ffd265de29ac1a5891b592b99dc54893131ac43e3c72517c4978c02811fd
   languageName: node
   linkType: hard
 
@@ -2475,25 +2475,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@libsql/client@npm:^0.3.0":
-  version: 0.3.0
-  resolution: "@libsql/client@npm:0.3.0"
+"@libsql/client@npm:^0.3.1":
+  version: 0.3.1
+  resolution: "@libsql/client@npm:0.3.1"
   dependencies:
-    "@libsql/hrana-client": ^0.4.2
+    "@libsql/hrana-client": ^0.4.3
     better-sqlite3: ^8.0.1
     js-base64: ^3.7.5
-  checksum: de8083c12cbf0f3517c60f8fc790ff3b8cccecb70c313e4f0dbd1bff376de24920e1972c67014ab61fb01157998093ee459329e29e5e2e771da2e43c86e0ad65
+  checksum: 6faa7573bb6f69e8a645d77547f8457ced6f174031ea8bcbe71604187ec28f0722d7dbd0fc1c9186c3de730b8c4035ca30f003d839061dae55e188dccd4d7fee
   languageName: node
   linkType: hard
 
-"@libsql/hrana-client@npm:^0.4.2":
-  version: 0.4.2
-  resolution: "@libsql/hrana-client@npm:0.4.2"
+"@libsql/hrana-client@npm:^0.4.3":
+  version: 0.4.3
+  resolution: "@libsql/hrana-client@npm:0.4.3"
   dependencies:
     "@libsql/isomorphic-fetch": ^0.1.1
     "@libsql/isomorphic-ws": ^0.1.2
     js-base64: ^3.7.5
-  checksum: e2fc438f09110e872ab588320174be62ea1ab04f07fa8c7fb7ca069fd8ff5a49ae5c7e113efeba98169508d635d7aec68a8a0efa5db08cbec2b28f56cff4e611
+  checksum: 8901eef441f4b773c7428108d4a6d5a8758ea320be4cc2964bb3ac077be2c20c58508703167a153c02f6673410bc9e6f0b6b73d75a7d319ac40ed540613a3f9a
   languageName: node
   linkType: hard
 
@@ -4577,11 +4577,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"drizzle-kit@npm:^0.19.5":
-  version: 0.19.5
-  resolution: "drizzle-kit@npm:0.19.5"
+"drizzle-kit@npm:^0.19.12":
+  version: 0.19.12
+  resolution: "drizzle-kit@npm:0.19.12"
   dependencies:
-    "@drizzle-team/studio": ^0.0.1
+    "@drizzle-team/studio": ^0.0.5
     "@esbuild-kit/esm-loader": ^2.5.5
     camelcase: ^7.0.1
     chalk: ^5.2.0
@@ -4595,7 +4595,7 @@ __metadata:
     zod: ^3.20.2
   bin:
     drizzle-kit: index.cjs
-  checksum: e34d2a7dbd7682b2aaceb6774c54d24b630e1cbb9c27fa31623e4314cb22ec056e54dac340cab5a2dc8447e267ad79abf6ef1f3d522753d051a84a0b998dc0ac
+  checksum: 36cbcbd5530a76c652fa1db7df82e644c15ac6681a42c7c578c2b7c6d51930f64360e93b467e50caad7ff84f4f244ee0971bc4583b2c7b52c0b7fad002a6c008
   languageName: node
   linkType: hard
 
@@ -8944,7 +8944,7 @@ __metadata:
   resolution: "shanghai-place-view@workspace:."
   dependencies:
     "@badrap/bar-of-progress": ^0.2.2
-    "@libsql/client": ^0.3.0
+    "@libsql/client": ^0.3.1
     "@prisma/client": ^5.0.0
     "@sentry/nextjs": ^7.58.1
     "@total-typescript/ts-reset": ^0.4.2
@@ -8963,16 +8963,17 @@ __metadata:
     daisyui: ^3.5.1
     dayjs: ^1.11.5
     dotenv: ^16.3.1
-    drizzle-kit: ^0.19.5
+    drizzle-kit: ^0.19.12
     drizzle-orm: ^0.28.1
     drizzle-zod: ^0.5.0
-    eslint: 8.46.0
-    eslint-config-next: 13.4.13
+    esbuild-runner: ^2.2.2
+    eslint: 8.45.0
+    eslint-config-next: 13.4.10
     eslint-config-prettier: ^9.0.0
     eslint-plugin-prettier: ^5.0.0
     flatpickr: ^4.6.13
     jotai: ^2.3.1
-    next: ^13.4.13
+    next: ^13.4.7
     pinyin-engine: ^1.2.2
     postcss: ^8.4.27
     postcss-flexbugs-fixes: ^5.0.2
