@@ -4904,6 +4904,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"esbuild-runner@npm:^2.2.2":
+  version: 2.2.2
+  resolution: "esbuild-runner@npm:2.2.2"
+  dependencies:
+    source-map-support: 0.5.21
+    tslib: 2.4.0
+  peerDependencies:
+    esbuild: "*"
+  bin:
+    esr: bin/esr.js
+  checksum: 9e5baf87e54b4f73c1ee45afb56435158d0ad35eb233ce6ad7a354f29746538e163f735d5b2739c737a6cf408283de14bbc86fdf726823047aa373d0e19a2e6b
+  languageName: node
+  linkType: hard
+
 "esbuild@npm:^0.18.6":
   version: 0.18.13
   resolution: "esbuild@npm:0.18.13"
@@ -9151,7 +9165,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"source-map-support@npm:^0.5.21":
+"source-map-support@npm:0.5.21, source-map-support@npm:^0.5.21":
   version: 0.5.21
   resolution: "source-map-support@npm:0.5.21"
   dependencies:

@@ -24,7 +24,7 @@ export const spot = sqliteTable(
     logId: integer('logId').references(() => log.spotId),
   },
   (SPOT) => ({
-    spotIdIndex: index('spotIdIndex').on(SPOT.spotId),
+    idIndex: index('idIndex').on(SPOT.spotId),
     nameIndex: index('nameIndex').on(SPOT.name),
   }),
 )

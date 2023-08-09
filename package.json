@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint --fix",
     "cypress": "cypress open --config baseUrl=http://127.0.0.1:3000",
-    "generate": "drizzle-kit generate:sqlite"
+    "generate": "drizzle-kit generate:sqlite",
+    "migration": "esr ./src/db/migration.ts"
   },
   "dependencies": {
     "@badrap/bar-of-progress": "^0.2.2",

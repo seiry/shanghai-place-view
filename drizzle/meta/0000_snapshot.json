@@ -1,7 +1,7 @@
 {
   "version": "5",
   "dialect": "sqlite",
-  "id": "d6eca6fd-323e-4421-af91-dfcde1bd8817",
+  "id": "e0817fef-ed1f-4d11-9770-6c54ea60e673",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "log": {
@@ -104,8 +104,8 @@
           ],
           "isUnique": true
         },
-        "spotIdIndex": {
-          "name": "spotIdIndex",
+        "idIndex": {
+          "name": "idIndex",
           "columns": [
             "spotId"
           ],
