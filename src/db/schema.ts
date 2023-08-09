@@ -22,7 +22,7 @@ export const spot = sqliteTable(
     spotId: integer('spotId').unique().primaryKey(),
     name: text('name').default(''),
 
-    logId: integer('logId').references(() => log.spotId),
+    // logId: integer('logId').references(() => log.spotId),
   },
   (SPOT) => ({
     idIndex: index('idIndex').on(SPOT.spotId),
