@@ -1,4 +1,5 @@
 import { sqliteTable, text, integer, index } from 'drizzle-orm/sqlite-core'
+import type { InferModel } from 'drizzle-orm'
 
 export const log = sqliteTable(
   'log',
@@ -28,3 +29,9 @@ export const spot = sqliteTable(
     nameIndex: index('nameIndex').on(SPOT.name),
   }),
 )
+
+export type Log = InferModel<typeof log> // return type when queried
+export type Spot = InferModel<typeof spot> // return type when queried
+
+export type InsertLog = InferModel<typeof log, 'insert'> // insert type
+export type InsertSpot = InferModel<typeof spot, 'insert'> // insert type
