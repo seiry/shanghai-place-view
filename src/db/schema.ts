@@ -1,5 +1,6 @@
 import { sqliteTable, text, index, int } from 'drizzle-orm/sqlite-core'
 import type { InferModel } from 'drizzle-orm'
+import { createInsertSchema } from 'drizzle-zod'
 
 export const log = sqliteTable(
   'log',
@@ -35,3 +36,6 @@ export type Spot = InferModel<typeof spot> // return type when queried
 
 export type InsertLog = InferModel<typeof log, 'insert'> // insert type
 export type InsertSpot = InferModel<typeof spot, 'insert'> // insert type
+
+export const insertLogSchema = createInsertSchema(log)
+export const insertSpotSchema = createInsertSchema(spot)

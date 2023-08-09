@@ -1,20 +1,26 @@
 import fetch from 'node-fetch'
 import dayjs from 'dayjs'
 import { db } from '@/db/turso'
-import { InsertLog, InsertSpot, log, spot } from '@/db/schema'
+import {
+  InsertLog,
+  InsertSpot,
+  insertLogSchema,
+  insertSpotSchema,
+  log,
+  spot,
+} from '@/db/schema'
 
 export async function main() {
   const data = await fetchData()
   await syncSpot(data)
   const time = dayjs().unix()
-  const sqlDataArr = data.map(
-    (rawData) =>
-      ({
-        spotId: +rawData.id,
-        num: +rawData.num,
-        dayNum: +rawData.day_num,
-        time,
-      }) satisfies InsertLog,
+  const sqlDataArr = data.map((rawData) =>
+    insertLogSchema.parse({
+      spotId: +rawData.id,
+      num: +rawData.num,
+      dayNum: +rawData.day_num,
+      time,
+    }),
   )
   db.insert(log).values(sqlDataArr).run()
 }
@@ -106,12 +112,11 @@ const fetchData = async () => {
 }
 
 const syncSpot = async (data: LocationInfo[]) => {
-  const sqlDataArr = data.map(
-    (rawData) =>
-      ({
-        spotId: +rawData.id,
-        name: rawData.name,
-      }) satisfies InsertSpot,
+  const sqlDataArr = data.map((rawData) =>
+    insertSpotSchema.parse({
+      spotId: +rawData.id,
+      name: rawData.name,
+    }),
   )
   db.insert(spot).values(sqlDataArr).onConflictDoNothing().run()
 }
