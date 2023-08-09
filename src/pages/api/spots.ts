@@ -3,9 +3,9 @@ import { db } from '@/db/turso'
 import { NextApiHandler } from 'next'
 
 const handler: NextApiHandler = async (req, res) => {
-  const data = db.select().from(spot)
+  const data = await db.select().from(spot).run()
 
-  res.status(200).json(data)
+  res.status(200).json(data.rows)
   return
 }
 
