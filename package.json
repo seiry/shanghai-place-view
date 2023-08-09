@@ -23,7 +23,7 @@
     "cypress": "^12.17.1",
     "daisyui": "^3.2.1",
     "dayjs": "^1.11.5",
-    "drizzle-orm": "^0.27.2",
+    "drizzle-orm": "^0.28.1",
     "drizzle-zod": "^0.4.4",
     "flatpickr": "^4.6.13",
     "jotai": "^2.2.2",
