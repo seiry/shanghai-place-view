@@ -1,32 +1,22 @@
-import { PrismaClient, Prisma } from '@prisma/client'
 import fetch from 'node-fetch'
 import dayjs from 'dayjs'
-const prisma = new PrismaClient({
-  log: [
-    {
-      emit: 'event',
-      level: 'query',
-    },
-  ],
-})
-
-prisma.$on('query', async (e) => {
-  // console.log(`${e.query}`)
-})
+import { db } from '@/db/turso'
+import { InsertLog, InsertSpot, log, spot } from '@/db/schema'
 
 export async function main() {
   const data = await fetchData()
   await syncSpot(data)
-  const time = dayjs().toDate()
-  const sqlDataArr: Prisma.logCreateManyInput[] = data.map((rawData) => ({
-    spotid: +rawData.id,
-    num: +rawData.num,
-    daynum: +rawData.day_num,
-    time,
-  }))
-  await prisma.log.createMany({
-    data: sqlDataArr,
-  })
+  const time = dayjs().unix()
+  const sqlDataArr = data.map(
+    (rawData) =>
+      ({
+        spotId: +rawData.id,
+        num: +rawData.num,
+        dayNum: +rawData.day_num,
+        time,
+      }) satisfies InsertLog,
+  )
+  db.insert(log).values(sqlDataArr).run()
 }
 
 const dataUrl =
@@ -116,22 +106,14 @@ const fetchData = async () => {
 }
 
 const syncSpot = async (data: LocationInfo[]) => {
-  const sqlDataArr: Prisma.spotCreateInput[] = data.map((rawData) => ({
-    spotid: +rawData.id,
-    name: rawData.name,
-  }))
-  await prisma.spot.createMany({
-    data: sqlDataArr,
-    skipDuplicates: true,
-  })
+  const sqlDataArr = data.map(
+    (rawData) =>
+      ({
+        spotId: +rawData.id,
+        name: rawData.name,
+      }) satisfies InsertSpot,
+  )
+  db.insert(spot).values(sqlDataArr).onConflictDoNothing().run()
 }
-export const run = () => {
-  main()
-    .catch((e) => {
-      throw e
-    })
-    .finally(async () => {
-      await prisma.$disconnect()
-    })
-}
-run()
+
+main()

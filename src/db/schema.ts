@@ -1,14 +1,14 @@
-import { sqliteTable, text, integer, index } from 'drizzle-orm/sqlite-core'
+import { sqliteTable, text, index, int } from 'drizzle-orm/sqlite-core'
 import type { InferModel } from 'drizzle-orm'
 
 export const log = sqliteTable(
   'log',
   {
-    logId: integer('logId').unique().primaryKey(),
-    spotId: integer('spotId'),
-    num: integer('num'),
-    dayNum: integer('dayNum'),
-    time: integer('time'), //datetime
+    logId: int('logId').primaryKey(),
+    spotId: int('spotId'),
+    num: int('num'),
+    dayNum: int('dayNum'),
+    time: int('time'), //datetime
   },
   (log) => ({
     spotIdIndex: index('spotIdIndex').on(log.spotId),
@@ -19,7 +19,7 @@ export const log = sqliteTable(
 export const spot = sqliteTable(
   'spot',
   {
-    spotId: integer('spotId').unique().primaryKey(),
+    spotId: int('spotId').primaryKey(),
     name: text('name').default(''),
 
     // logId: integer('logId').references(() => log.spotId),

@@ -1,7 +1,7 @@
 {
   "version": "5",
   "dialect": "sqlite",
-  "id": "fe2507b7-04ab-4c78-bf8d-2d91a55d0d9a",
+  "id": "367844e5-740f-4be2-b640-ec422087b6fd",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "log": {
@@ -44,13 +44,6 @@
         }
       },
       "indexes": {
-        "log_logId_unique": {
-          "name": "log_logId_unique",
-          "columns": [
-            "logId"
-          ],
-          "isUnique": true
-        },
         "spotIdIndex": {
           "name": "spotIdIndex",
           "columns": [
@@ -90,13 +83,6 @@
         }
       },
       "indexes": {
-        "spot_spotId_unique": {
-          "name": "spot_spotId_unique",
-          "columns": [
-            "spotId"
-          ],
-          "isUnique": true
-        },
         "idIndex": {
           "name": "idIndex",
           "columns": [
