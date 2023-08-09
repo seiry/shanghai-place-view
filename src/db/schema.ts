@@ -1,10 +1,4 @@
-import {
-  sqliteTable,
-  text,
-  integer,
-  uniqueIndex,
-  index,
-} from 'drizzle-orm/sqlite-core'
+import { sqliteTable, text, integer, index } from 'drizzle-orm/sqlite-core'
 
 export const log = sqliteTable(
   'log',
@@ -21,9 +15,16 @@ export const log = sqliteTable(
   }),
 )
 
-export const cities = sqliteTable('spot', {
-  spotId: integer('spotId').unique().primaryKey(),
-  name: text('name').default(''),
+export const spot = sqliteTable(
+  'spot',
+  {
+    spotId: integer('spotId').unique().primaryKey(),
+    name: text('name').default(''),
 
-  logId: integer('logId').references(() => log.spotId),
-})
+    logId: integer('logId').references(() => log.spotId),
+  },
+  (SPOT) => ({
+    spotIdIndex: index('spotIdIndex').on(SPOT.spotId),
+    nameIndex: index('nameIndex').on(SPOT.name),
+  }),
+)
