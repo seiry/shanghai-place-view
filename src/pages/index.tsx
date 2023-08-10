@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import { Filter } from '@/components/Filter'
 import { LineChart } from '@/components/Line'
 import { makeTitleTag } from '@/lib/utils'
+import { Loading } from '@/components/Loading'
 
 const DataPage: FC = () => {
   return (
@@ -13,10 +14,10 @@ const DataPage: FC = () => {
         <title>{makeTitleTag`trends`}</title>
       </Head>
 
-      <Suspense fallback={<>loading...</>}>
+      <Suspense fallback={<Loading />}>
         <Filter />
       </Suspense>
-      <Suspense fallback={<>loading...</>}>
+      <Suspense fallback={<Loading />}>
         <LineChart />
       </Suspense>
     </Page>

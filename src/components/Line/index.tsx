@@ -18,6 +18,7 @@ import { FC, Suspense } from 'react'
 import { Line } from 'react-chartjs-2'
 import styled from 'styled-components'
 import { useLineData } from '../../lib/data'
+import { Loading } from '../Loading'
 
 const LineWrap = styled.div`
   /* height: 300px; */
@@ -92,7 +93,7 @@ const options: ChartOptions<'line'> = {
 export const LineChart: FC = () => {
   const lineData = useLineData()
   return (
-    <Suspense fallback={<>loading</>}>
+    <Suspense fallback={<Loading />}>
       <LineWrap>
         <Line options={options} data={lineData} height="100%" />
       </LineWrap>
