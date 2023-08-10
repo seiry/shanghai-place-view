@@ -19,6 +19,7 @@ import { TypeOf, z } from 'zod'
 const ToolBar = styled.div`
   display: flex;
   gap: 1rem;
+  z-index: 10;
   width: 100%;
   .btn-group {
   }
