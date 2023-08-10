@@ -42,5 +42,5 @@ export type InsertSpot = InferModel<typeof spot, 'insert'> // insert type
 export const insertLogSchema = createInsertSchema(log)
 export const insertSpotSchema = createInsertSchema(spot)
 
-export const selectLogSchema = createSelectSchema(log)
 export const selectSpotSchema = createSelectSchema(spot)
+export const selectLogSchema = createSelectSchema(log).and(selectSpotSchema)
