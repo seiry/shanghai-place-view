@@ -1,14 +1,21 @@
 import { mainJob } from '@/lib/job'
-import { NextApiHandler } from 'next'
+import { NextRequest } from 'next/server'
 
-const handler: NextApiHandler = async (req, res) => {
-  if (req.query.key !== '19890604') {
-    res.status(404).end()
-    return
+export const config = {
+  runtime: 'edge',
+}
+
+const handler = async (req: NextRequest) => {
+  const url = req.url
+  const query = new URL(url).searchParams
+  if (query.get('key') !== '19890604') {
+    return new Response('', {
+      status: 404,
+    })
   }
   const re = await mainJob()
 
-  res.status(200).end(re.rowsAffected.toString())
+  return new Response(JSON.stringify(re.rowsAffected))
 }
 
 export default handler
