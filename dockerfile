@@ -5,9 +5,9 @@ FROM node:18.16-slim AS deps
 RUN apt-get update &&\
     apt-get install -y openssl
 WORKDIR /app
-COPY package.json package-lock.json ./prisma .env ./
+COPY package.json yarn.lock .env ./
 RUN yarn
-# RUN npx prisma generate
+
 
 # If using npm with a `package-lock.json` comment out above and use below instead
 # COPY package.json package-lock.json ./ 

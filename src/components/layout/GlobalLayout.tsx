@@ -19,7 +19,7 @@ export const GlobalLayout: FC<React.PropsWithChildren<unknown>> = (props) => {
       // debugger
       setChecked(event.target.checked)
     },
-    []
+    [],
   )
 
   useEffect(() => {
@@ -54,7 +54,7 @@ export const GlobalLayout: FC<React.PropsWithChildren<unknown>> = (props) => {
 
           <div
             className={clsx(
-              'w-full flex-auto md:static md:max-h-full md:overflow-visible '
+              'w-full flex-auto md:static md:max-h-full md:overflow-visible ',
             )}
           >
             <main

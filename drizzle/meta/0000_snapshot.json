@@ -1,62 +1,9 @@
 {
   "version": "5",
   "dialect": "sqlite",
-  "id": "dc410c2b-5ba7-48d0-8604-5ac2e27258fe",
+  "id": "128e8475-e63b-458c-a007-4b03fd86b2e1",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
-    "spot": {
-      "name": "spot",
-      "columns": {
-        "spotId": {
-          "name": "spotId",
-          "type": "integer",
-          "primaryKey": true,
-          "notNull": true,
-          "autoincrement": false
-        },
-        "name": {
-          "name": "name",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false,
-          "autoincrement": false,
-          "default": "''"
-        },
-        "logId": {
-          "name": "logId",
-          "type": "integer",
-          "primaryKey": false,
-          "notNull": false,
-          "autoincrement": false
-        }
-      },
-      "indexes": {
-        "spot_spotId_unique": {
-          "name": "spot_spotId_unique",
-          "columns": [
-            "spotId"
-          ],
-          "isUnique": true
-        }
-      },
-      "foreignKeys": {
-        "spot_logId_log_spotId_fk": {
-          "name": "spot_logId_log_spotId_fk",
-          "tableFrom": "spot",
-          "tableTo": "log",
-          "columnsFrom": [
-            "logId"
-          ],
-          "columnsTo": [
-            "spotId"
-          ],
-          "onDelete": "no action",
-          "onUpdate": "no action"
-        }
-      },
-      "compositePrimaryKeys": {},
-      "uniqueConstraints": {}
-    },
     "log": {
       "name": "log",
       "columns": {
@@ -71,7 +18,7 @@
           "name": "spotId",
           "type": "integer",
           "primaryKey": false,
-          "notNull": false,
+          "notNull": true,
           "autoincrement": false
         },
         "num": {
@@ -97,13 +44,6 @@
         }
       },
       "indexes": {
-        "log_logId_unique": {
-          "name": "log_logId_unique",
-          "columns": [
-            "logId"
-          ],
-          "isUnique": true
-        },
         "spotIdIndex": {
           "name": "spotIdIndex",
           "columns": [
@@ -115,6 +55,59 @@
           "name": "timeIndex",
           "columns": [
             "time"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {
+        "log_spotId_spot_spotId_fk": {
+          "name": "log_spotId_spot_spotId_fk",
+          "tableFrom": "log",
+          "tableTo": "spot",
+          "columnsFrom": [
+            "spotId"
+          ],
+          "columnsTo": [
+            "spotId"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "spot": {
+      "name": "spot",
+      "columns": {
+        "spotId": {
+          "name": "spotId",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false,
+          "default": "''"
+        }
+      },
+      "indexes": {
+        "idIndex": {
+          "name": "idIndex",
+          "columns": [
+            "spotId"
+          ],
+          "isUnique": false
+        },
+        "nameIndex": {
+          "name": "nameIndex",
+          "columns": [
+            "name"
           ],
           "isUnique": false
         }

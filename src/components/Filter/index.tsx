@@ -13,14 +13,35 @@ import {
   useFilterStore,
   useTimeFrame,
 } from '../../store/filter'
+import { selectLogSchema, selectSpotSchema } from '@/db/schema'
+import { TypeOf, z } from 'zod'
 
 const ToolBar = styled.div`
   display: flex;
   gap: 1rem;
+  z-index: 10;
   width: 100%;
   .btn-group {
   }
 `
+const useSpot = () => {
+  const { data: spotsData } = useSWR('spots', getFetcher<SpotResp[]>, {
+    suspense: true,
+  })
+  const spots = useMemo(
+    () => spotsData?.map((e) => selectSpotSchema.parse(e)) ?? [],
+    [spotsData],
+  )
+  return spots
+}
+
+const useMaxList = () => {
+  const { data: maxList } = useSWR('max', getFetcher<TrendResp[]>, {
+    suspense: true,
+  })
+  return maxList
+}
+
 export const Filter: FC = () => {
   const {
     setTimeFrame,
@@ -31,13 +52,9 @@ export const Filter: FC = () => {
     setTimeRage,
   } = useFilterStore()
   const timeFrame = useTimeFrame()
+  const spots = useSpot()
+  const maxList = useMaxList()
 
-  const { data: spots } = useSWR('spots', getFetcher<SpotResp[]>, {
-    suspense: true,
-  })
-  const { data: maxList } = useSWR('max', getFetcher<TrendResp[]>, {
-    suspense: true,
-  })
   const pinyinList = useMemo(
     () => new Pinyin(spots ?? [], ['name', 'id']),
     [spots],
@@ -110,7 +127,7 @@ export const Filter: FC = () => {
           className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 max-h-[400px] overflow-y-auto flex-nowrap"
         >
           {filteredSpotList?.map((spot) => (
-            <li key={spot.spotid} onClick={() => addSeleted(spot)}>
+            <li key={spot.spotId} onClick={() => addSeleted(spot)}>
               <a>{spot.name}</a>
             </li>
           ))}
@@ -119,7 +136,7 @@ export const Filter: FC = () => {
 
       <ul className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-72 max-h-[150px] overflow-y-auto flex-nowrap">
         {selected?.map((spot) => (
-          <li key={spot.spotid} onClick={() => rmSeleted(spot)}>
+          <li key={spot.spotId} onClick={() => rmSeleted(spot)}>
             <a>{spot.name}</a>
           </li>
         ))}
@@ -129,14 +146,12 @@ export const Filter: FC = () => {
         {/* <li className="self-center">max list</li> */}
         {maxList?.map((spot) => (
           <li
-            key={spot.spot.spotid}
+            key={spot.spotId}
             className="py-0"
-            onClick={() =>
-              addSeleted({ spotid: spot.spot.spotid, name: spot.spot.name })
-            }
+            onClick={() => addSeleted({ spotId: spot.spotId, name: spot.name })}
           >
             <a className="py-0">
-              {spot.spot.name} {spot.num}
+              {spot.name} {spot.num}
             </a>
           </li>
         ))}

@@ -13,7 +13,7 @@ const moduleExports = {
     // ssr and displayName are configured by default
     styledComponents: true,
   },
-  output: 'standalone',
+  // output: 'standalone',
 }
 
 const SentryWebpackPluginOptions = {

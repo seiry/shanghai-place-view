@@ -1,46 +1,37 @@
-import dayjs from 'dayjs'
+import { log, spot } from '@/db/schema'
+import { db } from '@/db/turso'
+import { and, desc, eq, notInArray } from 'drizzle-orm'
 import { NextApiHandler } from 'next'
 import { errorMsg } from '../../lib/error'
-import { Params } from '../../lib/fetch'
-import prisma from '../../lib/prisma'
-import { Prisma } from '@prisma/client'
 const handler: NextApiHandler = async (req, res) => {
-  const where: Prisma.logFindManyArgs['where'] = {
-    AND: [{}],
-  }
-  const time = await prisma.log.findFirst({
-    select: {
-      time: true,
-    },
-    where,
-    orderBy: {
-      time: 'desc',
-    },
-  })
-  if (!time) {
+  const time = await db
+    .select()
+    .from(log)
+    .orderBy(desc(log.time))
+    .limit(1)
+    .run()
+  const lastTime = time.rows?.[0]?.time
+
+  if (!lastTime) {
     res.status(500).json(errorMsg('no date'))
+    return
   }
 
-  const maxList = await prisma.log.findMany({
-    select: {
-      time: true,
-      num: true,
-      spot: true,
-    },
-    where: {
-      time: time?.time,
-      spotid: {
-        notIn: [102, 107, 104, 106],
-      },
-    } as Prisma.logFindManyArgs['where'],
-    orderBy: {
-      num: 'desc',
-    },
-    take: 5,
-  })
+  const maxList = await db
+    .select()
+    .from(log)
+    .innerJoin(spot, eq(log.spotId, spot.spotId))
+    .where(
+      and(
+        eq(log.time, lastTime as number),
+        notInArray(log.spotId, [102, 107, 104, 106]),
+      ),
+    )
+    .orderBy(desc(log.num))
+    .limit(5)
+    .run()
 
-  res.status(200).json(maxList)
-  return
+  res.status(200).json(maxList.rows)
 }
 
 export default handler

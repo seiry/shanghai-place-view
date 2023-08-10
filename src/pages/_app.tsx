@@ -1,7 +1,5 @@
-import ProgressBar from '@badrap/bar-of-progress'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
-import Router from 'next/router'
 import { Eruda } from '../components/Eruda'
 import '../lib/dayjs.init'
 
@@ -11,35 +9,7 @@ import '../../styles/globals.css'
 import '../../styles/header.scss'
 import '../../styles/utilities.css'
 // import { GlobalLayout } from '../components/layout/GlobalLayout'
-import {
-  closeSideBarWhenCould,
-  GlobalLayout,
-} from '../components/layout/GlobalLayout'
-
-// TODO: bar of progress
-const progress = new ProgressBar({
-  size: 2,
-  color: '#f1f8f9',
-  className: 'bar-of-progress',
-  delay: 100,
-})
-
-if (typeof window !== 'undefined') {
-  progress.start()
-  progress.finish()
-}
-
-Router.events.on('routeChangeStart', () => {
-  progress.start()
-  closeSideBarWhenCould()
-})
-
-Router.events.on('routeChangeComplete', () => {
-  progress.finish()
-  document?.querySelector('#scrollContainer')?.scrollTo(0, 0)
-})
-
-Router.events.on('routeChangeError', progress.finish)
+import { GlobalLayout } from '../components/layout/GlobalLayout'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

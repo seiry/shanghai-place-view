@@ -1,19 +1,18 @@
-import {
-  sqliteTable,
-  text,
-  integer,
-  uniqueIndex,
-  index,
-} from 'drizzle-orm/sqlite-core'
+import { sqliteTable, text, index, int } from 'drizzle-orm/sqlite-core'
+import type { InferModel } from 'drizzle-orm'
+import { createInsertSchema, createSelectSchema } from 'drizzle-zod'
+import { z } from 'zod'
 
 export const log = sqliteTable(
   'log',
   {
-    logId: integer('logId').unique().primaryKey(),
-    spotId: integer('spotId'),
-    num: integer('num'),
-    dayNum: integer('dayNum'),
-    time: integer('time'), //datetime
+    logId: int('logId').primaryKey(),
+    spotId: int('spotId')
+      .notNull()
+      .references(() => spot.spotId),
+    num: int('num'),
+    dayNum: int('dayNum'),
+    time: int('time'), //datetime
   },
   (log) => ({
     spotIdIndex: index('spotIdIndex').on(log.spotId),
@@ -21,9 +20,30 @@ export const log = sqliteTable(
   }),
 )
 
-export const cities = sqliteTable('spot', {
-  spotId: integer('spotId').unique().primaryKey(),
-  name: text('name').default(''),
+export const spot = sqliteTable(
+  'spot',
+  {
+    spotId: int('spotId').primaryKey(),
+    name: text('name').default(''),
 
-  logId: integer('logId').references(() => log.spotId),
-})
+    // logId: integer('logId').references(() => log.spotId),
+  },
+  (spot) => ({
+    idIndex: index('idIndex').on(spot.spotId),
+    nameIndex: index('nameIndex').on(spot.name),
+  }),
+)
+
+export type Log = InferModel<typeof log> // return type when queried
+export type Spot = InferModel<typeof spot> // return type when queried
+
+export type InsertLog = InferModel<typeof log, 'insert'> // insert type
+export type InsertSpot = InferModel<typeof spot, 'insert'> // insert type
+
+export const insertLogSchema = createInsertSchema(log)
+export const insertSpotSchema = createInsertSchema(spot)
+
+export const selectSpotSchema = createSelectSchema(spot)
+export const selectLogSchema = createSelectSchema(log)
+  .merge(selectSpotSchema)
+  .merge(z.object({ time: z.union([z.string(), z.number()]) }))

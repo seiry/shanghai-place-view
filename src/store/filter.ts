@@ -65,7 +65,7 @@ interface FilterState {
 export const useSelectedIds = (): number[] => {
   const { selected } = useFilterStore()
   return selected
-    .map((item) => item.spotid)
+    .map((item) => item.spotId)
     .filter((item) => item !== undefined)
 }
 export const useTimeFrame = (): TimeFrame => {
@@ -102,12 +102,12 @@ export const useFilterStore = create<FilterState>()(
         rmSeleted: (rm) =>
           set((state) => ({
             selected: state.selected.filter(
-              (item) => item.spotid !== rm.spotid
+              (item) => item.spotId !== rm.spotId,
             ),
           })),
         addSeleted: (add) =>
           set((state) => {
-            if (state.selected.find((item) => item.spotid === add.spotid)) {
+            if (state.selected.find((item) => item.spotId === add.spotId)) {
               return state
             }
             return {
@@ -117,7 +117,7 @@ export const useFilterStore = create<FilterState>()(
       }),
       {
         name: 'filter',
-      }
-    )
-  )
+      },
+    ),
+  ),
 )
