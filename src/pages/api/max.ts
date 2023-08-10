@@ -1,4 +1,4 @@
-import { log } from '@/db/schema'
+import { log, spot } from '@/db/schema'
 import { db } from '@/db/turso'
 import { and, desc, eq, notInArray } from 'drizzle-orm'
 import { NextApiHandler } from 'next'
@@ -20,6 +20,7 @@ const handler: NextApiHandler = async (req, res) => {
   const maxList = await db
     .select()
     .from(log)
+    .innerJoin(spot, eq(log.spotId, spot.spotId))
     .where(
       and(
         eq(log.time, lastTime as number),

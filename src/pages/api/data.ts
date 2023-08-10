@@ -1,7 +1,7 @@
-import { log } from '@/db/schema'
+import { log, spot } from '@/db/schema'
 import { db } from '@/db/turso'
 import dayjs from 'dayjs'
-import { and, gte, inArray, lte } from 'drizzle-orm'
+import { and, eq, gte, inArray, lte } from 'drizzle-orm'
 import { NextApiHandler } from 'next'
 import { errorMsg } from '../../lib/error'
 import { Params } from '../../lib/fetch'
@@ -19,6 +19,7 @@ const handler: NextApiHandler = async (req, res) => {
     const data = await db
       .select()
       .from(log)
+      .innerJoin(spot, eq(log.spotId, spot.spotId))
       .where(
         and(
           inArray(log.spotId, params.spotId),
