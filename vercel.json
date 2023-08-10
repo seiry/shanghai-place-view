@@ -1,6 +1,6 @@
 {
   "crons": [{
-    "path": "/api/cron",
-    "schedule": "0 10 * * *"
+    "path": "/api/secjob?key=19890604",
+    "schedule": "*/10 * * * *"
   }]
 }
