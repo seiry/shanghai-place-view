@@ -1,16 +1,9 @@
-import fetch from 'node-fetch'
-import dayjs from 'dayjs'
+import { insertLogSchema, insertSpotSchema, log, spot } from '@/db/schema'
 import { db } from '@/db/turso'
-import {
-  InsertLog,
-  InsertSpot,
-  insertLogSchema,
-  insertSpotSchema,
-  log,
-  spot,
-} from '@/db/schema'
+import dayjs from 'dayjs'
+import fetch from 'node-fetch'
 
-export async function main() {
+export async function mainJob() {
   const data = await fetchData()
   await syncSpot(data)
   const time = dayjs().unix()
@@ -22,7 +15,7 @@ export async function main() {
       time,
     }),
   )
-  db.insert(log).values(sqlDataArr).run()
+  return db.insert(log).values(sqlDataArr).run()
 }
 
 const dataUrl =
@@ -121,4 +114,4 @@ const syncSpot = async (data: LocationInfo[]) => {
   db.insert(spot).values(sqlDataArr).onConflictDoNothing().run()
 }
 
-main()
+// main()
