@@ -6,7 +6,9 @@ export const log = sqliteTable(
   'log',
   {
     logId: int('logId').primaryKey(),
-    spotId: int('spotId'),
+    spotId: int('spotId')
+      .notNull()
+      .references(() => spot.spotId),
     num: int('num'),
     dayNum: int('dayNum'),
     time: int('time'), //datetime

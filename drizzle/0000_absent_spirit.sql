@@ -1,9 +1,10 @@
 CREATE TABLE `log` (
 	`logId` integer PRIMARY KEY NOT NULL,
-	`spotId` integer,
+	`spotId` integer NOT NULL,
 	`num` integer,
 	`dayNum` integer,
-	`time` integer
+	`time` integer,
+	FOREIGN KEY (`spotId`) REFERENCES `spot`(`spotId`) ON UPDATE no action ON DELETE no action
 );
 --> statement-breakpoint
 CREATE TABLE `spot` (
