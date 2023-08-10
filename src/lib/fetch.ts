@@ -1,4 +1,6 @@
+import { selectLogSchema, selectSpotSchema } from '@/db/schema'
 import axios from 'axios'
+import { TypeOf } from 'zod'
 
 export type Params = IdParams & TimeParams
 
@@ -9,15 +11,15 @@ export interface TimeParams {
   from?: Date
   before?: Date
 }
-export interface TrendResp {
-  time: string
-  num: number
-  spot: {
-    spotid: number
-    name: string
-  }
-}
-
+// export interface TrendResp {
+//   time: string
+//   num: number
+//   spot: {
+//     spotid: number
+//     name: string
+//   }
+// }
+export type TrendResp = TypeOf<typeof selectLogSchema>
 export const dataFetcher = async (params: Params): Promise<TrendResp[][]> => {
   const res = await axios.post<TrendResp[]>('/api/data', {
     spotId: params.spotId,
@@ -26,16 +28,13 @@ export const dataFetcher = async (params: Params): Promise<TrendResp[][]> => {
   })
   const result: TrendResp[][] = []
   for (const id of params.spotId) {
-    const data = res.data.filter((d) => d.spot.spotid === id)
+    const data = res.data.filter((d) => d.spotId === id)
     result.push(data)
   }
   return result
 }
 
-export interface SpotResp {
-  spotid: number
-  name: string
-}
+export type SpotResp = TypeOf<typeof selectSpotSchema>
 
 export const getFetcher = async <T>(path: string): Promise<T> => {
   const res = await axios.post<T>(`/api/${path}`)

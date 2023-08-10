@@ -1,7 +1,6 @@
 import { sqliteTable, text, index, int } from 'drizzle-orm/sqlite-core'
 import type { InferModel } from 'drizzle-orm'
 import { createInsertSchema, createSelectSchema } from 'drizzle-zod'
-import { TypeOf } from 'zod'
 
 export const log = sqliteTable(
   'log',
@@ -43,4 +42,3 @@ export const insertSpotSchema = createInsertSchema(spot)
 
 export const selectLogSchema = createSelectSchema(log)
 export const selectSpotSchema = createSelectSchema(spot)
-type t = TypeOf<selectLogSchema>

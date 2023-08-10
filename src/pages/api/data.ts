@@ -27,7 +27,7 @@ const handler: NextApiHandler = async (req, res) => {
         ),
       )
       .run()
-    res.status(200).json(data)
+    res.status(200).json(data.rows)
   }
 }
 

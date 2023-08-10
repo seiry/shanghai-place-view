@@ -17,7 +17,7 @@ const colors = [
 const dataTimeFormat = 'YYYY-MM-DD HH:mm'
 const _paddingNum = -19890604
 
-const findOrMakeNode = (line: TrendResp[], time: string) => {
+const findOrMakeNode = (line: TrendResp[], time: number) => {
   return (
     line.find((i) => i.time === time) || {
       ...line[0],
@@ -99,7 +99,7 @@ export const useLineData = () => {
     return {
       labels: data[0]?.map((d) => d.time),
       datasets: data?.map((singleLine, i) => ({
-        label: singleLine?.[0]?.spot.name,
+        label: singleLine?.[0]?.name,
         data: singleLine?.map((d) => ({
           x: dayjs(d.time).valueOf(),
           y: d.num,
