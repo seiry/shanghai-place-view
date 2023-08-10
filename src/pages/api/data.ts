@@ -2,19 +2,30 @@ import { log, spot } from '@/db/schema'
 import { db } from '@/db/turso'
 import dayjs from 'dayjs'
 import { and, eq, gte, inArray, lte } from 'drizzle-orm'
-import { NextApiHandler } from 'next'
+import { NextRequest } from 'next/server'
 import { errorMsg } from '../../lib/error'
-import { Params } from '../../lib/fetch'
+import { Params } from '@/lib/fetch'
 
-const handler: NextApiHandler = async (req, res) => {
-  const params: Params = req.body
-  if (!params.spotId) {
-    res.status(500).json(errorMsg('wrong input'))
+export const config = {
+  runtime: 'edge',
+}
+
+const handler = async (req: NextRequest) => {
+  if (req.method !== 'POST') {
+    return new Response(null, { status: 404 })
   }
+  const params = (await req.json()) as Params
+
+  // const params: Params = req.body.json()
+  if (!params?.spotId) {
+    return new Response(JSON.stringify(errorMsg('wrong input')), {
+      status: 500,
+    })
+  }
+
   if (params.spotId instanceof Array) {
     if (params.spotId.length === 0) {
-      res.status(200).json([])
-      return
+      return new Response(JSON.stringify([]))
     }
     const data = await db
       .select()
@@ -28,7 +39,11 @@ const handler: NextApiHandler = async (req, res) => {
         ),
       )
       .run()
-    res.status(200).json(data.rows)
+    return new Response(JSON.stringify(data.rows))
+  } else {
+    return new Response(JSON.stringify(errorMsg('wrong input')), {
+      status: 500,
+    })
   }
 }
 

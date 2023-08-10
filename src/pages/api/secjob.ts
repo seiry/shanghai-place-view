@@ -6,9 +6,7 @@ export const config = {
 }
 
 const handler = async (req: NextRequest) => {
-  const url = req.url
-  const query = new URL(url).searchParams
-  if (query.get('key') !== '19890604') {
+  if (req.nextUrl.searchParams.get('key') !== '19890604') {
     return new Response('', {
       status: 404,
     })

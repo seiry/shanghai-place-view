@@ -2,7 +2,6 @@ import { log, spot } from '@/db/schema'
 import { db } from '@/db/turso'
 import { and, desc, eq, notInArray } from 'drizzle-orm'
 import { errorMsg } from '../../lib/error'
-import { NextRequest } from 'next/server'
 
 export const config = {
   runtime: 'edge',
