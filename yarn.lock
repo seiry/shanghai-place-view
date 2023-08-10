@@ -1517,13 +1517,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@badrap/bar-of-progress@npm:^0.2.2":
-  version: 0.2.2
-  resolution: "@badrap/bar-of-progress@npm:0.2.2"
-  checksum: 9b0d7c276213024d7444414d90228e56622964e34d4c3eaa4db524b37442f3b6a4b55e6fcb9c1446550c8166ac619ebf5000689fbc797fe509b0aeceb5513c67
-  languageName: node
-  linkType: hard
-
 "@colors/colors@npm:1.5.0":
   version: 1.5.0
   resolution: "@colors/colors@npm:1.5.0"
@@ -2666,34 +2659,6 @@ __metadata:
     picocolors: ^1.0.0
     tslib: ^2.6.0
   checksum: 24e04c121269317d259614cd32beea3af38277151c4002df5883c4be920b8e3490bb897748e844f9d46bf68230f86dabd4e8f093773130e7e60529a769a132fc
-  languageName: node
-  linkType: hard
-
-"@prisma/client@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "@prisma/client@npm:5.0.0"
-  dependencies:
-    "@prisma/engines-version": 4.17.0-26.6b0aef69b7cdfc787f822ecd7cdc76d5f1991584
-  peerDependencies:
-    prisma: "*"
-  peerDependenciesMeta:
-    prisma:
-      optional: true
-  checksum: 332c2af44e880ffc9dd1223992bf6f45910094c7a3a540cbbfdda45d6caf3e82998376338abdf85e34a12f1082ae932f2385d6396c62fe4bba7ec6b84de54466
-  languageName: node
-  linkType: hard
-
-"@prisma/engines-version@npm:4.17.0-26.6b0aef69b7cdfc787f822ecd7cdc76d5f1991584":
-  version: 4.17.0-26.6b0aef69b7cdfc787f822ecd7cdc76d5f1991584
-  resolution: "@prisma/engines-version@npm:4.17.0-26.6b0aef69b7cdfc787f822ecd7cdc76d5f1991584"
-  checksum: 8fcbceef3b554ee7fa404bead50be5286412a097b21723272aff298b289caf2802b01b84bb85c4c9f3b592eeac114c8d6e79db083f271dc8c54f453b4a515233
-  languageName: node
-  linkType: hard
-
-"@prisma/engines@npm:5.1.1":
-  version: 5.1.1
-  resolution: "@prisma/engines@npm:5.1.1"
-  checksum: 561c85def110279eb7c764e7c1ea1f8f54d9a2948ed5e5db9b11321c2bef362d178b756e39e7e022ee27cb2be5ac8d9b835967ce341ad8f6a1e8502f988140ee
   languageName: node
   linkType: hard
 
@@ -8418,17 +8383,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prisma@npm:^5.1.1":
-  version: 5.1.1
-  resolution: "prisma@npm:5.1.1"
-  dependencies:
-    "@prisma/engines": 5.1.1
-  bin:
-    prisma: build/index.js
-  checksum: ab0879fdff3a5e3f50956e18308bd996708519824802b2528c80d1639bbb4d8dd499ef17670db27986695811a9e28b2c9d5ab0753031441ee12878b30bace8b7
-  languageName: node
-  linkType: hard
-
 "progress@npm:^2.0.3":
   version: 2.0.3
   resolution: "progress@npm:2.0.3"
@@ -8943,9 +8897,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "shanghai-place-view@workspace:."
   dependencies:
-    "@badrap/bar-of-progress": ^0.2.2
     "@libsql/client": ^0.3.1
-    "@prisma/client": ^5.0.0
     "@sentry/nextjs": ^7.58.1
     "@total-typescript/ts-reset": ^0.4.2
     "@types/pinyin-engine": ^1.1.0
@@ -8977,9 +8929,8 @@ __metadata:
     pinyin-engine: ^1.2.2
     postcss: ^8.4.27
     postcss-flexbugs-fixes: ^5.0.2
-    postcss-preset-env: ^9.1.1
-    prettier: 3.0.1
-    prisma: ^5.1.1
+    postcss-preset-env: ^9.0.0
+    prettier: 3.0.0
     react: 18.2.0
     react-chartjs-2: ^5.2.0
     react-dom: 18.2.0
