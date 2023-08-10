@@ -1,6 +1,7 @@
 import { sqliteTable, text, index, int } from 'drizzle-orm/sqlite-core'
 import type { InferModel } from 'drizzle-orm'
 import { createInsertSchema, createSelectSchema } from 'drizzle-zod'
+import { z } from 'zod'
 
 export const log = sqliteTable(
   'log',
@@ -43,4 +44,6 @@ export const insertLogSchema = createInsertSchema(log)
 export const insertSpotSchema = createInsertSchema(spot)
 
 export const selectSpotSchema = createSelectSchema(spot)
-export const selectLogSchema = createSelectSchema(log).and(selectSpotSchema)
+export const selectLogSchema = createSelectSchema(log)
+  .merge(selectSpotSchema)
+  .merge(z.object({ time: z.union([z.string(), z.number()]) }))

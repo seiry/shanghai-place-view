@@ -20,6 +20,7 @@ export interface TimeParams {
 //   }
 // }
 export type TrendResp = TypeOf<typeof selectLogSchema>
+
 export const dataFetcher = async (params: Params): Promise<TrendResp[][]> => {
   const res = await axios.post<TrendResp[]>('/api/data', {
     spotId: params.spotId,

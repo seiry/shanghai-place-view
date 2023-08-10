@@ -17,7 +17,7 @@ const colors = [
 const dataTimeFormat = 'YYYY-MM-DD HH:mm'
 const _paddingNum = -19890604
 
-const findOrMakeNode = (line: TrendResp[], time: number) => {
+const findOrMakeNode = (line: TrendResp[], time: string) => {
   return (
     line.find((i) => i.time === time) || {
       ...line[0],
@@ -49,8 +49,10 @@ const fixData = (data: TrendResp[][]) => {
   // }
 
   const newData = data.map((item) => {
-    item.forEach((i) => (i.time = dayjs(i.time).format(dataTimeFormat)))
-    return item
+    return item.map((i) => ({
+      ...i,
+      time: dayjs(i.time).format(dataTimeFormat),
+    }))
   })
 
   const dates = newData
@@ -87,7 +89,7 @@ export const useLineData = () => {
     dataFetcher,
     { suspense: true },
   )
-  const lineData = useMemo<ChartData<'line'>>(() => {
+  const lineData = useMemo(() => {
     if (!originData) {
       return {
         labels: [],
@@ -97,17 +99,17 @@ export const useLineData = () => {
     const data = fixData(originData)
 
     return {
-      labels: data[0]?.map((d) => d.time),
+      labels: data[0]?.map((d) => d.time ?? ''),
       datasets: data?.map((singleLine, i) => ({
-        label: singleLine?.[0]?.name,
+        label: singleLine?.[0]?.name ?? '',
         data: singleLine?.map((d) => ({
           x: dayjs(d.time).valueOf(),
-          y: d.num,
+          y: d.num ?? 0,
         })),
         borderColor: colors[i % colors.length],
         backgroundColor: colors[i % colors.length] + '7f', //50alpha
       })),
-    }
+    } satisfies ChartData<'line'>
   }, [originData])
 
   return lineData
