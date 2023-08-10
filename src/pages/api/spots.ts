@@ -1,11 +1,13 @@
 import { spot } from '@/db/schema'
 import { db } from '@/db/turso'
-import { NextApiHandler } from 'next'
 
-const handler: NextApiHandler = async (req, res) => {
+export const config = {
+  runtime: 'edge',
+}
+
+const handler = async () => {
   const data = await db.select().from(spot).run()
-
-  res.status(200).json(data.rows)
+  return new Response(JSON.stringify(data.rows))
 }
 
 export default handler
