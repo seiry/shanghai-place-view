@@ -51,7 +51,7 @@ const fixData = (data: TrendResp[][]) => {
   const newData = data.map((item) => {
     return item.map((i) => ({
       ...i,
-      time: dayjs(i.time).format(dataTimeFormat),
+      time: dayjs(+i.time * 1e3).format(dataTimeFormat),
     }))
   })
 
