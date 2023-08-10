@@ -93,10 +93,8 @@ const options: ChartOptions<'line'> = {
 export const LineChart: FC = () => {
   const lineData = useLineData()
   return (
-    <Suspense fallback={<Loading />}>
-      <LineWrap>
-        <Line options={options} data={lineData} height="100%" />
-      </LineWrap>
-    </Suspense>
+    <LineWrap>
+      <Line options={options} data={lineData} height="100%" />
+    </LineWrap>
   )
 }
