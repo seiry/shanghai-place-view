@@ -5,6 +5,7 @@
 
 // const { withSentryConfig } = require('@sentry/nextjs')
 
+/** @type {import('next').NextConfig} */
 const moduleExports = {
   reactStrictMode: true,
   poweredByHeader: false,
@@ -12,6 +13,20 @@ const moduleExports = {
   compiler: {
     // ssr and displayName are configured by default
     styledComponents: true,
+  },
+  async headers() {
+    return [
+      {
+        source: '/api/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            // always respond last result from cache in 60s, but revalidate every 60s
+            value: 'public, s-maxage=60, stale-while-revalidate=120',
+          },
+        ],
+      },
+    ]
   },
   // output: 'standalone',
 }
