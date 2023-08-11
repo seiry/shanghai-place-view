@@ -24,6 +24,10 @@ const moduleExports = {
             // always respond last result from cache in 60s, but revalidate every 60s
             value: 'public, s-maxage=60, stale-while-revalidate=120',
           },
+          {
+            key: 'x-powered-by',
+            value: 'IIS 6.0',
+          },
         ],
       },
     ]
