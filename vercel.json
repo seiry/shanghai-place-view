@@ -1,6 +1,0 @@
-{
-  "crons": [{
-    "path": "/api/secjob?key=19890604",
-    "schedule": "*/10 * * * *"
-  }]
-}
