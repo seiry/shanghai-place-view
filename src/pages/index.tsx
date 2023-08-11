@@ -14,9 +14,7 @@ const DataPage: FC = () => {
         <title>{makeTitleTag`trends`}</title>
       </Head>
 
-      <Suspense fallback={<Loading />}>
-        <Filter />
-      </Suspense>
+      <Filter />
       <Suspense fallback={<Loading />}>
         <LineChart />
       </Suspense>
@@ -34,3 +32,4 @@ const Page = styled.div`
 export default dynamic(() => Promise.resolve(DataPage), {
   ssr: false,
 })
+// export default DataPage

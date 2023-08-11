@@ -1,6 +1,5 @@
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
-import { Eruda } from '../components/Eruda'
 import '../lib/dayjs.init'
 
 import 'tailwindcss/tailwind.css'
@@ -26,7 +25,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
         <link rel="icon" type="image/ico" href="/favicon.ico" />
       </Head>
-      <Eruda />
+      {/* <Eruda /> */}
 
       <GlobalLayout>
         <Component {...pageProps} />
