@@ -1,9 +1,13 @@
 import { log, spot } from '@/db/schema'
 import { db } from '@/db/turso'
 import { and, desc, eq, notInArray } from 'drizzle-orm'
-import { NextApiHandler } from 'next'
 import { errorMsg } from '../../lib/error'
-const handler: NextApiHandler = async (req, res) => {
+
+export const config = {
+  runtime: 'edge',
+}
+
+const handler = async () => {
   const time = await db
     .select()
     .from(log)
@@ -13,8 +17,9 @@ const handler: NextApiHandler = async (req, res) => {
   const lastTime = time.rows?.[0]?.time
 
   if (!lastTime) {
-    res.status(500).json(errorMsg('no date'))
-    return
+    return new Response(JSON.stringify(errorMsg('no date')), {
+      status: 500,
+    })
   }
 
   const maxList = await db
@@ -31,7 +36,7 @@ const handler: NextApiHandler = async (req, res) => {
     .limit(5)
     .run()
 
-  res.status(200).json(maxList.rows)
+  return new Response(JSON.stringify(maxList.rows))
 }
 
 export default handler
