@@ -14,9 +14,7 @@ const DataPage: FC = () => {
         <title>{makeTitleTag`trends`}</title>
       </Head>
 
-      <Suspense fallback={<Loading />}>
-        <Filter />
-      </Suspense>
+      <Filter />
       <Suspense fallback={<Loading />}>
         <LineChart />
       </Suspense>
