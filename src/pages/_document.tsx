@@ -30,9 +30,13 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang="zh" data-theme="cupcake" className="antialiased">
+      <Html
+        lang="zh"
+        data-theme="cupcake"
+        className="antialiased h-full relative"
+      >
         <Head />
-        <body className="overflow-x-hidden">
+        <body className="overflow-x-hidden h-full relative">
           <Main />
           <NextScript />
         </body>

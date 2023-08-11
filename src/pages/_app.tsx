@@ -1,13 +1,8 @@
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import '../lib/dayjs.init'
-
-import 'tailwindcss/tailwind.css'
-import '../../styles/animation.css'
-import '../../styles/globals.css'
-import '../../styles/header.scss'
-import '../../styles/utilities.css'
-// import { GlobalLayout } from '../components/layout/GlobalLayout'
+import '@/styles/global.css'
+import '@/styles/header.scss'
 import { GlobalLayout } from '../components/layout/GlobalLayout'
 
 function MyApp({ Component, pageProps }: AppProps) {
