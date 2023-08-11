@@ -14,18 +14,9 @@ import {
 } from 'chart.js'
 
 import dayjs from 'dayjs'
-import { FC, Suspense } from 'react'
+import { FC } from 'react'
 import { Line } from 'react-chartjs-2'
-import styled from 'styled-components'
 import { useLineData } from '../../lib/data'
-import { Loading } from '../Loading'
-
-const LineWrap = styled.div`
-  /* height: 300px; */
-  flex: 1;
-  position: relative;
-  user-select: none;
-`
 
 ChartJS.register(
   CategoryScale,
@@ -40,6 +31,7 @@ ChartJS.register(
 )
 
 const options: ChartOptions<'line'> = {
+  maintainAspectRatio: false,
   responsive: true,
   // parsing: false,
 
@@ -93,8 +85,8 @@ const options: ChartOptions<'line'> = {
 export const LineChart: FC = () => {
   const lineData = useLineData()
   return (
-    <LineWrap>
+    <div className="relative select-none flex-1">
       <Line options={options} data={lineData} height="100%" />
-    </LineWrap>
+    </div>
   )
 }

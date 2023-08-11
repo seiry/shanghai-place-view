@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const Header = () => {
   return (
     <header
-      className={clsx(' w-full  top-0 left-0 z-50 sticky transform-gpu ')}
+      className={clsx(' w-full  top-0 left-0 z-50 fixed transform-gpu ')}
       // inset-x-0 top-0 z-50 w-full transition duration-200 ease-in-out border-b border-base-200 bg-base-100 text-base-content sticky
     >
       <div className="navbar shadow-md bg-primary">

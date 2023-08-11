@@ -6,9 +6,7 @@ export const GlobalLayout: FC<React.PropsWithChildren<unknown>> = (props) => {
     <>
       <Header />
 
-      <main className="h-[calc(100vh-64px-130px)] pt-5 relative">
-        {props.children}
-      </main>
+      <main className="h-full  relative pt-20">{props.children}</main>
     </>
   )
 }
