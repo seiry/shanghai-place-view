@@ -26,7 +26,7 @@
     "esbuild-runner": "^2.2.2",
     "flatpickr": "^4.6.13",
     "jotai": "^2.3.1",
-    "million": "^2.5.10",
+    "million": "^2.5.11",
     "next": "^13.4.13",
     "pinyin-engine": "^1.2.2",
     "postcss-flexbugs-fixes": "^5.0.2",
