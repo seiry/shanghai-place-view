@@ -38,7 +38,7 @@ export const dataFetcher = async (params: Params): Promise<TrendResp[][]> => {
 export type SpotResp = TypeOf<typeof selectSpotSchema>
 
 export const getFetcher = async <T>(path: string): Promise<T> => {
-  const res = await axios.post<T>(`/api/${path}`)
+  const res = await axios.get<T>(`/api/${path}`)
 
   return res.data
 }
