@@ -15,3 +15,14 @@ a {
 * {
   box-sizing: border-box;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    #__next {
+        @apply h-full relative;
+    }
+
+}

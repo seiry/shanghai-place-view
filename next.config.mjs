@@ -4,9 +4,16 @@
 // https://docs.sentry.io/platforms/javascript/guides/nextjs/
 
 // const { withSentryConfig } = require('@sentry/nextjs')
+import million from 'million/compiler'
+
+const millionConfig = {
+  // auto: process.env.NO DE_ENV === 'production' ? true : false,
+  // if you're using RSC:
+  auto: { rsc: true },
+}
 
 /** @type {import('next').NextConfig} */
-const moduleExports = {
+const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   // swcMinify: true,
@@ -57,6 +64,4 @@ const SentryWebpackPluginOptions = {
   // https://github.com/getsentry/sentry-webpack-plugin#options.
 }
 
-// Make sure adding Sentry options is the last code to run before exporting, to
-// ensure that your source maps include changes from all other Webpack plugins
-module.exports = moduleExports
+export default million.next(nextConfig, millionConfig)
