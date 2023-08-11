@@ -32,3 +32,4 @@ const Page = styled.div`
 export default dynamic(() => Promise.resolve(DataPage), {
   ssr: false,
 })
+// export default DataPage
