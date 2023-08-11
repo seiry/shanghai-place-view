@@ -1,3 +1,4 @@
+import { selectSpotSchema } from '@/db/schema'
 import clsx from 'clsx'
 import dayjs from 'dayjs'
 import flatpickr from 'flatpickr'
@@ -6,25 +7,15 @@ import Pinyin from 'pinyin-engine'
 import { FC, Suspense, useEffect, useMemo, useRef, useState } from 'react'
 import styled from 'styled-components'
 import useSWR from 'swr'
-import { getFetcher, SpotResp, TrendResp } from '../../lib/fetch'
+import { SpotResp, TrendResp, getFetcher } from '../../lib/fetch'
 import {
   TimeFrameName,
   timeFrames,
   useFilterStore,
   useTimeFrame,
 } from '../../store/filter'
-import { selectLogSchema, selectSpotSchema } from '@/db/schema'
-import { TypeOf, z } from 'zod'
 import { Loading } from '../Loading'
 
-const ToolBar = styled.div`
-  display: flex;
-  gap: 1rem;
-  z-index: 10;
-  width: 100%;
-  .btn-group {
-  }
-`
 const useSpot = () => {
   const { data: spotsData } = useSWR('spots', getFetcher<SpotResp[]>, {
     suspense: true,
@@ -94,9 +85,10 @@ const SpotFilter: FC = () => {
           </div>
         </div>
       </label>
+
       <ul
         tabIndex={0}
-        className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 max-h-[400px] overflow-y-auto flex-nowrap"
+        className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 max-h-[400px] overflow-y-auto flex-nowrap absolute"
       >
         {filteredSpotList?.map((spot) => (
           <li key={spot.spotId} onClick={() => addSeleted(spot)}>
@@ -121,6 +113,7 @@ const Selected: FC = () => {
     </ul>
   )
 }
+
 const MaxList: FC = () => {
   const maxList = useMaxList()
 
@@ -218,19 +211,21 @@ const CustomDate: FC = () => {
 
 export const Filter: FC = () => {
   return (
-    <ToolBar>
-      <Suspense fallback={<Loading />}>
-        <SpotFilter />
-      </Suspense>
+    <div className="z-10 w-full relative">
+      <div className="flex gap-4  h-fit relative ">
+        <Suspense fallback={<Loading />}>
+          <SpotFilter />
+        </Suspense>
 
-      <Selected />
-      <Suspense fallback={<Loading />}>
-        <MaxList />
-      </Suspense>
-      <DateList />
+        <Selected />
+        <Suspense fallback={<Loading />}>
+          <MaxList />
+        </Suspense>
+        <DateList />
 
-      <CustomDate />
-    </ToolBar>
+        <CustomDate />
+      </div>
+    </div>
   )
 }
 
