@@ -10,4 +10,7 @@ jobs:
 
     steps:
       - name: Run curl command
-        run: curl ${{ secrets.CronUrl }}
+        # run: curl ${{ secrets.CronUrl }}
+        run: |
+          content=$(curl -s  ${{ secrets.CronUrl }})
+          echo "$content"
