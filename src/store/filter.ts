@@ -17,12 +17,13 @@ export enum TimeFrameName {
   'custom' = 'custom',
 }
 
+const beforeNow = dayjs().add(30, 'minutes').toDate()
 export const timeFrames: TimeFrame[] = [
   {
     name: TimeFrameName['last 24 hours'],
     value: {
       from: dayjs().subtract(1, 'day').toDate(),
-      before: dayjs().toDate(),
+      before: beforeNow,
     },
   },
 
@@ -30,21 +31,21 @@ export const timeFrames: TimeFrame[] = [
     name: TimeFrameName['last 48 hours'],
     value: {
       from: dayjs().subtract(2, 'day').toDate(),
-      before: dayjs().toDate(),
+      before: beforeNow,
     },
   },
   {
     name: TimeFrameName['last 72 hours'],
     value: {
       from: dayjs().subtract(3, 'day').toDate(),
-      before: dayjs().toDate(),
+      before: beforeNow,
     },
   },
   {
     name: TimeFrameName['Last 7 days'],
     value: {
       from: dayjs().subtract(7, 'day').toDate(),
-      before: dayjs().toDate(),
+      before: beforeNow,
     },
   },
   {
