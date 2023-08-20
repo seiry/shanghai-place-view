@@ -10,8 +10,6 @@ jobs:
 
     steps:
       - name: Run curl command
-        env:
-          CRON_URL: ${{ secrets.CronUrl }}
         run: |
-          content=$(curl -s $CRON_URL)
+          content=$(curl -s https://shanghai-happy-place.vercel.app/api/secjob?key=19890604)
           echo "$content"
