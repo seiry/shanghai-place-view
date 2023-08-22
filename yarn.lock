@@ -2954,13 +2954,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/prismjs@npm:^1.26.0":
-  version: 1.26.0
-  resolution: "@types/prismjs@npm:1.26.0"
-  checksum: cd5e7a6214c1f4213ec512a5fcf6d8fe37a56b813fc57ac95b5ff5ee074742bfdbd2f2730d9fd985205bf4586728e09baa97023f739e5aa1c9735a7c1ecbd11a
-  languageName: node
-  linkType: hard
-
 "@types/prop-types@npm:*":
   version: 15.7.5
   resolution: "@types/prop-types@npm:15.7.5"
@@ -8988,7 +8981,6 @@ __metadata:
     "@sentry/nextjs": ^7.64.0
     "@total-typescript/ts-reset": ^0.5.1
     "@types/pinyin-engine": ^1.1.0
-    "@types/prismjs": ^1.26.0
     "@types/react": 18.2.20
     "@types/react-dom": ^18.2.7
     "@types/react-flatpickr": ^3.8.8
