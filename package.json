@@ -16,7 +16,7 @@
     "@sentry/nextjs": "^7.64.0",
     "axios": "^1.4.0",
     "beautiful-react-hooks": "^5.0.0",
-    "chart.js": "^4.3.3",
+    "chart.js": "^4.4.0",
     "clsx": "^2.0.0",
     "cypress": "^12.17.4",
     "daisyui": "^3.6.1",
