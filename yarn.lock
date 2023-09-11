@@ -2479,45 +2479,45 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@libsql/client@npm:^0.3.2":
-  version: 0.3.2
-  resolution: "@libsql/client@npm:0.3.2"
+"@libsql/client@npm:^0.3.4":
+  version: 0.3.4
+  resolution: "@libsql/client@npm:0.3.4"
   dependencies:
-    "@libsql/hrana-client": ^0.5.0
+    "@libsql/hrana-client": ^0.5.2
     better-sqlite3: ^8.0.1
     js-base64: ^3.7.5
-  checksum: 7c1bf25f74e1abb8e53a40eb281cc631c6c12b4bf89f8a0cbbe45ef766ad1a96844689de87d050f6eee3a75e555190c0be7c95322ce692e9a3608cb956cb91fd
+  checksum: e29a06c3a0796b1f929dff8328c15385c454a8a58f4db8344bc49143f70c4e9d81d91e9870fa3a6659ef80e23d1b43949e08065af08652bb4c362882e14acd8e
   languageName: node
   linkType: hard
 
-"@libsql/hrana-client@npm:^0.5.0":
-  version: 0.5.0
-  resolution: "@libsql/hrana-client@npm:0.5.0"
+"@libsql/hrana-client@npm:^0.5.2":
+  version: 0.5.2
+  resolution: "@libsql/hrana-client@npm:0.5.2"
   dependencies:
-    "@libsql/isomorphic-fetch": ^0.1.6
-    "@libsql/isomorphic-ws": ^0.1.3
+    "@libsql/isomorphic-fetch": ^0.1.7
+    "@libsql/isomorphic-ws": ^0.1.5
     js-base64: ^3.7.5
-  checksum: 5d284a2bca485a1a3172b50dc1f3b66d7a044394b23ebaecd8eae83dcfa38689931c2c09eff63327bfb3b6491a77d2978f3f94420b168ed64ced35a3281ef1b8
+  checksum: b1c147a62f35230a2a2d06f25f579bc4f47a5c9d59f0d868542bf089f70945e02c2225096ee5b2e7656787ba836862860c5966e5ccfbf63dbba3b69e2e9518e3
   languageName: node
   linkType: hard
 
-"@libsql/isomorphic-fetch@npm:^0.1.6":
-  version: 0.1.6
-  resolution: "@libsql/isomorphic-fetch@npm:0.1.6"
+"@libsql/isomorphic-fetch@npm:^0.1.7":
+  version: 0.1.7
+  resolution: "@libsql/isomorphic-fetch@npm:0.1.7"
   dependencies:
     "@types/node-fetch": ^2.2.6
     node-fetch: ^2.6.12
-  checksum: d7f10c5168f5acb18d7e1123e6f4c5b3cc82d886c9b1bb3e32aeec5efd275c9c0a280782c3e4452fd7c1623eb4d803c133457e4c4a38451aa56e6a6c7fb15ec9
+  checksum: e14da7ea3f313d376797a9308803496acd45e0c1762163ae39d6b0914239bb4ac0e108e7eafc73c27f43a57a0344685c9ad7280542f05dfbe58bd9ec14b9b0d1
   languageName: node
   linkType: hard
 
-"@libsql/isomorphic-ws@npm:^0.1.3":
-  version: 0.1.3
-  resolution: "@libsql/isomorphic-ws@npm:0.1.3"
+"@libsql/isomorphic-ws@npm:^0.1.5":
+  version: 0.1.5
+  resolution: "@libsql/isomorphic-ws@npm:0.1.5"
   dependencies:
     "@types/ws": ^8.5.4
     ws: ^8.13.0
-  checksum: 13af15b101e6c31a4111e7a253c019fce0144da460765463afdde01b460368fa11c3d1d8dd5a4c3dfe5b3020f0576d43d6a64c6b117b38fb4672c2bcc178bb49
+  checksum: 8255a0f4cae8ea66c94d6ab02ca57ddc7d6472c43700fd089e615e2df56028bf3723f694c91fbd76db403772f43f49cf2545e29e7ac18f77aa482fcfed71c940
   languageName: node
   linkType: hard
 
@@ -8963,7 +8963,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "shanghai-place-view@workspace:."
   dependencies:
-    "@libsql/client": ^0.3.2
+    "@libsql/client": ^0.3.4
     "@sentry/nextjs": ^7.68.0
     "@total-typescript/ts-reset": ^0.5.1
     "@types/pinyin-engine": ^1.1.0
