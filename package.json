@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@libsql/client": "^0.3.4",
-    "@sentry/nextjs": "^7.68.0",
+    "@sentry/nextjs": "^7.69.0",
     "axios": "^1.5.0",
     "beautiful-react-hooks": "^5.0.0",
     "chart.js": "^4.4.0",
