@@ -20,7 +20,7 @@
     "clsx": "^2.0.0",
     "cypress": "^12.17.4",
     "daisyui": "^3.7.5",
-    "dayjs": "^1.11.9",
+    "dayjs": "^1.11.10",
     "drizzle-orm": "^0.28.6",
     "drizzle-zod": "^0.5.1",
     "esbuild-runner": "^2.2.2",
