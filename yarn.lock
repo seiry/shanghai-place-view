@@ -4333,16 +4333,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"daisyui@npm:^3.7.5":
-  version: 3.7.5
-  resolution: "daisyui@npm:3.7.5"
+"daisyui@npm:^3.7.6":
+  version: 3.7.6
+  resolution: "daisyui@npm:3.7.6"
   dependencies:
     colord: ^2.9
     css-selector-tokenizer: ^0.8
     postcss: ^8
     postcss-js: ^4
     tailwindcss: ^3
-  checksum: 5bc5a8bcb9175d080f18162c64def552abfc6add8df5093721901a4faea6d3972311ecfa86a86239d3a209f2214b3b69ace3a1002b590704a014b4c4440a2bde
+  checksum: 06ad556d8425a4c2cf83f8fee0593acaf83286c4dbec64d113a6ed1d6741e03e5db071857a1597ee3afa8f273f8fa9ecc0654f24a8f4464bd34dba5bf9b6605a
   languageName: node
   linkType: hard
 
@@ -9239,7 +9239,7 @@ __metadata:
     chart.js: ^4.4.0
     clsx: ^2.0.0
     cypress: ^12.17.4
-    daisyui: ^3.7.5
+    daisyui: ^3.7.6
     dayjs: ^1.11.10
     dotenv: ^16.3.1
     drizzle-kit: ^0.19.13
