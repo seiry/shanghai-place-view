@@ -27,7 +27,7 @@
     "flatpickr": "^4.6.13",
     "jotai": "^2.4.2",
     "million": "^2.6.0",
-    "next": "^13.5.2",
+    "next": "^13.5.3",
     "pinyin-engine": "^1.2.2",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-preset-env": "^9.1.4",
