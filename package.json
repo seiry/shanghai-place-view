@@ -14,7 +14,7 @@
   "dependencies": {
     "@libsql/client": "^0.3.5",
     "@sentry/nextjs": "^7.71.0",
-    "axios": "^1.5.0",
+    "axios": "^1.5.1",
     "beautiful-react-hooks": "^5.0.0",
     "chart.js": "^4.4.0",
     "clsx": "^2.0.0",
