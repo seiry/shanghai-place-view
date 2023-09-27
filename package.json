@@ -25,7 +25,7 @@
     "drizzle-zod": "^0.5.1",
     "esbuild-runner": "^2.2.2",
     "flatpickr": "^4.6.13",
-    "jotai": "^2.4.2",
+    "jotai": "^2.4.3",
     "million": "^2.6.2",
     "next": "^13.5.3",
     "pinyin-engine": "^1.2.2",
