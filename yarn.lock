@@ -7464,9 +7464,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"million@npm:^2.6.1":
-  version: 2.6.1
-  resolution: "million@npm:2.6.1"
+"million@npm:^2.6.2":
+  version: 2.6.2
+  resolution: "million@npm:2.6.2"
   dependencies:
     "@babel/core": ^7.21.0
     "@babel/generator": ^7.22.7
@@ -7478,7 +7478,7 @@ __metadata:
     unplugin: ^1.3.1
   bin:
     million: packages/cli/dist/index.js
-  checksum: 039f3a8f18d34893877211490811c397b14ac540046b0816ac167683af397bfc49cfc2704d563082255595d7a203e1b3d039b73af5126b93c1cdcc8cbe1b4975
+  checksum: 13124b1d4547bbb161f2ca5b97a4a1bcaea7414ff3fea9285ef8ccd09906ad4157317117c1cc2575143e6dce8269bcac0b851540d561925b4d15348de01d5396
   languageName: node
   linkType: hard
 
@@ -9373,7 +9373,7 @@ __metadata:
     eslint-plugin-prettier: ^5.0.0
     flatpickr: ^4.6.13
     jotai: ^2.4.2
-    million: ^2.6.1
+    million: ^2.6.2
     next: ^13.5.3
     pinyin-engine: ^1.2.2
     postcss: ^8.4.30
