@@ -41,7 +41,7 @@
     "swr": "^2.2.4",
     "ts-pattern": "^5.0.5",
     "zod": "^3.22.3",
-    "zustand": "^4.4.2"
+    "zustand": "^4.4.3"
   },
   "devDependencies": {
     "@total-typescript/ts-reset": "^0.5.1",
