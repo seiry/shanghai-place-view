@@ -1832,13 +1832,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-flatpickr@npm:^3.8.9":
-  version: 3.8.9
-  resolution: "@types/react-flatpickr@npm:3.8.9"
+"@types/react-flatpickr@npm:^3.8.10":
+  version: 3.8.10
+  resolution: "@types/react-flatpickr@npm:3.8.10"
   dependencies:
     "@types/react": "*"
     flatpickr: ^4.0.6
-  checksum: e191adf60d839ea60a0d0720495b4c52e044f25e23f7551732ac16306e72105881363d6148ffc2ba8672dc3bf5b6cb62b71af4022c1dd85a2e3f4d15ba03f0ab
+  checksum: 796f43343a4303603b18b0d561dadbd13f8d255b5c33795c26a15eb7e6888aac79b2173c00f6bd7ac36d6db90d278c1ec080204574f50d387f3ee27dd709b9be
   languageName: node
   linkType: hard
 
@@ -8080,7 +8080,7 @@ __metadata:
     "@types/pinyin-engine": ^1.1.0
     "@types/react": 18.2.28
     "@types/react-dom": ^18.2.13
-    "@types/react-flatpickr": ^3.8.9
+    "@types/react-flatpickr": ^3.8.10
     autoprefixer: ^10.4.16
     axios: ^1.5.1
     beautiful-react-hooks: ^5.0.0
