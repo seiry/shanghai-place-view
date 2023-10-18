@@ -1809,10 +1809,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/pinyin-engine@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "@types/pinyin-engine@npm:1.1.0"
-  checksum: 36df63de63b414cdfd06ed01ffffb82f8d1456b5258f8c6011b4f7416e4868290d93f03dd1828498518fb34c0d8aa44d1380188119e72cd68a6bdaddc4f8992f
+"@types/pinyin-engine@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "@types/pinyin-engine@npm:1.1.1"
+  checksum: 08da8d234fe0b1e7fc97a2304ab6caffaed0dc6bc4e8a4f433dc9355620a6bbeb0dcde4519fc96752b98c9a343b96f0d8774a1de92f98c5bbe0a86312075eb51
   languageName: node
   linkType: hard
 
@@ -8077,7 +8077,7 @@ __metadata:
     "@libsql/client": ^0.3.5
     "@sentry/nextjs": ^7.74.1
     "@total-typescript/ts-reset": ^0.5.1
-    "@types/pinyin-engine": ^1.1.0
+    "@types/pinyin-engine": ^1.1.1
     "@types/react": 18.2.28
     "@types/react-dom": ^18.2.13
     "@types/react-flatpickr": ^3.8.9
