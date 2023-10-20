@@ -1309,27 +1309,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@libsql/client@npm:^0.3.5":
-  version: 0.3.5
-  resolution: "@libsql/client@npm:0.3.5"
+"@libsql/client@npm:^0.3.6":
+  version: 0.3.6
+  resolution: "@libsql/client@npm:0.3.6"
   dependencies:
     "@libsql/hrana-client": ^0.5.5
     js-base64: ^3.7.5
-    libsql: ^0.1.22
-  checksum: eac00fdbe838053b3c4d4fc670a8d3a5ddc9f8ac3ba56acb42165acc6d46cf1811b3bf5cdbd88daf1ea3080c8c4c6ea6d03a5e2ed87a0e4ceaf7a9de263036c4
+    libsql: ^0.1.28
+  checksum: 0bef9e5b83ac4201933b7c736efbc472aae882b6236d8f993874b97755c0c7a9c3f5c9cafa0b10a35bea60885252b89985904577c703d9c952c08b21f3029f45
   languageName: node
   linkType: hard
 
-"@libsql/darwin-arm64@npm:0.1.23":
-  version: 0.1.23
-  resolution: "@libsql/darwin-arm64@npm:0.1.23"
+"@libsql/darwin-arm64@npm:0.1.30":
+  version: 0.1.30
+  resolution: "@libsql/darwin-arm64@npm:0.1.30"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@libsql/darwin-x64@npm:0.1.23":
-  version: 0.1.23
-  resolution: "@libsql/darwin-x64@npm:0.1.23"
+"@libsql/darwin-x64@npm:0.1.30":
+  version: 0.1.30
+  resolution: "@libsql/darwin-x64@npm:0.1.30"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
@@ -1366,23 +1366,30 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@libsql/linux-x64-gnu@npm:0.1.23":
-  version: 0.1.23
-  resolution: "@libsql/linux-x64-gnu@npm:0.1.23"
+"@libsql/linux-arm64-gnu@npm:0.1.30":
+  version: 0.1.30
+  resolution: "@libsql/linux-arm64-gnu@npm:0.1.30"
+  conditions: os=linux & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@libsql/linux-x64-gnu@npm:0.1.30":
+  version: 0.1.30
+  resolution: "@libsql/linux-x64-gnu@npm:0.1.30"
   conditions: os=linux & cpu=x64
   languageName: node
   linkType: hard
 
-"@libsql/linux-x64-musl@npm:0.1.23":
-  version: 0.1.23
-  resolution: "@libsql/linux-x64-musl@npm:0.1.23"
+"@libsql/linux-x64-musl@npm:0.1.30":
+  version: 0.1.30
+  resolution: "@libsql/linux-x64-musl@npm:0.1.30"
   conditions: os=linux & cpu=x64
   languageName: node
   linkType: hard
 
-"@libsql/win32-x64-msvc@npm:0.1.23":
-  version: 0.1.23
-  resolution: "@libsql/win32-x64-msvc@npm:0.1.23"
+"@libsql/win32-x64-msvc@npm:0.1.30":
+  version: 0.1.30
+  resolution: "@libsql/win32-x64-msvc@npm:0.1.30"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -5965,15 +5972,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"libsql@npm:^0.1.22":
-  version: 0.1.23
-  resolution: "libsql@npm:0.1.23"
+"libsql@npm:^0.1.28":
+  version: 0.1.30
+  resolution: "libsql@npm:0.1.30"
   dependencies:
-    "@libsql/darwin-arm64": 0.1.23
-    "@libsql/darwin-x64": 0.1.23
-    "@libsql/linux-x64-gnu": 0.1.23
-    "@libsql/linux-x64-musl": 0.1.23
-    "@libsql/win32-x64-msvc": 0.1.23
+    "@libsql/darwin-arm64": 0.1.30
+    "@libsql/darwin-x64": 0.1.30
+    "@libsql/linux-arm64-gnu": 0.1.30
+    "@libsql/linux-x64-gnu": 0.1.30
+    "@libsql/linux-x64-musl": 0.1.30
+    "@libsql/win32-x64-msvc": 0.1.30
     "@neon-rs/load": ^0.0.4
     detect-libc: 2.0.2
   dependenciesMeta:
@@ -5981,13 +5989,15 @@ __metadata:
       optional: true
     "@libsql/darwin-x64":
       optional: true
+    "@libsql/linux-arm64-gnu":
+      optional: true
     "@libsql/linux-x64-gnu":
       optional: true
     "@libsql/linux-x64-musl":
       optional: true
     "@libsql/win32-x64-msvc":
       optional: true
-  checksum: abe1ba037980668e4f4e0fd5c2aae42ea842163745aa03b5b7d191ddd08ecfdcd4c6a8853e7c0c2a87e49b6590e6363453138b37b8fb932c1e8c334f8ab2f99f
+  checksum: 52700a4eca972976d0450ced11c7b9e4601f3af5d89c1e6a3a8fe9b173091de13a6cbdb1c178cd5578b8f0b51e02cb27698602d4cd5595f38af9be72e5a9a10d
   conditions: (os=darwin | os=linux | os=win32) & (cpu=x64 | cpu=arm64)
   languageName: node
   linkType: hard
@@ -8074,7 +8084,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "shanghai-place-view@workspace:."
   dependencies:
-    "@libsql/client": ^0.3.5
+    "@libsql/client": ^0.3.6
     "@sentry/nextjs": ^7.74.1
     "@total-typescript/ts-reset": ^0.5.1
     "@types/pinyin-engine": ^1.1.1
