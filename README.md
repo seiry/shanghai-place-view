@@ -1,4 +1,4 @@
 ## cron job
-https://console.cron-job.org/jobs
+[https://console.cron-job.org/jobs](https://github.com/seiry/cron-jobs)
 
-[![Scheduled Task](https://github.com/seiry/shanghai-place-view/actions/workflows/cron.yml/badge.svg?branch=main)](https://github.com/seiry/shanghai-place-view/actions/workflows/cron.yml)
+[![shanghai scheduled Curl](https://github.com/seiry/cron-jobs/actions/workflows/shanghai-curl.yml/badge.svg)](https://github.com/seiry/cron-jobs/actions/workflows/shanghai-curl.yml)
