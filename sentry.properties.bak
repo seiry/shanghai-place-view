@@ -1,5 +1,0 @@
-defaults.url=https://sentry.io/
-defaults.org=nanjing-university-of-aeronaut
-defaults.project=blog
-auth.token=15748b9e9b9348d0bd1658875af1023489b58a12c8e34e9f8a2fdac250538a24
-cli.executable=../../.npm/_npx/a8388072043b4cbc/node_modules/@sentry/cli/bin/sentry-cli
