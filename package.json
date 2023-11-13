@@ -50,7 +50,7 @@
     "@types/react-flatpickr": "^3.8.11",
     "autoprefixer": "^10.4.16",
     "dotenv": "^16.3.1",
-    "drizzle-kit": "^0.20.1",
+    "drizzle-kit": "^0.20.2",
     "eslint": "8.53.0",
     "eslint-config-next": "14.0.2",
     "eslint-config-prettier": "^9.0.0",
