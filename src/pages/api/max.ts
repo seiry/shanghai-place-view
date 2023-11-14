@@ -16,6 +16,7 @@ const handler = async () => {
     .run()
   const lastTime = time.rows?.[0]?.time
 
+  console.log({ lastTime })
   if (!lastTime) {
     return new Response(JSON.stringify(errorMsg('no date')), {
       status: 500,
@@ -35,6 +36,7 @@ const handler = async () => {
     .orderBy(desc(log.num))
     .limit(5)
     .run()
+  console.log({ maxList: maxList.rows })
 
   return new Response(JSON.stringify(maxList.rows))
 }
