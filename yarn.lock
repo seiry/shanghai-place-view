@@ -3065,13 +3065,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"colord@npm:^2.9":
-  version: 2.9.3
-  resolution: "colord@npm:2.9.3"
-  checksum: 907a4506d7307e2f580b471b581e992181ed75ab0c6925ece9ca46d88161d2fc50ed15891cd0556d0d9321237ca75afc9d462e4c050b939ef88428517f047f30
-  languageName: node
-  linkType: hard
-
 "colorette@npm:^2.0.16":
   version: 2.0.20
   resolution: "colorette@npm:2.0.20"
@@ -3253,6 +3246,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"culori@npm:^3":
+  version: 3.2.0
+  resolution: "culori@npm:3.2.0"
+  checksum: 8ccef28ec0fe45e9e380f391fcb351515cdd41f4f251b6db55dbc90c7c4853f0f8cf0636578b9f04338a713022c4cc54cd816e711a7963765703004ee526cea6
+  languageName: node
+  linkType: hard
+
 "cypress@npm:^13.5.1":
   version: 13.5.1
   resolution: "cypress@npm:13.5.1"
@@ -3316,16 +3316,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"daisyui@npm:^3.9.4":
-  version: 3.9.4
-  resolution: "daisyui@npm:3.9.4"
+"daisyui@npm:^4.0.5":
+  version: 4.0.5
+  resolution: "daisyui@npm:4.0.5"
   dependencies:
-    colord: "npm:^2.9"
     css-selector-tokenizer: "npm:^0.8"
-    postcss: "npm:^8"
+    culori: "npm:^3"
+    picocolors: "npm:^1"
     postcss-js: "npm:^4"
-    tailwindcss: "npm:^3.1"
-  checksum: 1b0dffb93f3f694ac8e7ea9c7151e87bc9187a1b9d8e6731117660e9abc8bdae002c2902299061fb863966682a5b2d7cba7f23e3272ad11c1ef10901c4e839ef
+  checksum: 83f1ec9a810754e5a06f126d0ee3595a76ef2d6c011b867eceb47a1bba5c6f4ecacd6de93e65d32d05f07a94bc6c30f7c8043aa1f0c90e903050dde01a5297e7
   languageName: node
   linkType: hard
 
@@ -4657,7 +4656,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-glob@npm:^3.2.12, fast-glob@npm:^3.2.9, fast-glob@npm:^3.3.0":
+"fast-glob@npm:^3.2.9, fast-glob@npm:^3.3.0":
   version: 3.3.0
   resolution: "fast-glob@npm:3.3.0"
   dependencies:
@@ -5940,15 +5939,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jiti@npm:^1.18.2":
-  version: 1.19.1
-  resolution: "jiti@npm:1.19.1"
-  bin:
-    jiti: bin/jiti.js
-  checksum: 88f11b406a877db348b956eb9cecf42d6cb6edcd6317aa75c032130fc88c1150baf8def5511e808af10b11336db2639a295ffe1ed455d65216dcef45a0a424b5
-  languageName: node
-  linkType: hard
-
 "jiti@npm:^1.19.1":
   version: 1.20.0
   resolution: "jiti@npm:1.20.0"
@@ -7225,7 +7215,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"picocolors@npm:^1.0.0":
+"picocolors@npm:^1, picocolors@npm:^1.0.0":
   version: 1.0.0
   resolution: "picocolors@npm:1.0.0"
   checksum: a2e8092dd86c8396bdba9f2b5481032848525b3dc295ce9b57896f931e63fc16f79805144321f72976383fc249584672a75cc18d6777c6b757603f372f745981
@@ -7700,7 +7690,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8, postcss@npm:^8.4.23":
+"postcss@npm:^8.4.23":
   version: 8.4.26
   resolution: "postcss@npm:8.4.26"
   dependencies:
@@ -8395,7 +8385,7 @@ __metadata:
     chart.js: "npm:^4.4.0"
     clsx: "npm:^2.0.0"
     cypress: "npm:^13.5.1"
-    daisyui: "npm:^3.9.4"
+    daisyui: "npm:^4.0.5"
     dayjs: "npm:^1.11.10"
     dotenv: "npm:^16.3.1"
     drizzle-kit: "npm:^0.20.2"
@@ -8971,39 +8961,6 @@ __metadata:
     "@pkgr/utils": "npm:^2.3.1"
     tslib: "npm:^2.5.0"
   checksum: fb6798a2db2650ca3a2435ad32d4fc14842da807993a1a350b64d267e0e770aa7f26492b119aa7500892d3d07a5af1eec7bfbd6e23a619451558be0f226a6094
-  languageName: node
-  linkType: hard
-
-"tailwindcss@npm:^3.1":
-  version: 3.3.3
-  resolution: "tailwindcss@npm:3.3.3"
-  dependencies:
-    "@alloc/quick-lru": "npm:^5.2.0"
-    arg: "npm:^5.0.2"
-    chokidar: "npm:^3.5.3"
-    didyoumean: "npm:^1.2.2"
-    dlv: "npm:^1.1.3"
-    fast-glob: "npm:^3.2.12"
-    glob-parent: "npm:^6.0.2"
-    is-glob: "npm:^4.0.3"
-    jiti: "npm:^1.18.2"
-    lilconfig: "npm:^2.1.0"
-    micromatch: "npm:^4.0.5"
-    normalize-path: "npm:^3.0.0"
-    object-hash: "npm:^3.0.0"
-    picocolors: "npm:^1.0.0"
-    postcss: "npm:^8.4.23"
-    postcss-import: "npm:^15.1.0"
-    postcss-js: "npm:^4.0.1"
-    postcss-load-config: "npm:^4.0.1"
-    postcss-nested: "npm:^6.0.1"
-    postcss-selector-parser: "npm:^6.0.11"
-    resolve: "npm:^1.22.2"
-    sucrase: "npm:^3.32.0"
-  bin:
-    tailwind: lib/cli.js
-    tailwindcss: lib/cli.js
-  checksum: bc47f40cc33aca95fb9d523ecef0a450241e51d2259c354ac283c6a06c4dcd7edd1ffbd6f065fc496390ff3ab4dd8349c968b10cce7e11e0bde101705fa0f4f1
   languageName: node
   linkType: hard
 
