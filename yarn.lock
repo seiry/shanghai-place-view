@@ -1920,12 +1920,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:^18.2.15":
-  version: 18.2.15
-  resolution: "@types/react-dom@npm:18.2.15"
+"@types/react-dom@npm:^18.2.16":
+  version: 18.2.16
+  resolution: "@types/react-dom@npm:18.2.16"
   dependencies:
     "@types/react": "npm:*"
-  checksum: 57ea7e9e210d95fa18fde82fc585cb6252c9118c8793a38b37b07ccbba05d09d14f88cf76af46eecda41c430b4400f789a4bbc505eec459a15cbaf13f56f887a
+  checksum: c0be61864a9f50bb8cd29c719d170b03b36149f4fbe308faa40194d15492c4a13814a2f344fc5ceb99b4747bfa11cdfb2d15a141ed37218a32ec0edf98b90f2b
   languageName: node
   linkType: hard
 
@@ -8388,7 +8388,7 @@ __metadata:
     "@total-typescript/ts-reset": "npm:^0.5.1"
     "@types/pinyin-engine": "npm:^1.1.2"
     "@types/react": "npm:18.2.37"
-    "@types/react-dom": "npm:^18.2.15"
+    "@types/react-dom": "npm:^18.2.16"
     "@types/react-flatpickr": "npm:^3.8.11"
     autoprefixer: "npm:^10.4.16"
     axios: "npm:^1.6.2"
