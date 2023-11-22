@@ -17,7 +17,7 @@
     "beautiful-react-hooks": "^5.0.1",
     "chart.js": "^4.4.0",
     "clsx": "^2.0.0",
-    "cypress": "^13.5.1",
+    "cypress": "^13.6.0",
     "daisyui": "^3.9.4",
     "dayjs": "^1.11.10",
     "drizzle-orm": "^0.29.0",
