@@ -141,10 +141,10 @@ const DateList: FC = () => {
   const timeFrame = useTimeFrame()
 
   return (
-    <div className="btn-group btn-group-vertical">
+    <div className="join join-vertical">
       {timeFrames.map((time) => (
         <button
-          className={clsx('btn btn-sm', {
+          className={clsx('btn btn-sm join-item', {
             'btn-active': timeFrame.name === time.name,
           })}
           key={time.name}
