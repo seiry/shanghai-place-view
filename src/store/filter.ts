@@ -14,7 +14,7 @@ export enum TimeFrameName {
   'last 48 hours' = 'last 48 hours',
   'last 72 hours' = 'last 72 hours',
   'Last 7 days' = 'Last 7 days',
-  'custom' = 'custom',
+  custom = 'custom',
 }
 
 const beforeNow = dayjs().add(30, 'minutes').toDate()
