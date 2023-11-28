@@ -11,8 +11,8 @@
     "migration": "esr ./src/db/migration.ts"
   },
   "dependencies": {
-    "@libsql/client": "^0.3.6",
-    "@sentry/nextjs": "^7.82.0",
+    "@libsql/client": "0.4.0-pre.2",
+    "@sentry/nextjs": "^7.83.0",
     "axios": "^1.6.2",
     "beautiful-react-hooks": "^5.0.1",
     "chart.js": "^4.4.0",
@@ -40,7 +40,7 @@
     "swr": "^2.2.4",
     "ts-pattern": "^5.0.5",
     "zod": "^3.22.4",
-    "zustand": "^4.4.6"
+    "zustand": "^4.4.7"
   },
   "devDependencies": {
     "@total-typescript/ts-reset": "^0.5.1",
