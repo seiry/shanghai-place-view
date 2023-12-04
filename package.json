@@ -11,7 +11,7 @@
     "migration": "esr ./src/db/migration.ts"
   },
   "dependencies": {
-    "@libsql/client": "0.4.0-pre.2",
+    "@libsql/client": "0.4.0-pre.5",
     "@sentry/nextjs": "^7.83.0",
     "axios": "^1.6.2",
     "beautiful-react-hooks": "^5.0.1",
