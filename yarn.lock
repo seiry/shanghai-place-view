@@ -8473,7 +8473,7 @@ __metadata:
     styled-components: "npm:^6.1.1"
     swr: "npm:^2.2.4"
     tailwindcss: "npm:^3.3.6"
-    ts-pattern: "npm:^5.0.5"
+    ts-pattern: "npm:^5.0.6"
     typescript: "npm:5.3.2"
     zod: "npm:^3.22.4"
     zustand: "npm:^4.4.7"
@@ -9252,10 +9252,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-pattern@npm:^5.0.5":
-  version: 5.0.5
-  resolution: "ts-pattern@npm:5.0.5"
-  checksum: 63b1f652beb1066650db80d41806f16f8b804d577a36091640371cd4bfe5c3a6ee330e02470487d9eac56d6dc2acf969df8bf1081f615672c7ea8e645f8008b5
+"ts-pattern@npm:^5.0.6":
+  version: 5.0.6
+  resolution: "ts-pattern@npm:5.0.6"
+  checksum: fa798ae1bc2ce3c064104e701f11eb4aa9f9d02dce3eaf8496ea211a5f9f74d95849193ca5e91e408358d9f04554ae04ed2133438a7a308546f8f72f76af9883
   languageName: node
   linkType: hard
 
