@@ -1401,27 +1401,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@libsql/client@npm:0.4.0-pre.2":
-  version: 0.4.0-pre.2
-  resolution: "@libsql/client@npm:0.4.0-pre.2"
+"@libsql/client@npm:0.4.0-pre.5":
+  version: 0.4.0-pre.5
+  resolution: "@libsql/client@npm:0.4.0-pre.5"
   dependencies:
     "@libsql/hrana-client": "npm:^0.5.5"
     js-base64: "npm:^3.7.5"
-    libsql: "npm:^0.2.0-pre.2"
-  checksum: 40282cd7bdc1d91ea179344dd67c8237d9d5f4e91841496c4d3f2aa4569c3bab4631b02c0611acb3af50c29ce19512ba8141068aa117fc459d768dbd7e26c262
+    libsql: "npm:^0.2.0-pre.4"
+  checksum: 44bd6831189662b7df6b637b8bfc8a9cfe38dbe2ae39b4c185d57b7abd916241efddbd918fa1a42ba1228341251a6f2caf9f23d054b18038c3f709f1fc058174
   languageName: node
   linkType: hard
 
-"@libsql/darwin-arm64@npm:0.2.0-pre.2":
-  version: 0.2.0-pre.2
-  resolution: "@libsql/darwin-arm64@npm:0.2.0-pre.2"
+"@libsql/darwin-arm64@npm:0.2.0-pre.4":
+  version: 0.2.0-pre.4
+  resolution: "@libsql/darwin-arm64@npm:0.2.0-pre.4"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@libsql/darwin-x64@npm:0.2.0-pre.2":
-  version: 0.2.0-pre.2
-  resolution: "@libsql/darwin-x64@npm:0.2.0-pre.2"
+"@libsql/darwin-x64@npm:0.2.0-pre.4":
+  version: 0.2.0-pre.4
+  resolution: "@libsql/darwin-x64@npm:0.2.0-pre.4"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
@@ -1458,37 +1458,37 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@libsql/linux-arm64-gnu@npm:0.2.0-pre.2":
-  version: 0.2.0-pre.2
-  resolution: "@libsql/linux-arm64-gnu@npm:0.2.0-pre.2"
+"@libsql/linux-arm64-gnu@npm:0.2.0-pre.4":
+  version: 0.2.0-pre.4
+  resolution: "@libsql/linux-arm64-gnu@npm:0.2.0-pre.4"
   conditions: os=linux & cpu=arm64
   languageName: node
   linkType: hard
 
-"@libsql/linux-arm64-musl@npm:0.2.0-pre.2":
-  version: 0.2.0-pre.2
-  resolution: "@libsql/linux-arm64-musl@npm:0.2.0-pre.2"
+"@libsql/linux-arm64-musl@npm:0.2.0-pre.4":
+  version: 0.2.0-pre.4
+  resolution: "@libsql/linux-arm64-musl@npm:0.2.0-pre.4"
   conditions: os=linux & cpu=arm64
   languageName: node
   linkType: hard
 
-"@libsql/linux-x64-gnu@npm:0.2.0-pre.2":
-  version: 0.2.0-pre.2
-  resolution: "@libsql/linux-x64-gnu@npm:0.2.0-pre.2"
+"@libsql/linux-x64-gnu@npm:0.2.0-pre.4":
+  version: 0.2.0-pre.4
+  resolution: "@libsql/linux-x64-gnu@npm:0.2.0-pre.4"
   conditions: os=linux & cpu=x64
   languageName: node
   linkType: hard
 
-"@libsql/linux-x64-musl@npm:0.2.0-pre.2":
-  version: 0.2.0-pre.2
-  resolution: "@libsql/linux-x64-musl@npm:0.2.0-pre.2"
+"@libsql/linux-x64-musl@npm:0.2.0-pre.4":
+  version: 0.2.0-pre.4
+  resolution: "@libsql/linux-x64-musl@npm:0.2.0-pre.4"
   conditions: os=linux & cpu=x64
   languageName: node
   linkType: hard
 
-"@libsql/win32-x64-msvc@npm:0.2.0-pre.2":
-  version: 0.2.0-pre.2
-  resolution: "@libsql/win32-x64-msvc@npm:0.2.0-pre.2"
+"@libsql/win32-x64-msvc@npm:0.2.0-pre.4":
+  version: 0.2.0-pre.4
+  resolution: "@libsql/win32-x64-msvc@npm:0.2.0-pre.4"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -6179,17 +6179,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"libsql@npm:^0.2.0-pre.2":
-  version: 0.2.0-pre.2
-  resolution: "libsql@npm:0.2.0-pre.2"
+"libsql@npm:^0.2.0-pre.4":
+  version: 0.2.0-pre.4
+  resolution: "libsql@npm:0.2.0-pre.4"
   dependencies:
-    "@libsql/darwin-arm64": "npm:0.2.0-pre.2"
-    "@libsql/darwin-x64": "npm:0.2.0-pre.2"
-    "@libsql/linux-arm64-gnu": "npm:0.2.0-pre.2"
-    "@libsql/linux-arm64-musl": "npm:0.2.0-pre.2"
-    "@libsql/linux-x64-gnu": "npm:0.2.0-pre.2"
-    "@libsql/linux-x64-musl": "npm:0.2.0-pre.2"
-    "@libsql/win32-x64-msvc": "npm:0.2.0-pre.2"
+    "@libsql/darwin-arm64": "npm:0.2.0-pre.4"
+    "@libsql/darwin-x64": "npm:0.2.0-pre.4"
+    "@libsql/linux-arm64-gnu": "npm:0.2.0-pre.4"
+    "@libsql/linux-arm64-musl": "npm:0.2.0-pre.4"
+    "@libsql/linux-x64-gnu": "npm:0.2.0-pre.4"
+    "@libsql/linux-x64-musl": "npm:0.2.0-pre.4"
+    "@libsql/win32-x64-msvc": "npm:0.2.0-pre.4"
     "@neon-rs/load": "npm:^0.0.4"
     detect-libc: "npm:2.0.2"
   dependenciesMeta:
@@ -6207,7 +6207,7 @@ __metadata:
       optional: true
     "@libsql/win32-x64-msvc":
       optional: true
-  checksum: 5affa5d3b21fdb46b2980ac72c41d28326fbbf779fe7522c3e257561de8c4b40e30cecc75e8073fed778032b16f375459aa059fec3583b72b14ed1a535da6eff
+  checksum: 0ae6edf2aef479f252783d6a0d3953c5620e8ce32fd32dac250d0bad57b66d1471f069d08f959f140b46dd9b47b98370a5747a850d125282b71f94d3729ec1ec
   conditions: (os=darwin | os=linux | os=win32) & (cpu=x64 | cpu=arm64)
   languageName: node
   linkType: hard
@@ -8412,7 +8412,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "shanghai-place-view@workspace:."
   dependencies:
-    "@libsql/client": "npm:0.4.0-pre.2"
+    "@libsql/client": "npm:0.4.0-pre.5"
     "@sentry/nextjs": "npm:^7.83.0"
     "@total-typescript/ts-reset": "npm:^0.5.1"
     "@types/pinyin-engine": "npm:^1.1.2"
