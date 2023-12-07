@@ -10,8 +10,9 @@ import { regions } from '@/lib/CONSTS'
 export const config = {
   runtime: 'edge',
   // preferredRegion: regions,// must be a direct value
-  preferredRegion: ['sin1', 'sfo1', 'hnd1'],
 }
+
+export const preferredRegion = ['sin1', 'sfo1', 'hnd1']
 
 const handler = async (req: NextRequest) => {
   if (req.method !== 'POST') {
