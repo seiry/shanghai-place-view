@@ -1,14 +1,17 @@
 import { log, spot } from '@/db/schema'
 import { db } from '@/db/turso'
+import { Params } from '@/lib/fetch'
 import dayjs from 'dayjs'
 import { and, eq, gte, inArray, lte } from 'drizzle-orm'
 import { NextRequest } from 'next/server'
 import { errorMsg } from '../../lib/error'
-import { Params } from '@/lib/fetch'
 
 export const config = {
   runtime: 'edge',
+  // preferredRegion: regions,// must be a direct value
 }
+
+export const preferredRegion = ['sin1', 'sfo1', 'hnd1']
 
 const handler = async (req: NextRequest) => {
   if (req.method !== 'POST') {
