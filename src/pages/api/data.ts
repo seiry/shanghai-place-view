@@ -9,6 +9,7 @@ import { regions } from '@/lib/CONSTS'
 
 export const config = {
   runtime: 'edge',
+  preferredRegion: regions,
 }
 
 const handler = async (req: NextRequest) => {
