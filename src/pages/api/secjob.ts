@@ -1,11 +1,10 @@
-import { reigons } from '@/lib/CONSTS'
+import { regions } from '@/lib/CONSTS'
 import { mainJob } from '@/lib/job'
 import { NextRequest } from 'next/server'
 
 export const config = {
   runtime: 'edge',
 }
-export const preferredRegion = reigons
 
 const handler = async (req: NextRequest) => {
   if (req.nextUrl.searchParams.get('key') !== '19890604') {

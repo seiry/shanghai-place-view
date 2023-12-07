@@ -2,12 +2,11 @@ import { log, spot } from '@/db/schema'
 import { db } from '@/db/turso'
 import { and, desc, eq, notInArray } from 'drizzle-orm'
 import { errorMsg } from '../../lib/error'
-import { reigons } from '@/lib/CONSTS'
+import { regions } from '@/lib/CONSTS'
 
 export const config = {
   runtime: 'edge',
 }
-export const preferredRegion = reigons
 
 const handler = async () => {
   const time = await db

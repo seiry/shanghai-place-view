@@ -5,12 +5,11 @@ import { and, eq, gte, inArray, lte } from 'drizzle-orm'
 import { NextRequest } from 'next/server'
 import { errorMsg } from '../../lib/error'
 import { Params } from '@/lib/fetch'
-import { reigons } from '@/lib/CONSTS'
+import { regions } from '@/lib/CONSTS'
 
 export const config = {
   runtime: 'edge',
 }
-export const preferredRegion = reigons
 
 const handler = async (req: NextRequest) => {
   if (req.method !== 'POST') {
