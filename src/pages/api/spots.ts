@@ -1,10 +1,10 @@
 import { spot } from '@/db/schema'
 import { db } from '@/db/turso'
-import { regions } from '@/lib/CONSTS'
 
 export const config = {
   runtime: 'edge',
 }
+export const preferredRegion = ['sin1', 'sfo1', 'hnd1']
 
 const handler = async () => {
   const data = await db.select().from(spot).run()

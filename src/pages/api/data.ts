@@ -1,11 +1,10 @@
 import { log, spot } from '@/db/schema'
 import { db } from '@/db/turso'
+import { Params } from '@/lib/fetch'
 import dayjs from 'dayjs'
 import { and, eq, gte, inArray, lte } from 'drizzle-orm'
 import { NextRequest } from 'next/server'
 import { errorMsg } from '../../lib/error'
-import { Params } from '@/lib/fetch'
-import { regions } from '@/lib/CONSTS'
 
 export const config = {
   runtime: 'edge',
