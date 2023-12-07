@@ -8,7 +8,9 @@ import { Params } from '@/lib/fetch'
 
 export const config = {
   runtime: 'edge',
+  preferredRegion: ['sin', 'lax', 'nrt'],
 }
+export const preferredRegion = ['sin', 'lax', 'nrt']
 
 const handler = async (req: NextRequest) => {
   if (req.method !== 'POST') {
