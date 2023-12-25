@@ -3777,9 +3777,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"drizzle-orm@npm:^0.29.1":
-  version: 0.29.1
-  resolution: "drizzle-orm@npm:0.29.1"
+"drizzle-orm@npm:^0.29.2":
+  version: 0.29.2
+  resolution: "drizzle-orm@npm:0.29.2"
   peerDependencies:
     "@aws-sdk/client-rds-data": ">=3"
     "@cloudflare/workers-types": ">=3"
@@ -3789,15 +3789,18 @@ __metadata:
     "@planetscale/database": ">=1"
     "@types/better-sqlite3": "*"
     "@types/pg": "*"
+    "@types/react": ">=18"
     "@types/sql.js": "*"
     "@vercel/postgres": "*"
     better-sqlite3: ">=7"
     bun-types: "*"
+    expo-sqlite: ">=13.2.0"
     knex: "*"
     kysely: "*"
     mysql2: ">=2"
     pg: ">=8"
     postgres: ">=3"
+    react: ">=18"
     sql.js: ">=1"
     sqlite3: ">=5"
   peerDependenciesMeta:
@@ -3839,7 +3842,7 @@ __metadata:
       optional: true
     sqlite3:
       optional: true
-  checksum: 26051247bf6b66ecfbad24f2180c2787fcbe859955c3b561d563d71e969751712f57ff947fe384660bd451f2eb2f37a2f37a7222a5ccdc418c05640d73d08ed5
+  checksum: 1953c24c94a55019b7bf63a09324f7accc495a0d6ab1cd483dca464c9abbaaf2700367fd97cceed9295d46b6f2a79befcf2efea4907fef0b7375228a7c77ef62
   languageName: node
   linkType: hard
 
@@ -8472,7 +8475,7 @@ __metadata:
     dayjs: "npm:^1.11.10"
     dotenv: "npm:^16.3.1"
     drizzle-kit: "npm:^0.20.7"
-    drizzle-orm: "npm:^0.29.1"
+    drizzle-orm: "npm:^0.29.2"
     drizzle-zod: "npm:^0.5.1"
     esbuild-runner: "npm:^2.2.2"
     eslint: "npm:8.56.0"
