@@ -6,13 +6,6 @@ import { and, eq, gte, inArray, lte } from 'drizzle-orm'
 import { NextRequest } from 'next/server'
 import { errorMsg } from '../../lib/error'
 
-export const config = {
-  runtime: 'edge',
-  // preferredRegion: regions,// must be a direct value
-}
-
-export const preferredRegion = ['sin1', 'sfo1', 'hnd1']
-
 const handler = async (req: NextRequest) => {
   if (req.method !== 'POST') {
     return new Response(null, { status: 404 })

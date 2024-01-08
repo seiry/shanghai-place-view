@@ -3,11 +3,6 @@ import { db } from '@/db/turso'
 import { and, desc, eq, notInArray } from 'drizzle-orm'
 import { errorMsg } from '../../lib/error'
 
-export const config = {
-  runtime: 'edge',
-}
-export const preferredRegion = ['sin1', 'sfo1', 'hnd1']
-
 const handler = async () => {
   const time = await db
     .select()
