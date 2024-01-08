@@ -15,6 +15,7 @@ import {
   useTimeFrame,
 } from '../../store/filter'
 import { Loading } from '../Loading'
+import { ErrorBoundary } from '@sentry/nextjs'
 
 const useSpot = () => {
   const { data: spotsData } = useSWR('spots', getFetcher<SpotResp[]>, {
@@ -213,14 +214,18 @@ export const Filter: FC = () => {
   return (
     <div className="z-10 w-full relative">
       <div className="flex gap-4  h-fit relative ">
-        <Suspense fallback={<Loading />}>
-          <SpotFilter />
-        </Suspense>
+        <ErrorBoundary>
+          <Suspense fallback={<Loading />}>
+            <SpotFilter />
+          </Suspense>
+        </ErrorBoundary>
 
         <Selected />
-        <Suspense fallback={<Loading />}>
-          <MaxList />
-        </Suspense>
+        <ErrorBoundary>
+          <Suspense fallback={<Loading />}>
+            <MaxList />
+          </Suspense>
+        </ErrorBoundary>
         <DateList />
 
         <CustomDate />

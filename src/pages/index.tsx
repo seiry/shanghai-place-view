@@ -6,6 +6,7 @@ import { Filter } from '@/components/Filter'
 import { LineChart } from '@/components/Line'
 import { makeTitleTag } from '@/lib/utils'
 import { Loading } from '@/components/Loading'
+import { ErrorBoundary } from '@sentry/nextjs'
 
 const DataPage: FC = () => {
   return (
@@ -15,9 +16,11 @@ const DataPage: FC = () => {
       </Head>
 
       <Filter />
-      <Suspense fallback={<Loading />}>
-        <LineChart />
-      </Suspense>
+      <ErrorBoundary>
+        <Suspense fallback={<Loading />}>
+          <LineChart />
+        </Suspense>
+      </ErrorBoundary>
     </Page>
   )
 }
