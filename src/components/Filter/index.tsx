@@ -5,7 +5,6 @@ import flatpickr from 'flatpickr'
 import 'flatpickr/dist/themes/confetti.css'
 import Pinyin from 'pinyin-engine'
 import { FC, Suspense, useEffect, useMemo, useRef, useState } from 'react'
-import styled from 'styled-components'
 import useSWR from 'swr'
 import { SpotResp, TrendResp, getFetcher } from '../../lib/fetch'
 import {
@@ -16,6 +15,7 @@ import {
 } from '../../store/filter'
 import { Loading } from '../Loading'
 import { ErrorBoundary } from '@sentry/nextjs'
+import { twc } from 'react-twc'
 
 const useSpot = () => {
   const { data: spotsData } = useSWR('spots', getFetcher<SpotResp[]>, {
@@ -235,9 +235,5 @@ export const Filter: FC = () => {
 }
 
 const pickFormat = 'YYYY-MM-DD HH:mm:ss'
-const DateTime = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`
+
+const DateTime = twc.div`flex flex-col items-center justify-center`
