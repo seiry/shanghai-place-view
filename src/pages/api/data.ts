@@ -3,43 +3,46 @@ import { db } from '@/db/turso'
 import { Params } from '@/lib/fetch'
 import dayjs from 'dayjs'
 import { and, eq, gte, inArray, lte } from 'drizzle-orm'
-import { NextRequest } from 'next/server'
+import { NextApiRequest, NextApiResponse } from 'next'
 import { errorMsg } from '../../lib/error'
 
-const handler = async (req: NextRequest) => {
+const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method !== 'POST') {
-    return new Response(null, { status: 404 })
+    return res.status(404).end()
   }
-  const params = (await req.json()) as Params
 
-  // const params: Params = req.body.json()
+  const params: Params = req.body
+
   if (!params?.spotId) {
-    return new Response(JSON.stringify(errorMsg('wrong input')), {
-      status: 500,
-    })
+    return res.status(500).json(errorMsg('wrong input'))
   }
 
-  if (params.spotId instanceof Array) {
+  if (Array.isArray(params.spotId)) {
     if (params.spotId.length === 0) {
-      return new Response(JSON.stringify([]))
+      return res.status(200).json([])
     }
-    const data = await db
-      .select()
-      .from(log)
-      .innerJoin(spot, eq(log.spotId, spot.spotId))
-      .where(
-        and(
-          inArray(log.spotId, params.spotId),
-          lte(log.time, dayjs(params.before).unix() ?? dayjs().unix()),
-          gte(log.time, dayjs(params.from).unix() ?? 0),
-        ),
-      )
-      .run()
-    return new Response(JSON.stringify(data.rows))
+
+    try {
+      const data = await db
+        .select()
+        .from(log)
+        .innerJoin(spot, eq(log.spotId, spot.spotId))
+        .where(
+          and(
+            inArray(log.spotId, params.spotId),
+            lte(log.time, dayjs(params.before).unix() ?? dayjs().unix()),
+            gte(log.time, dayjs(params.from).unix() ?? 0),
+          ),
+        )
+        .run()
+
+      return res.status(200).json(data.rows)
+    } catch (error) {
+      console.error(error)
+      return res.status(500).json(errorMsg('Internal Server Error'))
+    }
   } else {
-    return new Response(JSON.stringify(errorMsg('wrong input')), {
-      status: 500,
-    })
+    return res.status(500).json(errorMsg('wrong input'))
   }
 }
 
