@@ -9,5 +9,5 @@ const client = createClient({
 })
 
 export const db = drizzle(client, {
-  // logger: true,
+  logger: true,
 })
