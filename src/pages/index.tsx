@@ -1,12 +1,12 @@
+import { Filter } from '@/components/Filter'
+import { LineChart } from '@/components/Line'
+import { Loading } from '@/components/Loading'
+import { makeTitleTag } from '@/lib/utils'
+import { ErrorBoundary } from '@sentry/nextjs'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import { FC, Suspense } from 'react'
-import styled from 'styled-components'
-import { Filter } from '@/components/Filter'
-import { LineChart } from '@/components/Line'
-import { makeTitleTag } from '@/lib/utils'
-import { Loading } from '@/components/Loading'
-import { ErrorBoundary } from '@sentry/nextjs'
+import { twc } from 'react-twc'
 
 const DataPage: FC = () => {
   return (
@@ -25,13 +25,7 @@ const DataPage: FC = () => {
   )
 }
 
-const Page = styled.div`
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 1rem;
-`
+const Page = twc.div`h-full flex flex-col gap-4 p-4`
 export default dynamic(() => Promise.resolve(DataPage), {
   ssr: false,
 })
