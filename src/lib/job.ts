@@ -5,6 +5,7 @@ import fetch from 'node-fetch'
 
 export async function mainJob() {
   const data = await fetchData()
+  console.log('data', data)
   await syncSpot(data)
   const time = dayjs().unix()
   const sqlDataArr = data.map((rawData) =>

@@ -1,6 +1,11 @@
 import { mainJob } from '@/lib/job'
 import { NextRequest } from 'next/server'
 
+export const config = {
+  runtime: 'edge',
+}
+// export const preferredRegion = ['sin1', 'sfo1', 'hnd1']
+
 const handler = async (req: NextRequest) => {
   if (req.nextUrl?.searchParams?.get('key') !== '19890604') {
     return new Response('', {
@@ -9,7 +14,7 @@ const handler = async (req: NextRequest) => {
   }
   const re = await mainJob()
 
-  return new Response(JSON.stringify(re.rowsAffected))
+  return Response.json(re.rowsAffected)
 }
 
 export default handler
