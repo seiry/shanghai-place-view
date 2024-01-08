@@ -1,20 +1,20 @@
 import { mainJob } from '@/lib/job'
-import { NextRequest } from 'next/server'
+import { NextApiRequest, NextApiResponse } from 'next'
 
-export const config = {
-  runtime: 'edge',
-}
-// export const preferredRegion = ['sin1', 'sfo1', 'hnd1']
-
-const handler = async (req: NextRequest) => {
-  if (req.nextUrl?.searchParams?.get('key') !== '19890604') {
-    return new Response('', {
-      status: 404,
-    })
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {
+  if (req.query.key !== '19890604') {
+    return res.status(404).send('')
   }
-  const re = await mainJob()
 
-  return Response.json(re.rowsAffected)
+  try {
+    const re = await mainJob()
+    return res.status(200).json(re.rowsAffected)
+  } catch (error) {
+    // 处理错误情况
+    console.error(error)
+    return res.status(500).json({ error: 'Internal Server Error' })
+  }
 }
-
-export default handler
