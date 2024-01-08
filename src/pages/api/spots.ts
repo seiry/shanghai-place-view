@@ -4,7 +4,7 @@ import { db } from '@/db/turso'
 export const config = {
   runtime: 'edge',
 }
-export const preferredRegion = ['sin1', 'sfo1', 'hnd1']
+// export const preferredRegion = ['sin1', 'sfo1', 'hnd1']
 
 const handler = async () => {
   const data = await db.select().from(spot).run()
