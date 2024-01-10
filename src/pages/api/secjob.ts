@@ -1,6 +1,8 @@
 import { mainJob } from '@/lib/job'
 import { NextApiRequest, NextApiResponse } from 'next'
 
+export const preferredRegion = ['sin1', 'sfo1', 'hnd1']
+
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
