@@ -45,7 +45,7 @@
   "devDependencies": {
     "@total-typescript/ts-reset": "^0.5.1",
     "@types/pinyin-engine": "^1.1.2",
-    "@types/react": "18.2.47",
+    "@types/react": "18.2.48",
     "@types/react-dom": "^18.2.18",
     "@types/react-flatpickr": "^3.8.11",
     "autoprefixer": "^10.4.16",
