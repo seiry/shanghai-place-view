@@ -3066,7 +3066,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"clsx@npm:^2.0.0, clsx@npm:^2.1.0":
+"clsx@npm:^2.1.0":
   version: 2.1.0
   resolution: "clsx@npm:2.1.0"
   checksum: 2e0ce7c3b6803d74fc8147c408f88e79245583202ac14abd9691e2aebb9f312de44270b79154320d10bb7804a9197869635d1291741084826cff20820f31542b
@@ -7776,13 +7776,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-twc@npm:^1.3.0":
-  version: 1.3.0
-  resolution: "react-twc@npm:1.3.0"
+"react-twc@npm:^1.4.1":
+  version: 1.4.1
+  resolution: "react-twc@npm:1.4.1"
   dependencies:
     "@radix-ui/react-slot": "npm:^1.0.2"
-    clsx: "npm:^2.0.0"
-  checksum: 0f8b26dbcb102c76d99010bd9ded4e39e6e8be689582aa9e61734e74176d0c505882c528bbd799230886703bb72a0fea1d14dae2cfd2132194307cfaf26ec659
+    clsx: "npm:^2.1.0"
+  checksum: fe53393c187d0eaae555249998f0cd3c94ec7f5328103a9eb5a153bb22f484780ae2ccbdcda4e48580462a4fb087482bce3f6b3b5af4d9ec00749913a1634368
   languageName: node
   linkType: hard
 
@@ -8229,7 +8229,7 @@ __metadata:
     react-chartjs-2: "npm:^5.2.0"
     react-dom: "npm:18.2.0"
     react-flatpickr: "npm:^3.10.13"
-    react-twc: "npm:^1.3.0"
+    react-twc: "npm:^1.4.1"
     sass: "npm:^1.69.7"
     sharp: "npm:^0.33.2"
     swr: "npm:^2.2.4"
