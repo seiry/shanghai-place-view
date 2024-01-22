@@ -841,12 +841,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@drizzle-team/studio@npm:^0.0.37":
-  version: 0.0.37
-  resolution: "@drizzle-team/studio@npm:0.0.37"
+"@drizzle-team/studio@npm:^0.0.39":
+  version: 0.0.39
+  resolution: "@drizzle-team/studio@npm:0.0.39"
   dependencies:
     superjson: "npm:^2.2.1"
-  checksum: a0b167706559e063ae1d6c391dc9690b479991ee2a338ce9e2295b8554a722bcb1a3b77321d5cc203abe9810e18feecfaa85f55f54e9a041e1057a18b9737c4f
+  checksum: 4e9a4f70fc7dc41ddb4d473f52652c912ce5e06756b27a4f9d0de5c4444c612dd5376602224cdfc1135396284c5a1702b69064b64438b8fea8489e4a7ff6393b
   languageName: node
   linkType: hard
 
@@ -3612,11 +3612,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"drizzle-kit@npm:^0.20.12":
-  version: 0.20.12
-  resolution: "drizzle-kit@npm:0.20.12"
+"drizzle-kit@npm:^0.20.13":
+  version: 0.20.13
+  resolution: "drizzle-kit@npm:0.20.13"
   dependencies:
-    "@drizzle-team/studio": "npm:^0.0.37"
+    "@drizzle-team/studio": "npm:^0.0.39"
     "@esbuild-kit/esm-loader": "npm:^2.5.5"
     camelcase: "npm:^7.0.1"
     chalk: "npm:^5.2.0"
@@ -3632,7 +3632,7 @@ __metadata:
     zod: "npm:^3.20.2"
   bin:
     drizzle-kit: bin.cjs
-  checksum: ad111409ebff20f7fce26048fec014e8610c4936777def8954613d2c390f28e308a6314ea27acb71d8570ffbb7e70460c62e1cb1a0114f63782e22d793532a44
+  checksum: ee5b38e487d5b423906d9187ed0910b236e216aca8f7df6f19757f2d02faeb4ae8565f1a99880bad0e196df3c959bf22d19f007b0a3f4c6b3a3bdefff07ff3ec
   languageName: node
   linkType: hard
 
@@ -8211,7 +8211,7 @@ __metadata:
     daisyui: "npm:^3.9.4"
     dayjs: "npm:^1.11.10"
     dotenv: "npm:^16.3.1"
-    drizzle-kit: "npm:^0.20.12"
+    drizzle-kit: "npm:^0.20.13"
     drizzle-orm: "npm:^0.29.3"
     drizzle-zod: "npm:^0.5.1"
     esbuild-runner: "npm:^2.2.2"
