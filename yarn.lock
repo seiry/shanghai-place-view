@@ -1499,50 +1499,60 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@libsql/client@npm:0.4.0-pre.7":
-  version: 0.4.0-pre.7
-  resolution: "@libsql/client@npm:0.4.0-pre.7"
+"@libsql/client@npm:0.4.2":
+  version: 0.4.2
+  resolution: "@libsql/client@npm:0.4.2"
   dependencies:
-    "@libsql/hrana-client": "npm:^0.5.5"
+    "@libsql/core": "npm:^0.4.2"
+    "@libsql/hrana-client": "npm:^0.5.6"
     js-base64: "npm:^3.7.5"
-    libsql: "npm:^0.2.0-pre.7"
-  checksum: e7a56c33a8dc89e8580e29defc572a1a0370c0781b6f5d1c187c82831ca76b02a49fc3445e981244c38027af0ffc858988b01db724c979072e7b78f3bf272e5b
+    libsql: "npm:^0.2.0"
+  checksum: 941f641138afdb65c46a21d402a2d1925e696c7d1603f908d4c054bf1b5fffe91a546e675d897aa69cbe39314d9fd1cd6b861f22982f8176b1befaf41dbc3d6d
   languageName: node
   linkType: hard
 
-"@libsql/darwin-arm64@npm:0.2.0-pre.7":
-  version: 0.2.0-pre.7
-  resolution: "@libsql/darwin-arm64@npm:0.2.0-pre.7"
+"@libsql/core@npm:^0.4.2":
+  version: 0.4.2
+  resolution: "@libsql/core@npm:0.4.2"
+  dependencies:
+    js-base64: "npm:^3.7.5"
+  checksum: d602dd45c06188346c4581574cc7bb303279845559c4e1caf33d5d67d7a72dae7d3b70517a683b6cb934b115e7cd31d3361d5e318b93e0d0d12f300f7ff3c21a
+  languageName: node
+  linkType: hard
+
+"@libsql/darwin-arm64@npm:0.2.0":
+  version: 0.2.0
+  resolution: "@libsql/darwin-arm64@npm:0.2.0"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@libsql/darwin-x64@npm:0.2.0-pre.7":
-  version: 0.2.0-pre.7
-  resolution: "@libsql/darwin-x64@npm:0.2.0-pre.7"
+"@libsql/darwin-x64@npm:0.2.0":
+  version: 0.2.0
+  resolution: "@libsql/darwin-x64@npm:0.2.0"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@libsql/hrana-client@npm:^0.5.5":
-  version: 0.5.5
-  resolution: "@libsql/hrana-client@npm:0.5.5"
+"@libsql/hrana-client@npm:^0.5.6":
+  version: 0.5.6
+  resolution: "@libsql/hrana-client@npm:0.5.6"
   dependencies:
-    "@libsql/isomorphic-fetch": "npm:^0.1.10"
+    "@libsql/isomorphic-fetch": "npm:^0.1.12"
     "@libsql/isomorphic-ws": "npm:^0.1.5"
     js-base64: "npm:^3.7.5"
     node-fetch: "npm:^3.3.2"
-  checksum: f44551f931a4f32c2df5dfe5dfafb49a9f08b47c22124a2af0dcfda784510c1689bd02dcdef3494f65e9eb7692c03b0f9629ca2ace66719f47d91440be86aa00
+  checksum: 8639267648db60bc9166bfd2debe2a4dc74834cc1c0e51c5dbdf6f95b7fb8abac575a604aa1a1cd9488795c56a02370bc984fa5f50c972adf4f55092510d9d5c
   languageName: node
   linkType: hard
 
-"@libsql/isomorphic-fetch@npm:^0.1.10":
-  version: 0.1.10
-  resolution: "@libsql/isomorphic-fetch@npm:0.1.10"
+"@libsql/isomorphic-fetch@npm:^0.1.12":
+  version: 0.1.12
+  resolution: "@libsql/isomorphic-fetch@npm:0.1.12"
   dependencies:
-    "@types/node-fetch": "npm:^2.2.6"
-    node-fetch: "npm:^2.6.12"
-  checksum: 672a3ffbbab45b6020fe1dac5bb668c6799111f46044817668e9ccf567d69638185c85f5e22d1811cc3e7f14d869575cdf5a04995fc55bdf4f5f7ca01fcd8a42
+    "@types/node-fetch": "npm:^2.6.11"
+    node-fetch: "npm:^2.7.0"
+  checksum: 83ea5c6b8b7b9519619d6bf56abc9ab0ced3257023d8a3aa6feaf5df76e705ca5b65381f33f293ea87f1543b03347c1994bb6172957e32e6ea4def03d9a5210e
   languageName: node
   linkType: hard
 
@@ -1556,37 +1566,37 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@libsql/linux-arm64-gnu@npm:0.2.0-pre.7":
-  version: 0.2.0-pre.7
-  resolution: "@libsql/linux-arm64-gnu@npm:0.2.0-pre.7"
+"@libsql/linux-arm64-gnu@npm:0.2.0":
+  version: 0.2.0
+  resolution: "@libsql/linux-arm64-gnu@npm:0.2.0"
   conditions: os=linux & cpu=arm64
   languageName: node
   linkType: hard
 
-"@libsql/linux-arm64-musl@npm:0.2.0-pre.7":
-  version: 0.2.0-pre.7
-  resolution: "@libsql/linux-arm64-musl@npm:0.2.0-pre.7"
+"@libsql/linux-arm64-musl@npm:0.2.0":
+  version: 0.2.0
+  resolution: "@libsql/linux-arm64-musl@npm:0.2.0"
   conditions: os=linux & cpu=arm64
   languageName: node
   linkType: hard
 
-"@libsql/linux-x64-gnu@npm:0.2.0-pre.7":
-  version: 0.2.0-pre.7
-  resolution: "@libsql/linux-x64-gnu@npm:0.2.0-pre.7"
+"@libsql/linux-x64-gnu@npm:0.2.0":
+  version: 0.2.0
+  resolution: "@libsql/linux-x64-gnu@npm:0.2.0"
   conditions: os=linux & cpu=x64
   languageName: node
   linkType: hard
 
-"@libsql/linux-x64-musl@npm:0.2.0-pre.7":
-  version: 0.2.0-pre.7
-  resolution: "@libsql/linux-x64-musl@npm:0.2.0-pre.7"
+"@libsql/linux-x64-musl@npm:0.2.0":
+  version: 0.2.0
+  resolution: "@libsql/linux-x64-musl@npm:0.2.0"
   conditions: os=linux & cpu=x64
   languageName: node
   linkType: hard
 
-"@libsql/win32-x64-msvc@npm:0.2.0-pre.7":
-  version: 0.2.0-pre.7
-  resolution: "@libsql/win32-x64-msvc@npm:0.2.0-pre.7"
+"@libsql/win32-x64-msvc@npm:0.2.0":
+  version: 0.2.0
+  resolution: "@libsql/win32-x64-msvc@npm:0.2.0"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -2035,13 +2045,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node-fetch@npm:^2.2.6":
-  version: 2.6.4
-  resolution: "@types/node-fetch@npm:2.6.4"
+"@types/node-fetch@npm:^2.6.11":
+  version: 2.6.11
+  resolution: "@types/node-fetch@npm:2.6.11"
   dependencies:
     "@types/node": "npm:*"
-    form-data: "npm:^3.0.0"
-  checksum: e904b5f887099a2728979bce9bbae9cc5f851e97a8dc71fe9a6f900798ef0cab761a3027609e70ca73b0bfbd0a9433acdbc052301762eb2d7695d97975746be6
+    form-data: "npm:^4.0.0"
+  checksum: c416df8f182ec3826278ea42557fda08f169a48a05e60722d9c8edd4e5b2076ae281c6b6601ad406035b7201f885b0257983b61c26b3f9eb0f41192a807b5de5
   languageName: node
   linkType: hard
 
@@ -4871,17 +4881,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"form-data@npm:^3.0.0":
-  version: 3.0.1
-  resolution: "form-data@npm:3.0.1"
-  dependencies:
-    asynckit: "npm:^0.4.0"
-    combined-stream: "npm:^1.0.8"
-    mime-types: "npm:^2.1.12"
-  checksum: 944b40ff63b9cb1ca7a97e70f72104c548e0b0263e3e817e49919015a0d687453086259b93005389896dbffd3777cccea2e67c51f4e827590e5979b14ff91bf7
-  languageName: node
-  linkType: hard
-
 "form-data@npm:^4.0.0":
   version: 4.0.0
   resolution: "form-data@npm:4.0.0"
@@ -6197,17 +6196,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"libsql@npm:^0.2.0-pre.7":
-  version: 0.2.0-pre.7
-  resolution: "libsql@npm:0.2.0-pre.7"
+"libsql@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "libsql@npm:0.2.0"
   dependencies:
-    "@libsql/darwin-arm64": "npm:0.2.0-pre.7"
-    "@libsql/darwin-x64": "npm:0.2.0-pre.7"
-    "@libsql/linux-arm64-gnu": "npm:0.2.0-pre.7"
-    "@libsql/linux-arm64-musl": "npm:0.2.0-pre.7"
-    "@libsql/linux-x64-gnu": "npm:0.2.0-pre.7"
-    "@libsql/linux-x64-musl": "npm:0.2.0-pre.7"
-    "@libsql/win32-x64-msvc": "npm:0.2.0-pre.7"
+    "@libsql/darwin-arm64": "npm:0.2.0"
+    "@libsql/darwin-x64": "npm:0.2.0"
+    "@libsql/linux-arm64-gnu": "npm:0.2.0"
+    "@libsql/linux-arm64-musl": "npm:0.2.0"
+    "@libsql/linux-x64-gnu": "npm:0.2.0"
+    "@libsql/linux-x64-musl": "npm:0.2.0"
+    "@libsql/win32-x64-msvc": "npm:0.2.0"
     "@neon-rs/load": "npm:^0.0.4"
     detect-libc: "npm:2.0.2"
   dependenciesMeta:
@@ -6225,7 +6224,7 @@ __metadata:
       optional: true
     "@libsql/win32-x64-msvc":
       optional: true
-  checksum: 18e38ef258bf4818eef56417331fd1d5985ad3c3d56694ac4159f45a449db0f1300398308798551b0f1d3f19ee497025d0f61dd7840ce4cad36389572ebe672b
+  checksum: 8c35d634f0226e312756dd69fa69c45302988f941befba5801d6e9a9ca33e5004297cf2e9d4ce247aa6ae7f1bb3850f1ba041d898736f6e81d3d49504e44a735
   conditions: (os=darwin | os=linux | os=win32) & (cpu=x64 | cpu=arm64)
   languageName: node
   linkType: hard
@@ -6794,20 +6793,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-fetch@npm:^2.6.12":
-  version: 2.7.0
-  resolution: "node-fetch@npm:2.7.0"
-  dependencies:
-    whatwg-url: "npm:^5.0.0"
-  peerDependencies:
-    encoding: ^0.1.0
-  peerDependenciesMeta:
-    encoding:
-      optional: true
-  checksum: b24f8a3dc937f388192e59bcf9d0857d7b6940a2496f328381641cb616efccc9866e89ec43f2ec956bbd6c3d3ee05524ce77fe7b29ccd34692b3a16f237d6676
-  languageName: node
-  linkType: hard
-
 "node-fetch@npm:^2.6.7":
   version: 2.6.12
   resolution: "node-fetch@npm:2.6.12"
@@ -6819,6 +6804,20 @@ __metadata:
     encoding:
       optional: true
   checksum: 370ed4d906edad9709a81b54a0141d37d2973a27dc80c723d8ac14afcec6dc67bc6c70986a96992b64ec75d08159cc4b65ce6aa9063941168ea5ac73b24df9f8
+  languageName: node
+  linkType: hard
+
+"node-fetch@npm:^2.7.0":
+  version: 2.7.0
+  resolution: "node-fetch@npm:2.7.0"
+  dependencies:
+    whatwg-url: "npm:^5.0.0"
+  peerDependencies:
+    encoding: ^0.1.0
+  peerDependenciesMeta:
+    encoding:
+      optional: true
+  checksum: b24f8a3dc937f388192e59bcf9d0857d7b6940a2496f328381641cb616efccc9866e89ec43f2ec956bbd6c3d3ee05524ce77fe7b29ccd34692b3a16f237d6676
   languageName: node
   linkType: hard
 
@@ -8262,7 +8261,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "shanghai-place-view@workspace:."
   dependencies:
-    "@libsql/client": "npm:0.4.0-pre.7"
+    "@libsql/client": "npm:0.4.2"
     "@sentry/nextjs": "npm:^7.94.1"
     "@total-typescript/ts-reset": "npm:^0.5.1"
     "@types/pinyin-engine": "npm:^1.1.2"
