@@ -1499,24 +1499,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@libsql/client@npm:0.4.2":
-  version: 0.4.2
-  resolution: "@libsql/client@npm:0.4.2"
+"@libsql/client@npm:0.4.3":
+  version: 0.4.3
+  resolution: "@libsql/client@npm:0.4.3"
   dependencies:
-    "@libsql/core": "npm:^0.4.2"
+    "@libsql/core": "npm:^0.4.3"
     "@libsql/hrana-client": "npm:^0.5.6"
     js-base64: "npm:^3.7.5"
     libsql: "npm:^0.2.0"
-  checksum: 941f641138afdb65c46a21d402a2d1925e696c7d1603f908d4c054bf1b5fffe91a546e675d897aa69cbe39314d9fd1cd6b861f22982f8176b1befaf41dbc3d6d
+  dependenciesMeta:
+    libsql:
+      optional: true
+  checksum: 0a1130dc5f5b7e7a9dae3536d96f6b39676112fd046b1d94407f2fa91d28811993cae0fdbf9f3a74ad47f372e8f0a09cdd7823fd15eae3fef5b9c22cb3474d6c
   languageName: node
   linkType: hard
 
-"@libsql/core@npm:^0.4.2":
-  version: 0.4.2
-  resolution: "@libsql/core@npm:0.4.2"
+"@libsql/core@npm:^0.4.3":
+  version: 0.4.3
+  resolution: "@libsql/core@npm:0.4.3"
   dependencies:
     js-base64: "npm:^3.7.5"
-  checksum: d602dd45c06188346c4581574cc7bb303279845559c4e1caf33d5d67d7a72dae7d3b70517a683b6cb934b115e7cd31d3361d5e318b93e0d0d12f300f7ff3c21a
+  checksum: c579925657329dde219cb5a05192c2838e88e77f4fe27334eb165e5aeb290e8eb0bb611e80165e1223978237ef7b6f736e0d82c5cfbf4b228f1b04803103896e
   languageName: node
   linkType: hard
 
@@ -8262,7 +8265,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "shanghai-place-view@workspace:."
   dependencies:
-    "@libsql/client": "npm:0.4.2"
+    "@libsql/client": "npm:0.4.3"
     "@sentry/nextjs": "npm:^7.99.0"
     "@total-typescript/ts-reset": "npm:^0.5.1"
     "@types/pinyin-engine": "npm:^1.1.2"
