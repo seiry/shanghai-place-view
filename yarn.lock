@@ -2110,14 +2110,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:18.2.54":
-  version: 18.2.54
-  resolution: "@types/react@npm:18.2.54"
+"@types/react@npm:18.2.55":
+  version: 18.2.55
+  resolution: "@types/react@npm:18.2.55"
   dependencies:
     "@types/prop-types": "npm:*"
     "@types/scheduler": "npm:*"
     csstype: "npm:^3.0.2"
-  checksum: 69f1a98c5504864fced16261247f0a79322bcfd8d689848cc523fb62e2dd1d64e6c7ac97819fc18f794f8904e1ff7b13fdb0dc28456060ca90b1da62eaa1ee5d
+  checksum: bf8fe19e73575489e63c0726355f164157cd69e75f2a862436ad2c0586e732cb953a7255a6bc73145e8f9506ee7a723f9a569ca9a39c53984e5b12b84e1c718a
   languageName: node
   linkType: hard
 
@@ -8269,7 +8269,7 @@ __metadata:
     "@sentry/nextjs": "npm:^7.99.0"
     "@total-typescript/ts-reset": "npm:^0.5.1"
     "@types/pinyin-engine": "npm:^1.1.2"
-    "@types/react": "npm:18.2.54"
+    "@types/react": "npm:18.2.55"
     "@types/react-dom": "npm:^18.2.18"
     "@types/react-flatpickr": "npm:^3.8.11"
     autoprefixer: "npm:^10.4.17"
