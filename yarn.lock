@@ -3642,10 +3642,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dotenv@npm:^16.4.3":
-  version: 16.4.3
-  resolution: "dotenv@npm:16.4.3"
-  checksum: f07db902c62c239aef7a7b696b21dfab8e95bf5883bcf23c6b9b55f42578d18b842e6257b4f4ecfdbd024a3ee9949fbaaa4c84807de7ba037c74fe3c70785198
+"dotenv@npm:^16.4.4":
+  version: 16.4.4
+  resolution: "dotenv@npm:16.4.4"
+  checksum: ddf43ede209d5f54c9da688e93326162eb0fc367ad1869909568cb15571ab8c87a0fab4e1d4af9860be0571c707a8b4aefa060a4f1b0bb14298a81e0ccf0017d
   languageName: node
   linkType: hard
 
@@ -8280,7 +8280,7 @@ __metadata:
     cypress: "npm:^13.6.4"
     daisyui: "npm:^3.9.4"
     dayjs: "npm:^1.11.10"
-    dotenv: "npm:^16.4.3"
+    dotenv: "npm:^16.4.4"
     drizzle-kit: "npm:^0.20.14"
     drizzle-orm: "npm:^0.29.3"
     drizzle-zod: "npm:^0.5.1"
