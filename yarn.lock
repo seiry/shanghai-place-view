@@ -8310,7 +8310,7 @@ __metadata:
     ts-pattern: "npm:^5.0.6"
     typescript: "npm:5.3.3"
     zod: "npm:^3.22.4"
-    zustand: "npm:^4.5.0"
+    zustand: "npm:^4.5.1"
   languageName: unknown
   linkType: soft
 
@@ -9602,9 +9602,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zustand@npm:^4.5.0":
-  version: 4.5.0
-  resolution: "zustand@npm:4.5.0"
+"zustand@npm:^4.5.1":
+  version: 4.5.1
+  resolution: "zustand@npm:4.5.1"
   dependencies:
     use-sync-external-store: "npm:1.2.0"
   peerDependencies:
@@ -9618,6 +9618,6 @@ __metadata:
       optional: true
     react:
       optional: true
-  checksum: 2488b904b3c8ced5feddfd30d8641d9d0c58c044b182b401035fdea8201c53ee84d89992cb425c365445ec315616016e2346cc1a07b1fe09f070c9da45564200
+  checksum: c5dcd734ddcc393bc1febcf1811d606222c6d40cb4cf0e4d605be6cfa1855c8b09b6725ab6b73a395f1e020f8f617b605c800c1f19301b240c45d5042e1b2a10
   languageName: node
   linkType: hard
