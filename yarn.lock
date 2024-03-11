@@ -3692,14 +3692,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"drizzle-orm@npm:^0.29.4":
-  version: 0.29.4
-  resolution: "drizzle-orm@npm:0.29.4"
+"drizzle-orm@npm:^0.30.1":
+  version: 0.30.1
+  resolution: "drizzle-orm@npm:0.30.1"
   peerDependencies:
     "@aws-sdk/client-rds-data": ">=3"
     "@cloudflare/workers-types": ">=3"
     "@libsql/client": "*"
     "@neondatabase/serverless": ">=0.1"
+    "@op-engineering/op-sqlite": ">=2"
     "@opentelemetry/api": ^1.4.1
     "@planetscale/database": ">=1"
     "@types/better-sqlite3": "*"
@@ -3726,6 +3727,8 @@ __metadata:
     "@libsql/client":
       optional: true
     "@neondatabase/serverless":
+      optional: true
+    "@op-engineering/op-sqlite":
       optional: true
     "@opentelemetry/api":
       optional: true
@@ -3763,7 +3766,7 @@ __metadata:
       optional: true
     sqlite3:
       optional: true
-  checksum: 20a75905309e69989811dfc306956e3bda74b2de5039f1179b55c54d724c96d321eca41e479a3df76f6a83953efcea276b6e33627e8514246f9ea38ba322045a
+  checksum: 139e4e17619e29b364520ef36318b902d1a0e0c8a3749fd12ced2ca645b10a6d47a9905fb07d0618655f310fab87c96ff11a17477d808fbc088123ea3dda98bf
   languageName: node
   linkType: hard
 
@@ -8300,7 +8303,7 @@ __metadata:
     dayjs: "npm:^1.11.10"
     dotenv: "npm:^16.4.5"
     drizzle-kit: "npm:^0.20.14"
-    drizzle-orm: "npm:^0.29.4"
+    drizzle-orm: "npm:^0.30.1"
     drizzle-zod: "npm:^0.5.1"
     esbuild-runner: "npm:^2.2.2"
     eslint: "npm:8.57.0"
