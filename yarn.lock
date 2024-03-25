@@ -3669,9 +3669,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"drizzle-orm@npm:^0.30.2":
-  version: 0.30.2
-  resolution: "drizzle-orm@npm:0.30.2"
+"drizzle-orm@npm:^0.30.4":
+  version: 0.30.4
+  resolution: "drizzle-orm@npm:0.30.4"
   peerDependencies:
     "@aws-sdk/client-rds-data": ">=3"
     "@cloudflare/workers-types": ">=3"
@@ -3685,6 +3685,7 @@ __metadata:
     "@types/react": ">=18"
     "@types/sql.js": "*"
     "@vercel/postgres": "*"
+    "@xata.io/client": "*"
     better-sqlite3: ">=7"
     bun-types: "*"
     expo-sqlite: ">=13.2.0"
@@ -3721,6 +3722,8 @@ __metadata:
       optional: true
     "@vercel/postgres":
       optional: true
+    "@xata.io/client":
+      optional: true
     better-sqlite3:
       optional: true
     bun-types:
@@ -3743,7 +3746,7 @@ __metadata:
       optional: true
     sqlite3:
       optional: true
-  checksum: 7355cb54af007b2fa55ae97c1a04b7968a18e393980b3731b66806d37dd4ff0b3520312a64aa2db9661ef35bb6ffb2f54c5a158ea75f836e6af5640c9d8d5475
+  checksum: 536fa53a1e6aca6b6846fe6dc7f44eec516a8e902642d3eab1afefe8bb829d8e5d4265547622b03d7e0e7eb42a3eb6c8ba37efd37999c25c0ea25bdfdbe731a5
   languageName: node
   linkType: hard
 
@@ -8274,7 +8277,7 @@ __metadata:
     dayjs: "npm:^1.11.10"
     dotenv: "npm:^16.4.5"
     drizzle-kit: "npm:^0.20.14"
-    drizzle-orm: "npm:^0.30.2"
+    drizzle-orm: "npm:^0.30.4"
     drizzle-zod: "npm:^0.5.1"
     esbuild-runner: "npm:^2.2.2"
     eslint: "npm:8.57.0"
