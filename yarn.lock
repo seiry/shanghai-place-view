@@ -884,15 +884,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@drizzle-team/studio@npm:^0.0.39":
-  version: 0.0.39
-  resolution: "@drizzle-team/studio@npm:0.0.39"
-  dependencies:
-    superjson: "npm:^2.2.1"
-  checksum: 4e9a4f70fc7dc41ddb4d473f52652c912ce5e06756b27a4f9d0de5c4444c612dd5376602224cdfc1135396284c5a1702b69064b64438b8fea8489e4a7ff6393b
-  languageName: node
-  linkType: hard
-
 "@emnapi/runtime@npm:^1.1.0":
   version: 1.1.0
   resolution: "@emnapi/runtime@npm:1.1.0"
@@ -1269,6 +1260,23 @@ __metadata:
   version: 9.0.0
   resolution: "@eslint/js@npm:9.0.0"
   checksum: b14b20af72410ef53e3e77e7d83cc1d6e6554b0092ceb9f969d25d765f4d775b4be32b0cd99bbfd6ce72eb2e4fb6b39b42a159b31909fbe1b3a5e88d75211687
+  languageName: node
+  linkType: hard
+
+"@hono/node-server@npm:^1.9.0":
+  version: 1.11.0
+  resolution: "@hono/node-server@npm:1.11.0"
+  checksum: b1845ea663b70513a65a76b92f660fc7d736cbeab2ea83b6044a6671bd1e2082b63b5a290c918bba16193b9e8d7e96f4a9dbec410861068e56f8b50d3959fb98
+  languageName: node
+  linkType: hard
+
+"@hono/zod-validator@npm:^0.2.0":
+  version: 0.2.1
+  resolution: "@hono/zod-validator@npm:0.2.1"
+  peerDependencies:
+    hono: ">=3.9.0"
+    zod: ^3.19.1
+  checksum: 3bd8d058124e25ea5c03a1270c5c6d7038f9d407208be01927fb8ebc15f248193dc505c3fd7a0fe093b6382797f09692f62599603857360489d72779d5d67b34
   languageName: node
   linkType: hard
 
@@ -3653,12 +3661,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"drizzle-kit@npm:^0.20.14":
-  version: 0.20.14
-  resolution: "drizzle-kit@npm:0.20.14"
+"drizzle-kit@npm:^0.20.17":
+  version: 0.20.17
+  resolution: "drizzle-kit@npm:0.20.17"
   dependencies:
-    "@drizzle-team/studio": "npm:^0.0.39"
     "@esbuild-kit/esm-loader": "npm:^2.5.5"
+    "@hono/node-server": "npm:^1.9.0"
+    "@hono/zod-validator": "npm:^0.2.0"
     camelcase: "npm:^7.0.1"
     chalk: "npm:^5.2.0"
     commander: "npm:^9.4.1"
@@ -3667,13 +3676,15 @@ __metadata:
     esbuild-register: "npm:^3.5.0"
     glob: "npm:^8.1.0"
     hanji: "npm:^0.0.5"
+    hono: "npm:^4.1.4"
     json-diff: "npm:0.9.0"
     minimatch: "npm:^7.4.3"
     semver: "npm:^7.5.4"
+    superjson: "npm:^2.2.1"
     zod: "npm:^3.20.2"
   bin:
     drizzle-kit: bin.cjs
-  checksum: 75d1a42767628ce5c3909d85af4c4756cc43578dda8000caca49f3cd461b298b5a2379810694e0624843ce849c29213b8017e839124439d412a6bc7f06786334
+  checksum: cd971541405247991a8fb4933d2354fa5d00684c9c6573606789033c3d7d98f8540d9980a124ff226f24cba98578793c19722b68d7fd75075d700b278777db2b
   languageName: node
   linkType: hard
 
@@ -5367,6 +5378,13 @@ __metadata:
   dependencies:
     react-is: "npm:^16.7.0"
   checksum: 1acbe85f33e5a39f90c822ad4d28b24daeb60f71c545279431dc98c312cd28a54f8d64788e477fe21dc502b0e3cf58589ebe5c1ad22af27245370391c2d24ea6
+  languageName: node
+  linkType: hard
+
+"hono@npm:^4.1.4":
+  version: 4.2.6
+  resolution: "hono@npm:4.2.6"
+  checksum: bcd3f8162906cb61a2e5ded85d516be85e0e75ae5731483c620a78f2cf54d587e22d5f2421c809de4c72bbe32854714420361c134c8712b7f5084ba339c4cf5f
   languageName: node
   linkType: hard
 
@@ -8311,7 +8329,7 @@ __metadata:
     daisyui: "npm:^3.9.4"
     dayjs: "npm:^1.11.10"
     dotenv: "npm:^16.4.5"
-    drizzle-kit: "npm:^0.20.14"
+    drizzle-kit: "npm:^0.20.17"
     drizzle-orm: "npm:^0.30.8"
     drizzle-zod: "npm:^0.5.1"
     esbuild-runner: "npm:^2.2.2"
