@@ -29,7 +29,7 @@
     "next": "^14.2.1",
     "pinyin-engine": "^1.2.2",
     "postcss-flexbugs-fixes": "^5.0.2",
-    "postcss-preset-env": "^9.5.5",
+    "postcss-preset-env": "^9.5.9",
     "react": "18.2.0",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "18.2.0",
