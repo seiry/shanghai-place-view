@@ -3671,9 +3671,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"drizzle-kit@npm:^0.20.17":
-  version: 0.20.17
-  resolution: "drizzle-kit@npm:0.20.17"
+"drizzle-kit@npm:^0.20.18":
+  version: 0.20.18
+  resolution: "drizzle-kit@npm:0.20.18"
   dependencies:
     "@esbuild-kit/esm-loader": "npm:^2.5.5"
     "@hono/node-server": "npm:^1.9.0"
@@ -3694,7 +3694,7 @@ __metadata:
     zod: "npm:^3.20.2"
   bin:
     drizzle-kit: bin.cjs
-  checksum: cd971541405247991a8fb4933d2354fa5d00684c9c6573606789033c3d7d98f8540d9980a124ff226f24cba98578793c19722b68d7fd75075d700b278777db2b
+  checksum: cdc912116b12493763e160099ea8100cfcd1cdbe2725c4309c7dc1ce3e83c27f87d862bf0a8f26f614deffdcdcd0363f1c9494196846ec3d4ecfae3b91fe1139
   languageName: node
   linkType: hard
 
@@ -8332,7 +8332,7 @@ __metadata:
     daisyui: "npm:^3.9.4"
     dayjs: "npm:^1.11.11"
     dotenv: "npm:^16.4.5"
-    drizzle-kit: "npm:^0.20.17"
+    drizzle-kit: "npm:^0.20.18"
     drizzle-orm: "npm:^0.30.9"
     drizzle-zod: "npm:^0.5.1"
     esbuild-runner: "npm:^2.2.2"
