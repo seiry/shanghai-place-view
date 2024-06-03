@@ -1557,24 +1557,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@libsql/client@npm:0.5.6":
-  version: 0.5.6
-  resolution: "@libsql/client@npm:0.5.6"
+"@libsql/client@npm:0.6.2":
+  version: 0.6.2
+  resolution: "@libsql/client@npm:0.6.2"
   dependencies:
-    "@libsql/core": "npm:^0.5.6"
-    "@libsql/hrana-client": "npm:^0.5.6"
+    "@libsql/core": "npm:^0.6.2"
+    "@libsql/hrana-client": "npm:^0.6.0"
     js-base64: "npm:^3.7.5"
     libsql: "npm:^0.3.10"
-  checksum: 8113cd888a6287a27808e803d02d0e56471f30955d7f058fd26eede7d3554890b518b6f1f2afa417f0da8453c90c44a6f67fd4cd79e806fff5bd7daa18792a49
+  checksum: 494fad437ff475bbc0750f9dc740341fb8f011c2a10ad64fe07ad41ad8ee7bbf7d1294e6e081d0605b56f787551ca6d52fec71e3d061d2269e4645f09d76cb48
   languageName: node
   linkType: hard
 
-"@libsql/core@npm:^0.5.6":
-  version: 0.5.6
-  resolution: "@libsql/core@npm:0.5.6"
+"@libsql/core@npm:^0.6.2":
+  version: 0.6.2
+  resolution: "@libsql/core@npm:0.6.2"
   dependencies:
     js-base64: "npm:^3.7.5"
-  checksum: a6a19181f67bd49fd5bf1b974a6f68afd8da38e83d4b09fc588cbf22ae8018f5a3547b13a5fe1bf14d4c8015f91c7bf48f4a3403159bf975e39261406ded640a
+  checksum: e1f6094923c7100afc3a5ac88ac01fda4b130fae1d29e57154a53cd16f6ce137f3892bd5774b75e47cb17fa832fce33a25f1ab419dea3e7747b5d99195c14993
   languageName: node
   linkType: hard
 
@@ -1592,25 +1592,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@libsql/hrana-client@npm:^0.5.6":
-  version: 0.5.6
-  resolution: "@libsql/hrana-client@npm:0.5.6"
+"@libsql/hrana-client@npm:^0.6.0":
+  version: 0.6.2
+  resolution: "@libsql/hrana-client@npm:0.6.2"
   dependencies:
-    "@libsql/isomorphic-fetch": "npm:^0.1.12"
+    "@libsql/isomorphic-fetch": "npm:^0.2.1"
     "@libsql/isomorphic-ws": "npm:^0.1.5"
     js-base64: "npm:^3.7.5"
     node-fetch: "npm:^3.3.2"
-  checksum: 8639267648db60bc9166bfd2debe2a4dc74834cc1c0e51c5dbdf6f95b7fb8abac575a604aa1a1cd9488795c56a02370bc984fa5f50c972adf4f55092510d9d5c
+  checksum: d477b7afe2517c8f5cb810018c1d59fb0ccc5b30fd9a65bbe29cdbaaa6df0c8f1f034d9b76efb3c4c1b1ce92f626addf13278ca8538f5c8e91436c9f4ebf4178
   languageName: node
   linkType: hard
 
-"@libsql/isomorphic-fetch@npm:^0.1.12":
-  version: 0.1.12
-  resolution: "@libsql/isomorphic-fetch@npm:0.1.12"
-  dependencies:
-    "@types/node-fetch": "npm:^2.6.11"
-    node-fetch: "npm:^2.7.0"
-  checksum: 83ea5c6b8b7b9519619d6bf56abc9ab0ced3257023d8a3aa6feaf5df76e705ca5b65381f33f293ea87f1543b03347c1994bb6172957e32e6ea4def03d9a5210e
+"@libsql/isomorphic-fetch@npm:^0.2.1":
+  version: 0.2.1
+  resolution: "@libsql/isomorphic-fetch@npm:0.2.1"
+  checksum: 24fa7a3a75ed4e44a1689d0559858f400856fd637082cf3667416a4eae1f5265980af6e41d65dc9108cef597354acbd6ca35aa8df8981425a1e5f7ab7ebe6036
   languageName: node
   linkType: hard
 
@@ -2112,16 +2109,6 @@ __metadata:
   version: 0.0.29
   resolution: "@types/json5@npm:0.0.29"
   checksum: 4e5aed58cabb2bbf6f725da13421aa50a49abb6bc17bfab6c31b8774b073fa7b50d557c61f961a09a85f6056151190f8ac95f13f5b48136ba5841f7d4484ec56
-  languageName: node
-  linkType: hard
-
-"@types/node-fetch@npm:^2.6.11":
-  version: 2.6.11
-  resolution: "@types/node-fetch@npm:2.6.11"
-  dependencies:
-    "@types/node": "npm:*"
-    form-data: "npm:^4.0.0"
-  checksum: c416df8f182ec3826278ea42557fda08f169a48a05e60722d9c8edd4e5b2076ae281c6b6601ad406035b7201f885b0257983b61c26b3f9eb0f41192a807b5de5
   languageName: node
   linkType: hard
 
@@ -6848,20 +6835,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-fetch@npm:^2.7.0":
-  version: 2.7.0
-  resolution: "node-fetch@npm:2.7.0"
-  dependencies:
-    whatwg-url: "npm:^5.0.0"
-  peerDependencies:
-    encoding: ^0.1.0
-  peerDependenciesMeta:
-    encoding:
-      optional: true
-  checksum: b24f8a3dc937f388192e59bcf9d0857d7b6940a2496f328381641cb616efccc9866e89ec43f2ec956bbd6c3d3ee05524ce77fe7b29ccd34692b3a16f237d6676
-  languageName: node
-  linkType: hard
-
 "node-fetch@npm:^3.3.2":
   version: 3.3.2
   resolution: "node-fetch@npm:3.3.2"
@@ -8333,7 +8306,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "shanghai-place-view@workspace:."
   dependencies:
-    "@libsql/client": "npm:0.5.6"
+    "@libsql/client": "npm:0.6.2"
     "@sentry/nextjs": "npm:^7.113.0"
     "@total-typescript/ts-reset": "npm:^0.5.1"
     "@types/pinyin-engine": "npm:^1.1.2"
