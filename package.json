@@ -35,7 +35,7 @@
     "react-dom": "18.2.0",
     "react-flatpickr": "^3.10.13",
     "react-twc": "^1.4.1",
-    "sass": "^1.77.4",
+    "sass": "^1.77.6",
     "sharp": "^0.33.4",
     "swr": "^2.2.5",
     "ts-pattern": "^5.2.0",
