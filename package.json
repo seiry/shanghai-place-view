@@ -20,7 +20,7 @@
     "cypress": "^13.13.1",
     "daisyui": "^3.9.4",
     "dayjs": "^1.11.12",
-    "drizzle-orm": "^0.32.0",
+    "drizzle-orm": "^0.32.1",
     "drizzle-zod": "^0.5.1",
     "esbuild-runner": "^2.2.2",
     "flatpickr": "^4.6.13",
