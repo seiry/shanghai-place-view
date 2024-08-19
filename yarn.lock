@@ -8056,13 +8056,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-twc@npm:^1.4.1":
-  version: 1.4.1
-  resolution: "react-twc@npm:1.4.1"
+"react-twc@npm:^1.4.2":
+  version: 1.4.2
+  resolution: "react-twc@npm:1.4.2"
   dependencies:
     "@radix-ui/react-slot": "npm:^1.0.2"
     clsx: "npm:^2.1.0"
-  checksum: fe53393c187d0eaae555249998f0cd3c94ec7f5328103a9eb5a153bb22f484780ae2ccbdcda4e48580462a4fb087482bce3f6b3b5af4d9ec00749913a1634368
+  checksum: 1edda1486d5c291f65964f54df4c338ace6643b808924f256d085a3a1b63fce9a366e0c090b8a7178b9898eb8f516e3f37187dea005328421c33e538d3648032
   languageName: node
   linkType: hard
 
@@ -8520,7 +8520,7 @@ __metadata:
     react-chartjs-2: "npm:^5.2.0"
     react-dom: "npm:18.2.0"
     react-flatpickr: "npm:^3.10.13"
-    react-twc: "npm:^1.4.1"
+    react-twc: "npm:^1.4.2"
     sass: "npm:^1.77.8"
     sharp: "npm:^0.33.4"
     swr: "npm:^2.2.5"
