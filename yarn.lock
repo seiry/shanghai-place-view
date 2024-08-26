@@ -2115,10 +2115,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@total-typescript/ts-reset@npm:^0.5.1":
-  version: 0.5.1
-  resolution: "@total-typescript/ts-reset@npm:0.5.1"
-  checksum: f773a2b91707fab677c361837ef7855522d470e8a3abc0b9209a04832715feb0aa1ef0d10db880c1232acbd2c84222ec7c1bbf3f92d1d34d18c18ce08d304e45
+"@total-typescript/ts-reset@npm:^0.6.0":
+  version: 0.6.0
+  resolution: "@total-typescript/ts-reset@npm:0.6.0"
+  checksum: aa46e630a55715052933b792d9e456631faf3cb8e12096017a6e678e13ed5b31fa461423eb2b74cd38eb5247951d61468e20c703d89c3dc78f8b937ea8434309
   languageName: node
   linkType: hard
 
@@ -8483,7 +8483,7 @@ __metadata:
   dependencies:
     "@libsql/client": "npm:0.5.6"
     "@sentry/nextjs": "npm:^7.113.0"
-    "@total-typescript/ts-reset": "npm:^0.5.1"
+    "@total-typescript/ts-reset": "npm:^0.6.0"
     "@types/pinyin-engine": "npm:^1.1.2"
     "@types/react": "npm:18.2.79"
     "@types/react-dom": "npm:^18.2.25"
