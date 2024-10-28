@@ -3366,12 +3366,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chart.js@npm:^4.4.5":
-  version: 4.4.5
-  resolution: "chart.js@npm:4.4.5"
+"chart.js@npm:^4.4.6":
+  version: 4.4.6
+  resolution: "chart.js@npm:4.4.6"
   dependencies:
     "@kurkle/color": "npm:^0.3.0"
-  checksum: def643ed3ae898f3f37a0a59b5f1a36ffaf68c8a4f4392dcfebb6e5872534065d04b5b437b25c2b3065c20799403b4436a356bdd1700727267b3b468fec49f84
+  checksum: 50d0c13a16fd8c156784ff5e4c79070f09325147b0ee5c64d6d3a17933dd9072027dbc72c561cdd8aa41183d8e5736ef634c9843767f79e8abcf1fa0fd03543b
   languageName: node
   linkType: hard
 
@@ -8901,7 +8901,7 @@ __metadata:
     autoprefixer: "npm:^10.4.20"
     axios: "npm:^1.7.7"
     beautiful-react-hooks: "npm:^5.0.2"
-    chart.js: "npm:^4.4.5"
+    chart.js: "npm:^4.4.6"
     clsx: "npm:^2.1.1"
     cypress: "npm:^13.15.1"
     daisyui: "npm:^3.9.4"
