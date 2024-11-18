@@ -4078,9 +4078,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"drizzle-orm@npm:^0.36.1":
-  version: 0.36.1
-  resolution: "drizzle-orm@npm:0.36.1"
+"drizzle-orm@npm:^0.36.3":
+  version: 0.36.3
+  resolution: "drizzle-orm@npm:0.36.3"
   peerDependencies:
     "@aws-sdk/client-rds-data": ">=3"
     "@cloudflare/workers-types": ">=3"
@@ -4101,7 +4101,7 @@ __metadata:
     "@xata.io/client": "*"
     better-sqlite3: ">=7"
     bun-types: "*"
-    expo-sqlite: ">=13.2.0"
+    expo-sqlite: ">=14.0.0"
     knex: "*"
     kysely: "*"
     mysql2: ">=2"
@@ -4169,7 +4169,7 @@ __metadata:
       optional: true
     sqlite3:
       optional: true
-  checksum: 705c077a3bc34877a7dfa76c77e0a43858606b50a31ef90f1643ec6ad62fe49151d127c0fcbe6b0b7b04983a8a3984ca944a69288e41f36193ef4708a1f16ecf
+  checksum: 344884488365f6bbfe4a9b6856521dd651d24540a40696ab69e44557b772db4c5ca7e91debcbf4e32d12f4e7c1f90b0145178b00b0ae83f45f92f228a6424088
   languageName: node
   linkType: hard
 
@@ -8881,7 +8881,7 @@ __metadata:
     dayjs: "npm:^1.11.13"
     dotenv: "npm:^16.4.5"
     drizzle-kit: "npm:^0.20.18"
-    drizzle-orm: "npm:^0.36.1"
+    drizzle-orm: "npm:^0.36.3"
     drizzle-zod: "npm:^0.5.1"
     esbuild-runner: "npm:^2.2.2"
     eslint: "npm:9.14.0"
