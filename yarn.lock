@@ -4097,16 +4097,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"drizzle-orm@npm:^0.36.3":
-  version: 0.36.3
-  resolution: "drizzle-orm@npm:0.36.3"
+"drizzle-orm@npm:^0.36.4":
+  version: 0.36.4
+  resolution: "drizzle-orm@npm:0.36.4"
   peerDependencies:
     "@aws-sdk/client-rds-data": ">=3"
     "@cloudflare/workers-types": ">=3"
     "@electric-sql/pglite": ">=0.2.0"
     "@libsql/client": ">=0.10.0"
     "@libsql/client-wasm": ">=0.10.0"
-    "@neondatabase/serverless": ">=0.1"
+    "@neondatabase/serverless": ">=0.10.0"
     "@op-engineering/op-sqlite": ">=2"
     "@opentelemetry/api": ^1.4.1
     "@planetscale/database": ">=1"
@@ -4188,7 +4188,7 @@ __metadata:
       optional: true
     sqlite3:
       optional: true
-  checksum: 344884488365f6bbfe4a9b6856521dd651d24540a40696ab69e44557b772db4c5ca7e91debcbf4e32d12f4e7c1f90b0145178b00b0ae83f45f92f228a6424088
+  checksum: 455473db5b7db188f3bd1638e8e50a0244995b564d2ae72ad698c1e96681e1a91433c1b3f66d2798018d3d61eb6b752eb6c714fa8f3938d684d2c593980b99fe
   languageName: node
   linkType: hard
 
@@ -9005,7 +9005,7 @@ __metadata:
     dayjs: "npm:^1.11.13"
     dotenv: "npm:^16.4.5"
     drizzle-kit: "npm:^0.20.18"
-    drizzle-orm: "npm:^0.36.3"
+    drizzle-orm: "npm:^0.36.4"
     drizzle-zod: "npm:^0.5.1"
     esbuild-runner: "npm:^2.2.2"
     eslint: "npm:9.15.0"
