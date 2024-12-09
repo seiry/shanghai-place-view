@@ -4192,13 +4192,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"drizzle-zod@npm:^0.5.1":
-  version: 0.5.1
-  resolution: "drizzle-zod@npm:0.5.1"
+"drizzle-zod@npm:^0.6.0":
+  version: 0.6.0
+  resolution: "drizzle-zod@npm:0.6.0"
   peerDependencies:
-    drizzle-orm: ">=0.23.13"
-    zod: "*"
-  checksum: d4266923df2525c5f357858e74f4ae32b8f825ebeecb8f97ca6be3cdf715c1542feb0e556dfeb78383673bc9d5b523e7b5cfce8dd6dbfddbe49eed9e1ada4827
+    drizzle-orm: ">=0.36.0"
+    zod: ">=3.0.0"
+  checksum: 4deaca0ee9af56c6219440c772ee797d1b5bf6214af4673c1321ab5afbea99c416fbbab695e2662f613fe0a4653ff54898d947d3382b6eba6d7198cec0a05d92
   languageName: node
   linkType: hard
 
@@ -9013,7 +9013,7 @@ __metadata:
     dotenv: "npm:^16.4.5"
     drizzle-kit: "npm:^0.20.18"
     drizzle-orm: "npm:^0.38.0"
-    drizzle-zod: "npm:^0.5.1"
+    drizzle-zod: "npm:^0.6.0"
     esbuild-runner: "npm:^2.2.2"
     eslint: "npm:9.16.0"
     eslint-config-next: "npm:14.2.15"
