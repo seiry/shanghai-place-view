@@ -1,7 +1,8 @@
+import React, { memo } from 'react'
 import clsx from 'clsx'
 import Link from 'next/link'
 
-export const Header = () => {
+export const Header = memo(() => {
   return (
     <header
       className={clsx(' w-full  top-0 left-0 z-50 fixed transform-gpu ')}
@@ -42,4 +43,4 @@ export const Header = () => {
       </div>
     </header>
   )
-}
+})

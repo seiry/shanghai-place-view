@@ -101,7 +101,7 @@ const SpotFilter: FC = memo(() => {
   )
 })
 
-const Selected: FC = () => {
+const Selected: FC = memo(() => {
   const { selected, rmSeleted } = useFilterStore()
 
   return (
@@ -113,9 +113,9 @@ const Selected: FC = () => {
       ))}
     </ul>
   )
-}
+})
 
-const MaxList: FC = () => {
+const MaxList: FC = memo(() => {
   const maxList = useMaxList()
 
   const { addSeleted } = useFilterStore()
@@ -135,9 +135,9 @@ const MaxList: FC = () => {
       ))}
     </ul>
   )
-}
+})
 
-const DateList: FC = () => {
+const DateList: FC = memo(() => {
   const { setTimeFrame } = useFilterStore()
   const timeFrame = useTimeFrame()
 
@@ -156,9 +156,9 @@ const DateList: FC = () => {
       ))}
     </div>
   )
-}
+})
 
-const CustomDate: FC = () => {
+const CustomDate: FC = memo(() => {
   const { timeRangePickerValue, setTimeRage } = useFilterStore()
   const timeFrame = useTimeFrame()
 
@@ -208,7 +208,7 @@ const CustomDate: FC = () => {
       )}
     </DateTime>
   )
-}
+})
 
 export const Filter: FC = memo(() => {
   return (
