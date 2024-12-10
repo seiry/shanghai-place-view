@@ -210,7 +210,7 @@ const CustomDate: FC = () => {
   )
 }
 
-export const Filter: FC = () => {
+export const Filter: FC = memo(() => {
   return (
     <div className="z-10 w-full relative">
       <div className="flex gap-4  h-fit relative ">
@@ -232,7 +232,7 @@ export const Filter: FC = () => {
       </div>
     </div>
   )
-}
+})
 
 const pickFormat = 'YYYY-MM-DD HH:mm:ss'
 
