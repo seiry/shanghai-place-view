@@ -73,7 +73,7 @@ interface Result {
 }
 
 const fetchData = async () => {
-  const json: Result = await fetch(dataUrl).then((re) => re.json())
+  const json = await fetch(dataUrl).then((re) => re.json()) as Result
   // https://github.com/node-fetch/node-fetch/issues/541
   const top: LocationInfo = {
     id: +json.result.top.code,
