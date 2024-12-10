@@ -14,8 +14,8 @@ import {
   useTimeFrame,
 } from '../../store/filter'
 import { Loading } from '../Loading'
-import { ErrorBoundary } from '@sentry/nextjs'
 import { twc } from 'react-twc'
+import { ErrorBoundary } from 'react-error-boundary'
 
 const useSpot = () => {
   const { data: spotsData } = useSWR('spots', getFetcher<SpotResp[]>, {
@@ -214,14 +214,14 @@ export const Filter: FC = () => {
   return (
     <div className="z-10 w-full relative">
       <div className="flex gap-4  h-fit relative ">
-        <ErrorBoundary>
+        <ErrorBoundary fallback>
           <Suspense fallback={<Loading />}>
             <SpotFilter />
           </Suspense>
         </ErrorBoundary>
 
         <Selected />
-        <ErrorBoundary>
+        <ErrorBoundary fallback>
           <Suspense fallback={<Loading />}>
             <MaxList />
           </Suspense>
