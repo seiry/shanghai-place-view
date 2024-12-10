@@ -5,7 +5,7 @@ if (!process.env.DATABASE_URL) {
 export default {
   schema: './src/db/schema.ts',
   out: './drizzle',
-  dialect:'turso',
+  dialect: 'turso',
   dbCredentials: {
     authToken: process.env.DATABASE_AUTH_TOKEN,
     url: process.env.DATABASE_URL,
