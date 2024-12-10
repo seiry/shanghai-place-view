@@ -300,6 +300,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.12.5":
+  version: 7.26.0
+  resolution: "@babel/runtime@npm:7.26.0"
+  dependencies:
+    regenerator-runtime: "npm:^0.14.0"
+  checksum: 10/9f4ea1c1d566c497c052d505587554e782e021e6ccd302c2ad7ae8291c8e16e3f19d4a7726fb64469e057779ea2081c28b7dbefec6d813a22f08a35712c0f699
+  languageName: node
+  linkType: hard
+
 "@babel/runtime@npm:^7.13.10":
   version: 7.23.8
   resolution: "@babel/runtime@npm:7.23.8"
@@ -8245,6 +8254,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-error-boundary@npm:^4.1.2":
+  version: 4.1.2
+  resolution: "react-error-boundary@npm:4.1.2"
+  dependencies:
+    "@babel/runtime": "npm:^7.12.5"
+  peerDependencies:
+    react: ">=16.13.1"
+  checksum: 10/a8b59e5ef891bb6c48874d12c72bbd1a9292a56751adeee5666e228bd3a4913084329a9c21f7baafa0df68dc6d25e18883edb25946ce5763981885cbb93786eb
+  languageName: node
+  linkType: hard
+
 "react-flatpickr@npm:^3.10.13":
   version: 3.10.13
   resolution: "react-flatpickr@npm:3.10.13"
@@ -8743,6 +8763,7 @@ __metadata:
     react: "npm:18.2.0"
     react-chartjs-2: "npm:^5.2.0"
     react-dom: "npm:18.2.0"
+    react-error-boundary: "npm:^4.1.2"
     react-flatpickr: "npm:^3.10.13"
     react-twc: "npm:^1.4.2"
     sass: "npm:^1.82.0"

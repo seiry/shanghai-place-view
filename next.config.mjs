@@ -1,9 +1,6 @@
 // This file sets a custom webpack configuration to use your Next.js app
-// with Sentry.
 // https://nextjs.org/docs/api-reference/next.config.js/introduction
-// https://docs.sentry.io/platforms/javascript/guides/nextjs/
 
-// const { withSentryConfig } = require('@sentry/nextjs')
 import million from 'million/compiler'
 
 const millionConfig = {
@@ -47,18 +44,6 @@ const nextConfig = {
     ]
   },
   // output: 'standalone',
-}
-
-const SentryWebpackPluginOptions = {
-  // Additional config options for the Sentry Webpack plugin. Keep in mind that
-  // the following options are set automatically, and overriding them is not
-  // recommended:
-  //   release, url, org, project, authToken, configFile, stripPrefix,
-  //   urlPrefix, include, ignore
-
-  silent: true, // Suppresses all logs
-  // For all available options, see:
-  // https://github.com/getsentry/sentry-webpack-plugin#options.
 }
 
 export default million.next(nextConfig, millionConfig)

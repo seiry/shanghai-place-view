@@ -2,10 +2,10 @@ import { Filter } from '@/components/Filter'
 import { LineChart } from '@/components/Line'
 import { Loading } from '@/components/Loading'
 import { makeTitleTag } from '@/lib/utils'
-import { ErrorBoundary } from '@sentry/nextjs'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import { FC, Suspense } from 'react'
+import { ErrorBoundary } from 'react-error-boundary'
 import { twc } from 'react-twc'
 
 const DataPage: FC = () => {
@@ -16,7 +16,8 @@ const DataPage: FC = () => {
       </Head>
 
       <Filter />
-      <ErrorBoundary>
+      <ErrorBoundary fallback={<>error</>}>
+        
         <Suspense fallback={<Loading />}>
           <LineChart />
         </Suspense>
