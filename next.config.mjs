@@ -1,8 +1,7 @@
 // This file sets a custom webpack configuration to use your Next.js app
 // https://nextjs.org/docs/api-reference/next.config.js/introduction
 
-import million from 'million/compiler'
-
+import MillionLint from '@million/lint';
 const millionConfig = {
   // auto: process.env.NO DE_ENV === 'production' ? true : false,
   // if you're using RSC:
@@ -46,4 +45,4 @@ const nextConfig = {
   // output: 'standalone',
 }
 
-export default million.next(nextConfig, millionConfig)
+export default MillionLint.next()(nextConfig);
