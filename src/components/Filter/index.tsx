@@ -4,7 +4,7 @@ import dayjs from 'dayjs'
 import flatpickr from 'flatpickr'
 import 'flatpickr/dist/themes/confetti.css'
 import Pinyin from 'pinyin-engine'
-import { FC, Suspense, useEffect, useMemo, useRef, useState } from 'react'
+import { FC, Suspense, useEffect, useMemo, useRef, useState, memo } from 'react'
 import useSWR from 'swr'
 import { SpotResp, TrendResp, getFetcher } from '../../lib/fetch'
 import {
@@ -35,7 +35,7 @@ const useMaxList = () => {
   return maxList
 }
 
-const SpotFilter: FC = () => {
+const SpotFilter: FC = memo(() => {
   const { addSeleted } = useFilterStore()
   const spots = useSpot()
 
@@ -99,7 +99,7 @@ const SpotFilter: FC = () => {
       </ul>
     </div>
   )
-}
+})
 
 const Selected: FC = () => {
   const { selected, rmSeleted } = useFilterStore()
