@@ -2,11 +2,6 @@
 // https://nextjs.org/docs/api-reference/next.config.js/introduction
 
 import MillionLint from '@million/lint';
-const millionConfig = {
-  // auto: process.env.NO DE_ENV === 'production' ? true : false,
-  // if you're using RSC:
-  auto: { rsc: true },
-}
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
