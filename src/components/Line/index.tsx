@@ -14,7 +14,7 @@ import {
 } from 'chart.js'
 
 import dayjs from 'dayjs'
-import { FC } from 'react'
+import { FC, memo } from 'react'
 import { Line } from 'react-chartjs-2'
 import { useLineData } from '../../lib/data'
 
@@ -82,11 +82,11 @@ const options: ChartOptions<'line'> = {
   },
 }
 
-export const LineChart: FC = () => {
+export const LineChart: FC = memo(() => {
   const lineData = useLineData()
   return (
     <div className="relative select-none flex-1">
       <Line options={options} data={lineData} height="100%" />
     </div>
   )
-}
+})
