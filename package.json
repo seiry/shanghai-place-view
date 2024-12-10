@@ -6,7 +6,6 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint --fix",
-    "cypress": "cypress open --config baseUrl=http://127.0.0.1:3000",
     "generate": "drizzle-kit generate:sqlite",
     "migration": "esr ./src/db/migration.ts"
   },
@@ -16,7 +15,6 @@
     "beautiful-react-hooks": "^5.0.2",
     "chart.js": "^4.4.7",
     "clsx": "^2.1.1",
-    "cypress": "^13.16.1",
     "daisyui": "^3.9.4",
     "dayjs": "^1.11.13",
     "drizzle-orm": "^0.38.0",
