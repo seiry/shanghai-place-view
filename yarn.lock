@@ -72,7 +72,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:7.26.0, @babel/core@npm:^7.23.7":
+"@babel/core@npm:7.26.0":
   version: 7.26.0
   resolution: "@babel/core@npm:7.26.0"
   dependencies:
@@ -249,7 +249,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/types@npm:^7.23.6, @babel/types@npm:^7.25.9, @babel/types@npm:^7.26.0, @babel/types@npm:^7.26.3":
+"@babel/types@npm:^7.25.9, @babel/types@npm:^7.26.0, @babel/types@npm:^7.26.3":
   version: 7.26.3
   resolution: "@babel/types@npm:7.26.3"
   dependencies:
@@ -6647,22 +6647,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"million@npm:^3.1.11":
-  version: 3.1.11
-  resolution: "million@npm:3.1.11"
-  dependencies:
-    "@babel/core": "npm:^7.23.7"
-    "@babel/types": "npm:^7.23.6"
-    "@rollup/pluginutils": "npm:^5.1.0"
-    kleur: "npm:^4.1.5"
-    undici: "npm:^6.3.0"
-    unplugin: "npm:^1.6.0"
-  bin:
-    million: cli.js
-  checksum: 10/8583e853698a58dc872805fb6eec3bed269ec68c13a582209c5dd80791503bae82ef4ccd1a19f802e665dc77ab54751471367481762c6aaac88f806bc529bdfe
-  languageName: node
-  linkType: hard
-
 "mime-db@npm:1.52.0":
   version: 1.52.0
   resolution: "mime-db@npm:1.52.0"
@@ -8688,7 +8672,6 @@ __metadata:
     eslint-plugin-prettier: "npm:^5.2.1"
     flatpickr: "npm:^4.6.13"
     jotai: "npm:^2.10.3"
-    million: "npm:^3.1.11"
     next: "npm:^15.0.4"
     pinyin-engine: "npm:^1.2.2"
     postcss: "npm:^8.4.49"
@@ -9553,13 +9536,6 @@ __metadata:
   version: 6.20.0
   resolution: "undici-types@npm:6.20.0"
   checksum: 10/583ac7bbf4ff69931d3985f4762cde2690bb607844c16a5e2fbb92ed312fe4fa1b365e953032d469fa28ba8b224e88a595f0b10a449332f83fa77c695e567dbe
-  languageName: node
-  linkType: hard
-
-"undici@npm:^6.3.0":
-  version: 6.21.0
-  resolution: "undici@npm:6.21.0"
-  checksum: 10/c8ff80dcadfcf613e7fe697c37519fca070fcf1cfccc69ffb6a7080a22e225eb79d232e9f70e32b099b3e67ac4216e8fd615e188cfb792e09df9233471ec17e0
   languageName: node
   linkType: hard
 
