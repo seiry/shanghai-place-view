@@ -19,8 +19,11 @@ export async function mainJob() {
   return db.insert(log).values(sqlDataArr).run()
 }
 
+// https://travel.whlyj.sh.gov.cn/scenicArea.html
 const dataUrl =
-  'https://lysh.smgtech.net/api/wx/app/sceneries-new?lng=121.47&lat=31.23&grade=0&sort=0&distance=0&keyword='
+  'https://travel.whlyj.sh.gov.cn/api/wx/app/sceneries-new?lng=121.47&lat=31.23&grade=0&sort=0&distance=0&keyword='
+
+  // 'https://lysh.smgtech.net/api/wx/app/sceneries-new?lng=121.47&lat=31.23&grade=0&sort=0&distance=0&keyword='
 //  `https://lysh.eastday.com/lyj/WebApiService/api/GetSpots?t=${dayjs().valueOf()}`
 // https://lysh.smgtech.net/scenicArea.html
 //
