@@ -19,7 +19,7 @@
     "daisyui": "^3.9.4",
     "dayjs": "^1.11.13",
     "drizzle-orm": "^0.38.3",
-    "drizzle-zod": "^0.6.0",
+    "drizzle-zod": "^0.6.1",
     "esbuild-runner": "^2.2.2",
     "flatpickr": "^4.6.13",
     "jotai": "^2.11.0",
