@@ -3969,9 +3969,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"drizzle-kit@npm:^0.30.1":
-  version: 0.30.1
-  resolution: "drizzle-kit@npm:0.30.1"
+"drizzle-kit@npm:^0.30.2":
+  version: 0.30.2
+  resolution: "drizzle-kit@npm:0.30.2"
   dependencies:
     "@drizzle-team/brocli": "npm:^0.10.2"
     "@esbuild-kit/esm-loader": "npm:^2.5.5"
@@ -3979,7 +3979,7 @@ __metadata:
     esbuild-register: "npm:^3.5.0"
   bin:
     drizzle-kit: bin.cjs
-  checksum: 10/6b93d3a00ce812c060d5659052e6f7f6f626a46fea299bf649e30234b694f22ed9464616ff3831768837d0f03f5d6e813c5c2bdd465aa99002a27bb2578bc1e8
+  checksum: 10/64bdb3863bbb26ceaaaabdd1b15c24ef8bf3b6a41e87f23992ef6ed80796b2c66fc9422161b4779ea6961649acfa905815906211b0a7789c05c7c3c5bed33a34
   languageName: node
   linkType: hard
 
@@ -8669,7 +8669,7 @@ __metadata:
     daisyui: "npm:^3.9.4"
     dayjs: "npm:^1.11.13"
     dotenv: "npm:^16.4.7"
-    drizzle-kit: "npm:^0.30.1"
+    drizzle-kit: "npm:^0.30.2"
     drizzle-orm: "npm:^0.38.4"
     drizzle-zod: "npm:^0.6.1"
     esbuild-runner: "npm:^2.2.2"
