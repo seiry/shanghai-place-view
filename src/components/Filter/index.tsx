@@ -89,7 +89,7 @@ const SpotFilter: FC = memo(() => {
 
       <ul
         tabIndex={0}
-        className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 max-h-[400px] overflow-y-auto flex-nowrap absolute"
+        className="dropdown-content menu p-2 shadow-sm bg-base-100 rounded-box w-52 max-h-[400px] overflow-y-auto flex-nowrap absolute"
       >
         {filteredSpotList?.map((spot) => (
           <li key={spot.spotId} onClick={() => addSeleted(spot)}>
@@ -105,7 +105,7 @@ const Selected: FC = memo(() => {
   const { selected, rmSeleted } = useFilterStore()
 
   return (
-    <ul className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-72 max-h-[150px] overflow-y-auto flex-nowrap">
+    <ul className="dropdown-content menu p-2 shadow-sm bg-base-100 rounded-box w-72 max-h-[150px] overflow-y-auto flex-nowrap">
       {selected?.map((spot) => (
         <li key={spot.spotId} onClick={() => rmSeleted(spot)}>
           <a>{spot.name}</a>
@@ -120,7 +120,7 @@ const MaxList: FC = memo(() => {
 
   const { addSeleted } = useFilterStore()
   return (
-    <ul className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-72 max-h-[150px] overflow-y-auto flex-nowrap">
+    <ul className="dropdown-content menu p-2 shadow-sm bg-base-100 rounded-box w-72 max-h-[150px] overflow-y-auto flex-nowrap">
       {/* <li className="self-center">max list</li> */}
       {maxList?.map((spot) => (
         <li
@@ -187,7 +187,7 @@ const CustomDate: FC = memo(() => {
       ref={dateTimeRef}
       className={clsx('text-base transition-colors', {
         'text-primary': isPicking,
-        'text-gray-300 !cursor-not-allowed': !isPicking,
+        'text-gray-300 cursor-not-allowed!': !isPicking,
       })}
     >
       {timeRangePickerValue?.[0] && (
