@@ -1,7 +1,7 @@
 // This file sets a custom webpack configuration to use your Next.js app
 // https://nextjs.org/docs/api-reference/next.config.js/introduction
 
-import MillionLint from '@million/lint';
+import MillionLint from '@million/lint'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -40,4 +40,4 @@ const nextConfig = {
   // output: 'standalone',
 }
 
-export default MillionLint.next()(nextConfig);
+export default MillionLint.next()(nextConfig)

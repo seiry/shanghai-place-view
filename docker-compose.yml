@@ -9,4 +9,3 @@ services:
     ports:
       - 1803:3000
     restart: unless-stopped
-    

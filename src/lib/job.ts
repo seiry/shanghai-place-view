@@ -23,7 +23,7 @@ export async function mainJob() {
 const dataUrl =
   'https://travel.whlyj.sh.gov.cn/api/wx/app/sceneries-new?lng=121.47&lat=31.23&grade=0&sort=0&distance=0&keyword='
 
-  // 'https://lysh.smgtech.net/api/wx/app/sceneries-new?lng=121.47&lat=31.23&grade=0&sort=0&distance=0&keyword='
+// 'https://lysh.smgtech.net/api/wx/app/sceneries-new?lng=121.47&lat=31.23&grade=0&sort=0&distance=0&keyword='
 //  `https://lysh.eastday.com/lyj/WebApiService/api/GetSpots?t=${dayjs().valueOf()}`
 // https://lysh.smgtech.net/scenicArea.html
 //
@@ -73,7 +73,7 @@ interface Result {
 }
 
 const fetchData = async () => {
-  const json = await fetch(dataUrl).then((re) => re.json()) as Result
+  const json = (await fetch(dataUrl).then((re) => re.json())) as Result
   // https://github.com/node-fetch/node-fetch/issues/541
   const top: LocationInfo = {
     id: +json.result.top.code,

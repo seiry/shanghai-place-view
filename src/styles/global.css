@@ -51,8 +51,7 @@
 }
 
 @layer components {
-    #__next {
-        @apply h-full relative;
-    }
-
+  #__next {
+    @apply h-full relative;
+  }
 }

@@ -17,7 +17,6 @@ const DataPage: FC = () => {
 
       <Filter />
       <ErrorBoundary fallback={<>error</>}>
-        
         <Suspense fallback={<Loading />}>
           <LineChart />
         </Suspense>
