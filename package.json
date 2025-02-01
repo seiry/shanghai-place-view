@@ -16,7 +16,7 @@
     "beautiful-react-hooks": "^5.0.2",
     "chart.js": "^4.4.7",
     "clsx": "^2.1.1",
-    "daisyui": "^3.9.4",
+    "daisyui": "^4.12.23",
     "dayjs": "^1.11.13",
     "drizzle-orm": "^0.39.0",
     "drizzle-zod": "^0.7.0",
