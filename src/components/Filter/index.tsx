@@ -58,16 +58,16 @@ const SpotFilter: FC = memo(() => {
     <div className={clsx('dropdown', { 'dropdown-open': showDropdown })}>
       <label>
         <div className="form-control m-1" tabIndex={0}>
-          <div className="input-group">
+          <div className="join join-horizontal">
             <input
               type="text"
               placeholder="Search…"
-              className="input input-bordered"
+              className="input input-bordered join-item"
               onChange={(e) => setSearchText(e.target.value)}
               onBlur={() => setShowDropdown(false)}
               onFocus={() => setShowDropdown(true)}
             />
-            <button className="btn btn-square">
+            <button className="btn btn-square join-item">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6"
