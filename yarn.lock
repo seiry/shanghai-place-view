@@ -3544,13 +3544,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"camelcase-css@npm:^2.0.1":
-  version: 2.0.1
-  resolution: "camelcase-css@npm:2.0.1"
-  checksum: 10/1cec2b3b3dcb5026688a470b00299a8db7d904c4802845c353dbd12d9d248d3346949a814d83bfd988d4d2e5b9904c07efe76fecd195a1d4f05b543e7c0b56b1
-  languageName: node
-  linkType: hard
-
 "camelcase@npm:^6.2.0":
   version: 6.3.0
   resolution: "camelcase@npm:6.3.0"
@@ -3841,16 +3834,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"css-selector-tokenizer@npm:^0.8":
-  version: 0.8.0
-  resolution: "css-selector-tokenizer@npm:0.8.0"
-  dependencies:
-    cssesc: "npm:^3.0.0"
-    fastparse: "npm:^1.1.2"
-  checksum: 10/1eb7ca7d2c21ede700a0fab7df4547198431c30ba62663d81a566a8abe6ab7524f627ce6c0bde63f34917e199b73be4081e449bd8faf107d155766204082aa0a
-  languageName: node
-  linkType: hard
-
 "cssdb@npm:^8.2.3":
   version: 8.2.3
   resolution: "cssdb@npm:8.2.3"
@@ -3874,22 +3857,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"culori@npm:^3":
-  version: 3.3.0
-  resolution: "culori@npm:3.3.0"
-  checksum: 10/e11fc8e2cd86a2a6cfe4eb676c26ce94d6bb404b8b142f24d2841125f91f9453efcb25ae9c335d0679340d7b51b09299b17dd74aaef066e751352702d47eba62
-  languageName: node
-  linkType: hard
-
-"daisyui@npm:^4.12.23":
-  version: 4.12.23
-  resolution: "daisyui@npm:4.12.23"
-  dependencies:
-    css-selector-tokenizer: "npm:^0.8"
-    culori: "npm:^3"
-    picocolors: "npm:^1"
-    postcss-js: "npm:^4"
-  checksum: 10/2d85d4c5fc62515a891c3f679c2b32178567cc4ec2b26b9fbf172ecea67c661eebdc2047b9392f0616a199d528b535c12226f9ebcde884fbdd98c2ed98793116
+"daisyui@npm:^5.0.0-beta.6":
+  version: 5.0.0-beta.6
+  resolution: "daisyui@npm:5.0.0-beta.6"
+  checksum: 10/8dbc0d9718b0832854fe5ba16a0702531a4d0fe0961e8f41805c94dfe68816c8af4afebf0790b25845506782d5baf0b4b32e92a7301abe9d4a6474fb2d02cebd
   languageName: node
   linkType: hard
 
@@ -5476,13 +5447,6 @@ __metadata:
   peerDependencies:
     "@babel/types": ^7
   checksum: 10/6b6e9cc82e475eb96033cb6a5bdd18dce4b0ab98d9bd7aa22ca04ae142be9bf74427b34b2d70aa97bc68797f315a67898230a5182a34d8ba334ac6e0b5af3ba3
-  languageName: node
-  linkType: hard
-
-"fastparse@npm:^1.1.2":
-  version: 1.1.2
-  resolution: "fastparse@npm:1.1.2"
-  checksum: 10/c4d199809dc4e8acafeb786be49481cc9144de296e2d54df4540ccfd868d0df73afc649aba70a748925eb32bbc4208b723d6288adf92382275031a8c7e10c0aa
   languageName: node
   linkType: hard
 
@@ -7975,13 +7939,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"picocolors@npm:^1, picocolors@npm:^1.1.0, picocolors@npm:^1.1.1":
-  version: 1.1.1
-  resolution: "picocolors@npm:1.1.1"
-  checksum: 10/e1cf46bf84886c79055fdfa9dcb3e4711ad259949e3565154b004b260cd356c5d54b31a1437ce9782624bf766272fe6b0154f5f0c744fb7af5d454d2b60db045
-  languageName: node
-  linkType: hard
-
 "picocolors@npm:^1.0.0":
   version: 1.0.0
   resolution: "picocolors@npm:1.0.0"
@@ -7993,6 +7950,13 @@ __metadata:
   version: 1.0.1
   resolution: "picocolors@npm:1.0.1"
   checksum: 10/fa68166d1f56009fc02a34cdfd112b0dd3cf1ef57667ac57281f714065558c01828cdf4f18600ad6851cbe0093952ed0660b1e0156bddf2184b6aaf5817553a5
+  languageName: node
+  linkType: hard
+
+"picocolors@npm:^1.1.0, picocolors@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "picocolors@npm:1.1.1"
+  checksum: 10/e1cf46bf84886c79055fdfa9dcb3e4711ad259949e3565154b004b260cd356c5d54b31a1437ce9782624bf766272fe6b0154f5f0c744fb7af5d454d2b60db045
   languageName: node
   linkType: hard
 
@@ -8246,17 +8210,6 @@ __metadata:
   peerDependencies:
     postcss: ^8.4
   checksum: 10/44c1e7d8586b36e9a55cc63dde4cc9f2b2632861d51bc8aebc1aca9045de2052b243bed3d0f9838334f3584d19bf04a4d308ed3fea671af30dd404e319fae252
-  languageName: node
-  linkType: hard
-
-"postcss-js@npm:^4":
-  version: 4.0.1
-  resolution: "postcss-js@npm:4.0.1"
-  dependencies:
-    camelcase-css: "npm:^2.0.1"
-  peerDependencies:
-    postcss: ^8.4.21
-  checksum: 10/ef2cfe8554daab4166cfcb290f376e7387964c36503f5bd42008778dba735685af8d4f5e0aba67cae999f47c855df40a1cd31ae840e0df320ded36352581045e
   languageName: node
   linkType: hard
 
@@ -9237,7 +9190,7 @@ __metadata:
     beautiful-react-hooks: "npm:^5.0.2"
     chart.js: "npm:^4.4.7"
     clsx: "npm:^2.1.1"
-    daisyui: "npm:^4.12.23"
+    daisyui: "npm:^5.0.0-beta.6"
     dayjs: "npm:^1.11.13"
     dotenv: "npm:^16.4.7"
     drizzle-kit: "npm:^0.30.4"
