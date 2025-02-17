@@ -47,7 +47,7 @@
     "@types/react-dom": "^19.0.4",
     "@types/react-flatpickr": "^3.8.11",
     "autoprefixer": "^10.4.20",
-    "daisyui": "^5.0.0-beta.7",
+    "daisyui": "^5.0.0-beta.8",
     "dotenv": "^16.4.7",
     "drizzle-kit": "^0.30.4",
     "eslint": "9.20.1",
