@@ -13,7 +13,7 @@
     "@libsql/client": "0.15.0",
     "@million/lint": "^1.0.14",
     "axios": "^1.8.3",
-    "beautiful-react-hooks": "^5.0.2",
+    "beautiful-react-hooks": "^5.0.3",
     "chart.js": "^4.4.8",
     "clsx": "^2.1.1",
     "dayjs": "^1.11.13",
