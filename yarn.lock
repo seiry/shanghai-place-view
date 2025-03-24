@@ -2744,12 +2744,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:19.0.11":
-  version: 19.0.11
-  resolution: "@types/react@npm:19.0.11"
+"@types/react@npm:19.0.12":
+  version: 19.0.12
+  resolution: "@types/react@npm:19.0.12"
   dependencies:
     csstype: "npm:^3.0.2"
-  checksum: 10/b26cac1814b78190395e44bae6e3d8864a50530b17e86aeb1ea63470037c263f906a8edc4f9e604e6416fdbeb75033cb7262efd5b37e933141d9f5cd9ca22040
+  checksum: 10/2476295f27371ea67f0ba3ca8fae3c683fc8d086b8b387e0519e67ff5731072c6ff0372fbd5a4c6d760895b1e7dc8997ac518f07bf6b6a8d1e40aeb5d2068b9e
   languageName: node
   linkType: hard
 
@@ -9230,7 +9230,7 @@ __metadata:
     "@tailwindcss/postcss": "npm:^4.0.15"
     "@total-typescript/ts-reset": "npm:^0.6.1"
     "@types/pinyin-engine": "npm:^1.1.2"
-    "@types/react": "npm:19.0.11"
+    "@types/react": "npm:19.0.12"
     "@types/react-dom": "npm:^19.0.4"
     "@types/react-flatpickr": "npm:^3.8.11"
     autoprefixer: "npm:^10.4.21"
@@ -9882,13 +9882,6 @@ __metadata:
     "@pkgr/utils": "npm:^2.3.1"
     tslib: "npm:^2.5.0"
   checksum: 10/fb6798a2db2650ca3a2435ad32d4fc14842da807993a1a350b64d267e0e770aa7f26492b119aa7500892d3d07a5af1eec7bfbd6e23a619451558be0f226a6094
-  languageName: node
-  linkType: hard
-
-"tailwindcss@npm:4.0.14":
-  version: 4.0.14
-  resolution: "tailwindcss@npm:4.0.14"
-  checksum: 10/8d6e039b99b22d4dd97d8713d7ad6ff0e7762ece2a8e99eeb3b4e52ea8273fbded363a4b63c2e668a7f08f95fa87371aa29fd710b1a1d840d5fbb846ba87445a
   languageName: node
   linkType: hard
 
