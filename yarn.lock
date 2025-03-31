@@ -8651,15 +8651,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-flatpickr@npm:^3.10.13":
-  version: 3.10.13
-  resolution: "react-flatpickr@npm:3.10.13"
+"react-flatpickr@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "react-flatpickr@npm:4.0.0"
   dependencies:
     flatpickr: "npm:^4.6.2"
     prop-types: "npm:^15.5.10"
   peerDependencies:
     react: "*"
-  checksum: 10/0b4e2b6b64f0684d8c04fa0619aaf10ba1af02521aacddeaaea4dcce2360cbef278bfeddfb65f42fa218b75177f16c4c8f4b5c5fd6bcc99a4c43358d23a292b8
+  checksum: 10/6cd9eea01b6a62126a2fd6f2bcd911ebaf7d1f16514fe40cee7501c6b092b3b6648deac347e686baaef10e6f98e3a7988105bf7c47df1a3b6359205dfa2f6ba0
   languageName: node
   linkType: hard
 
@@ -9261,7 +9261,7 @@ __metadata:
     react-chartjs-2: "npm:^5.3.0"
     react-dom: "npm:19.0.0"
     react-error-boundary: "npm:^5.0.0"
-    react-flatpickr: "npm:^3.10.13"
+    react-flatpickr: "npm:^4.0.0"
     react-twc: "npm:^1.4.2"
     sass: "npm:^1.86.1"
     sharp: "npm:^0.33.5"
