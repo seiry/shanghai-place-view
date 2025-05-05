@@ -9700,7 +9700,7 @@ __metadata:
     sass: "npm:^1.87.0"
     sharp: "npm:^0.34.1"
     swr: "npm:^2.3.3"
-    tailwindcss: "npm:4.1.4"
+    tailwindcss: "npm:4.1.5"
     ts-pattern: "npm:^5.7.0"
     typescript: "npm:5.8.3"
     zod: "npm:^3.24.3"
