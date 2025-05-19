@@ -9793,7 +9793,7 @@ __metadata:
     sharp: "npm:^0.34.1"
     swr: "npm:^2.3.3"
     tailwindcss: "npm:4.1.6"
-    ts-pattern: "npm:^5.7.0"
+    ts-pattern: "npm:^5.7.1"
     typescript: "npm:5.8.3"
     zod: "npm:^3.24.4"
     zustand: "npm:^5.0.4"
@@ -10509,10 +10509,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-pattern@npm:^5.7.0":
-  version: 5.7.0
-  resolution: "ts-pattern@npm:5.7.0"
-  checksum: 10/9a1dda9321a79c7c36209c9434dae4e51cb79c0df2bd15ac2bcd1fc193e1467bb876733d41bf786865646e6736b1d8535ccb40ae39b7cf3e39c4247c745a5eb5
+"ts-pattern@npm:^5.7.1":
+  version: 5.7.1
+  resolution: "ts-pattern@npm:5.7.1"
+  checksum: 10/010ea63fed84c4961fc8ff45cd65f58f2aec8063953fd32f825ff322c4dff83cd1f7192fd11e3095b0cd48bd6fac0eca4077881e4239775a86955e702b235a49
   languageName: node
   linkType: hard
 
