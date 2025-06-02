@@ -17,7 +17,7 @@
     "chart.js": "^4.4.9",
     "clsx": "^2.1.1",
     "dayjs": "^1.11.13",
-    "drizzle-orm": "^0.43.1",
+    "drizzle-orm": "^0.44.1",
     "drizzle-zod": "^0.7.1",
     "esbuild-runner": "^2.2.2",
     "flatpickr": "^4.6.13",
