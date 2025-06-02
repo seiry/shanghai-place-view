@@ -10,7 +10,7 @@
     "migration": "esr ./src/db/migration.ts"
   },
   "dependencies": {
-    "@libsql/client": "0.15.7",
+    "@libsql/client": "0.15.8",
     "@million/lint": "^1.0.14",
     "axios": "^1.9.0",
     "beautiful-react-hooks": "^5.0.3",
