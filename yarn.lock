@@ -4447,9 +4447,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"drizzle-orm@npm:^0.44.1":
-  version: 0.44.1
-  resolution: "drizzle-orm@npm:0.44.1"
+"drizzle-orm@npm:^0.44.2":
+  version: 0.44.2
+  resolution: "drizzle-orm@npm:0.44.2"
   peerDependencies:
     "@aws-sdk/client-rds-data": ">=3"
     "@cloudflare/workers-types": ">=4"
@@ -4538,7 +4538,7 @@ __metadata:
       optional: true
     sqlite3:
       optional: true
-  checksum: 10/51fe208a54021c1f904535e80ffd563dd29d560eda464ab84c4e713e85901785b7a4b8dbbf7c3063bbf608536bcd260ffee9bc333db916eeaf07ee6418cd29e7
+  checksum: 10/75cd5351a3e94358f8cb4fc7da6ad6f7d6e78d1648f37040d8471be6b60ad8cc388094907079735d7d5e9671fe8477f9d3285d5b148a67f56dc83c18b6761aff
   languageName: node
   linkType: hard
 
@@ -9552,7 +9552,7 @@ __metadata:
     dayjs: "npm:^1.11.13"
     dotenv: "npm:^16.5.0"
     drizzle-kit: "npm:^0.31.1"
-    drizzle-orm: "npm:^0.44.1"
+    drizzle-orm: "npm:^0.44.2"
     drizzle-zod: "npm:^0.7.1"
     esbuild-runner: "npm:^2.2.2"
     eslint: "npm:9.28.0"
