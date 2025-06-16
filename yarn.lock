@@ -4551,13 +4551,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"drizzle-zod@npm:^0.7.1":
-  version: 0.7.1
-  resolution: "drizzle-zod@npm:0.7.1"
+"drizzle-zod@npm:^0.8.2":
+  version: 0.8.2
+  resolution: "drizzle-zod@npm:0.8.2"
   peerDependencies:
     drizzle-orm: ">=0.36.0"
-    zod: ">=3.0.0"
-  checksum: 10/f9001d9732b7ded9c40e0fab0778d11548b00e99bb1f4ca161d56bdc95a03dcd93b7683848f0a142783e5c1f087322b9a666acb4392da81fccbb7443b4bf99e2
+    zod: ^3.25.1
+  checksum: 10/703bb2d5fda59a13cb5c834b0e0db51cb7146bf52610e7607f580710039d6b92f3815c2b4dc19aa8bbdbbf48213d21e13eab59f71a58c6750572f372e1fd276d
   languageName: node
   linkType: hard
 
@@ -9562,7 +9562,7 @@ __metadata:
     dotenv: "npm:^16.5.0"
     drizzle-kit: "npm:^0.31.1"
     drizzle-orm: "npm:^0.44.2"
-    drizzle-zod: "npm:^0.7.1"
+    drizzle-zod: "npm:^0.8.2"
     esbuild-runner: "npm:^2.2.2"
     eslint: "npm:9.29.0"
     eslint-config-next: "npm:15.3.3"
@@ -10278,13 +10278,6 @@ __metadata:
   version: 4.1.10
   resolution: "tailwindcss@npm:4.1.10"
   checksum: 10/699cfeacced1d3a3f17f8525ac6fe3246fb35d18c29a6814eebc039b768121d0c05311aaa8eb09b7c695e6667085a6a7ee023cd577a3386aef8c5891d6f785cb
-  languageName: node
-  linkType: hard
-
-"tailwindcss@npm:4.1.8":
-  version: 4.1.8
-  resolution: "tailwindcss@npm:4.1.8"
-  checksum: 10/9fe7a7a40c34936b7f15b0cc836ade478975dcf316909b6dd948908f6723cc403ce8ab22d2e1a1b6e0e955eea656802e06b80eb8c0536c9e09fa3eabae16e30f
   languageName: node
   linkType: hard
 
