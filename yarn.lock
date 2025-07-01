@@ -207,7 +207,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.13.10":
+"@babel/runtime@npm:^7.12.5":
   version: 7.26.10
   resolution: "@babel/runtime@npm:7.26.10"
   dependencies:
@@ -2602,34 +2602,31 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@radix-ui/react-compose-refs@npm:1.0.1":
-  version: 1.0.1
-  resolution: "@radix-ui/react-compose-refs@npm:1.0.1"
-  dependencies:
-    "@babel/runtime": "npm:^7.13.10"
+"@radix-ui/react-compose-refs@npm:1.1.2":
+  version: 1.1.2
+  resolution: "@radix-ui/react-compose-refs@npm:1.1.2"
   peerDependencies:
     "@types/react": "*"
-    react: ^16.8 || ^17.0 || ^18.0
+    react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 10/2b9a613b6db5bff8865588b6bf4065f73021b3d16c0a90b2d4c23deceeb63612f1f15de188227ebdc5f88222cab031be617a9dd025874c0487b303be3e5cc2a8
+  checksum: 10/9a91f0213014ffa40c5b8aae4debb993be5654217e504e35aa7422887eb2d114486d37e53c482d0fffb00cd44f51b5269fcdf397b280c71666fa11b7f32f165d
   languageName: node
   linkType: hard
 
-"@radix-ui/react-slot@npm:^1.0.2":
-  version: 1.0.2
-  resolution: "@radix-ui/react-slot@npm:1.0.2"
+"@radix-ui/react-slot@npm:^1.2.3":
+  version: 1.2.3
+  resolution: "@radix-ui/react-slot@npm:1.2.3"
   dependencies:
-    "@babel/runtime": "npm:^7.13.10"
-    "@radix-ui/react-compose-refs": "npm:1.0.1"
+    "@radix-ui/react-compose-refs": "npm:1.1.2"
   peerDependencies:
     "@types/react": "*"
-    react: ^16.8 || ^17.0 || ^18.0
+    react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 10/734866561e991438fbcf22af06e56b272ed6ee8f7b536489ee3bf2f736f8b53bf6bc14ebde94834aa0aceda854d018a0ce20bb171defffbaed1f566006cbb887
+  checksum: 10/fe484c2741e31d9c20a8fb53c5790a73c0664e2bea35e27f4d484a90c42135fcfffe11a08abfcacb7a8ee2faf013471f0e856818f3ddac8ac51ceb8869e0fd08
   languageName: node
   linkType: hard
 
@@ -3956,13 +3953,6 @@ __metadata:
     strip-ansi: "npm:^6.0.1"
     wrap-ansi: "npm:^7.0.0"
   checksum: 10/eaa5561aeb3135c2cddf7a3b3f562fc4238ff3b3fc666869ef2adf264be0f372136702f16add9299087fb1907c2e4ec5dbfe83bd24bce815c70a80c6c1a2e950
-  languageName: node
-  linkType: hard
-
-"clsx@npm:^2.1.0":
-  version: 2.1.0
-  resolution: "clsx@npm:2.1.0"
-  checksum: 10/2e0ce7c3b6803d74fc8147c408f88e79245583202ac14abd9691e2aebb9f312de44270b79154320d10bb7804a9197869635d1291741084826cff20820f31542b
   languageName: node
   linkType: hard
 
@@ -8986,13 +8976,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-twc@npm:^1.4.2":
-  version: 1.4.2
-  resolution: "react-twc@npm:1.4.2"
+"react-twc@npm:^1.5.0":
+  version: 1.5.0
+  resolution: "react-twc@npm:1.5.0"
   dependencies:
-    "@radix-ui/react-slot": "npm:^1.0.2"
-    clsx: "npm:^2.1.0"
-  checksum: 10/1edda1486d5c291f65964f54df4c338ace6643b808924f256d085a3a1b63fce9a366e0c090b8a7178b9898eb8f516e3f37187dea005328421c33e538d3648032
+    "@radix-ui/react-slot": "npm:^1.2.3"
+    clsx: "npm:^2.1.1"
+  checksum: 10/f5e8cc430d6b2fe0748be716e52d822a33d3aa01cae15dd95c45aae4686084c292d2bc26dcabba79cd39b8d01c966357b0e74436a222c313883a3da30e48d19c
   languageName: node
   linkType: hard
 
@@ -9581,7 +9571,7 @@ __metadata:
     react-dom: "npm:19.0.0"
     react-error-boundary: "npm:^5.0.0"
     react-flatpickr: "npm:^3.10.13"
-    react-twc: "npm:^1.4.2"
+    react-twc: "npm:^1.5.0"
     sass: "npm:^1.89.2"
     sharp: "npm:^0.34.2"
     swr: "npm:^2.3.3"
