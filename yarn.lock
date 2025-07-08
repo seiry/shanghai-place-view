@@ -9578,7 +9578,7 @@ __metadata:
     tailwindcss: "npm:4.1.11"
     ts-pattern: "npm:^5.7.1"
     typescript: "npm:5.8.3"
-    zod: "npm:^3.25.67"
+    zod: "npm:^3.25.75"
     zustand: "npm:^5.0.6"
   languageName: unknown
   linkType: soft
@@ -11006,10 +11006,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zod@npm:^3.25.67":
-  version: 3.25.67
-  resolution: "zod@npm:3.25.67"
-  checksum: 10/0e35432dcca7f053e63f5dd491a87c78abe0d981817547252c3b6d05f0f58788695d1a69724759c6501dff3fd62929be24c9f314a3625179bee889150f7a61fa
+"zod@npm:^3.25.75":
+  version: 3.25.75
+  resolution: "zod@npm:3.25.75"
+  checksum: 10/ac5bfd290e81a7954079a99c8ec27c2653af5c3842eaeddda06becb415b1d3887c1b06d6cbe8d52fde08f50e958643966ab0bf585a8e432d53b83ddb8e274d10
   languageName: node
   linkType: hard
 
