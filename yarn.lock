@@ -8862,13 +8862,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-twc@npm:^1.5.0":
-  version: 1.5.0
-  resolution: "react-twc@npm:1.5.0"
+"react-twc@npm:^1.5.1":
+  version: 1.5.1
+  resolution: "react-twc@npm:1.5.1"
   dependencies:
     "@radix-ui/react-slot": "npm:^1.2.3"
     clsx: "npm:^2.1.1"
-  checksum: 10/f5e8cc430d6b2fe0748be716e52d822a33d3aa01cae15dd95c45aae4686084c292d2bc26dcabba79cd39b8d01c966357b0e74436a222c313883a3da30e48d19c
+  checksum: 10/2eeef4c88eb4494fba9fbccf8719c0f2cf4f01b15a45f1fb5ddcf2dafae2df9256cad2f45e8703cd589677fc35f8a76d3df035d8f02ffcf4fa96eff0d96929ed
   languageName: node
   linkType: hard
 
@@ -9448,7 +9448,7 @@ __metadata:
     react-dom: "npm:19.0.0"
     react-error-boundary: "npm:^5.0.0"
     react-flatpickr: "npm:^3.10.13"
-    react-twc: "npm:^1.5.0"
+    react-twc: "npm:^1.5.1"
     sass: "npm:^1.89.2"
     sharp: "npm:^0.34.3"
     swr: "npm:^2.3.4"
