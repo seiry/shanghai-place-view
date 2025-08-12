@@ -6980,9 +6980,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jotai@npm:^2.13.0":
-  version: 2.13.0
-  resolution: "jotai@npm:2.13.0"
+"jotai@npm:^2.13.1":
+  version: 2.13.1
+  resolution: "jotai@npm:2.13.1"
   peerDependencies:
     "@babel/core": ">=7.0.0"
     "@babel/template": ">=7.0.0"
@@ -6997,7 +6997,7 @@ __metadata:
       optional: true
     react:
       optional: true
-  checksum: 10/dfeb3a8b2210949a7d9d21072fa5e9d3781b77da1e457ac12c7a426699415130972921d2b2a90835f3b9ad8b78c8c3cee11ecadd869f9a57cd25193b7cfb60b9
+  checksum: 10/6176f24c351dbcac7129ecc8000c12d3a358197963ecb71e24963873995f4286d8608575a36d4c6d6579e17d31a229f32eeab34676f2edeca63f372623661c20
   languageName: node
   linkType: hard
 
@@ -9433,7 +9433,7 @@ __metadata:
     eslint-config-prettier: "npm:^10.1.8"
     eslint-plugin-prettier: "npm:^5.5.3"
     flatpickr: "npm:^4.6.13"
-    jotai: "npm:^2.13.0"
+    jotai: "npm:^2.13.1"
     next: "npm:^15.4.5"
     pinyin-engine: "npm:^1.2.2"
     postcss: "npm:^8.5.6"
