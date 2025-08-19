@@ -9477,7 +9477,7 @@ __metadata:
     sass: "npm:^1.90.0"
     sharp: "npm:^0.34.3"
     swr: "npm:^2.3.6"
-    tailwindcss: "npm:4.1.11"
+    tailwindcss: "npm:4.1.12"
     ts-pattern: "npm:^5.8.0"
     typescript: "npm:5.9.2"
     zod: "npm:^3.25.75"
