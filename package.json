@@ -22,7 +22,7 @@
     "esbuild-runner": "^2.2.2",
     "flatpickr": "^4.6.13",
     "jotai": "^2.13.1",
-    "next": "^15.4.5",
+    "next": "^15.4.7",
     "pinyin-engine": "^1.2.2",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-preset-env": "^10.2.4",
