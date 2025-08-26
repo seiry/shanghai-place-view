@@ -2233,12 +2233,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/eslint-plugin-next@npm:15.4.7":
-  version: 15.4.7
-  resolution: "@next/eslint-plugin-next@npm:15.4.7"
+"@next/eslint-plugin-next@npm:15.5.0":
+  version: 15.5.0
+  resolution: "@next/eslint-plugin-next@npm:15.5.0"
   dependencies:
     fast-glob: "npm:3.3.1"
-  checksum: 10/72bd0d387f9026a280917d85466daff7cd1006a5668b1d0a6981b8966253a723c7dfbceec86a7a9c933ce67416d9d7fb96351feefc01214bdf1cd7e81b2ee9ab
+  checksum: 10/b6746717a1626fff5d880d8825768e2ba3ae892787a82e7edcad1cf71ab0a23a4588a6ec451087a0c5030e477a3590c684653d60d81ba5ea369c3f69e6a90a3a
   languageName: node
   linkType: hard
 
@@ -5158,11 +5158,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-next@npm:15.4.7":
-  version: 15.4.7
-  resolution: "eslint-config-next@npm:15.4.7"
+"eslint-config-next@npm:15.5.0":
+  version: 15.5.0
+  resolution: "eslint-config-next@npm:15.5.0"
   dependencies:
-    "@next/eslint-plugin-next": "npm:15.4.7"
+    "@next/eslint-plugin-next": "npm:15.5.0"
     "@rushstack/eslint-patch": "npm:^1.10.3"
     "@typescript-eslint/eslint-plugin": "npm:^5.4.2 || ^6.0.0 || ^7.0.0 || ^8.0.0"
     "@typescript-eslint/parser": "npm:^5.4.2 || ^6.0.0 || ^7.0.0 || ^8.0.0"
@@ -5178,7 +5178,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 10/4059db930f1622c8cd92658885e76642e2d6ee206ba7a4e2626939ef9eeb4bc8926395e5894bbca1d812f536404c486867131a1b4906bba18735959e60601690
+  checksum: 10/21bdbba088178309139985d64b176d9454b98ad411c1197b92232d8aaced06fabdf14fdbb21cd2b4d71639c8c51e24c1a464c3f094c1381eea2d61e177caa576
   languageName: node
   linkType: hard
 
@@ -9457,7 +9457,7 @@ __metadata:
     drizzle-zod: "npm:^0.7.1"
     esbuild-runner: "npm:^2.2.2"
     eslint: "npm:9.33.0"
-    eslint-config-next: "npm:15.4.7"
+    eslint-config-next: "npm:15.5.0"
     eslint-config-prettier: "npm:^10.1.8"
     eslint-plugin-prettier: "npm:^5.5.4"
     flatpickr: "npm:^4.6.13"
@@ -10087,13 +10087,6 @@ __metadata:
     "@pkgr/utils": "npm:^2.3.1"
     tslib: "npm:^2.5.0"
   checksum: 10/fb6798a2db2650ca3a2435ad32d4fc14842da807993a1a350b64d267e0e770aa7f26492b119aa7500892d3d07a5af1eec7bfbd6e23a619451558be0f226a6094
-  languageName: node
-  linkType: hard
-
-"tailwindcss@npm:4.1.11":
-  version: 4.1.11
-  resolution: "tailwindcss@npm:4.1.11"
-  checksum: 10/cfe16f327e501cc9cefb136138b5435353c63bd0aa4092a100fc49aef6340d919b1a19910b133b4b5973adfd91c6e284195e78efa303eb92e7976614a2076d6b
   languageName: node
   linkType: hard
 
