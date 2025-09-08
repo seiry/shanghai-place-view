@@ -9516,7 +9516,7 @@ __metadata:
     sass: "npm:^1.92.1"
     sharp: "npm:^0.34.3"
     swr: "npm:^2.3.6"
-    tailwindcss: "npm:4.1.12"
+    tailwindcss: "npm:4.1.13"
     ts-pattern: "npm:^5.8.0"
     typescript: "npm:5.9.2"
     zod: "npm:^3.25.75"
@@ -10126,13 +10126,6 @@ __metadata:
     "@pkgr/utils": "npm:^2.3.1"
     tslib: "npm:^2.5.0"
   checksum: 10/fb6798a2db2650ca3a2435ad32d4fc14842da807993a1a350b64d267e0e770aa7f26492b119aa7500892d3d07a5af1eec7bfbd6e23a619451558be0f226a6094
-  languageName: node
-  linkType: hard
-
-"tailwindcss@npm:4.1.12":
-  version: 4.1.12
-  resolution: "tailwindcss@npm:4.1.12"
-  checksum: 10/12f453b37b8eb1f209a02e556d6f2e3ffdf14bf79d79652fd542e50de619092a1f1d62457199b3859a8894fb54b7e2a2be9f65ebe78de7f39457ba1b94151a45
   languageName: node
   linkType: hard
 
