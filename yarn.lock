@@ -1902,38 +1902,38 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@libsql/client@npm:0.15.12":
-  version: 0.15.12
-  resolution: "@libsql/client@npm:0.15.12"
+"@libsql/client@npm:0.15.15":
+  version: 0.15.15
+  resolution: "@libsql/client@npm:0.15.15"
   dependencies:
-    "@libsql/core": "npm:^0.15.12"
+    "@libsql/core": "npm:^0.15.14"
     "@libsql/hrana-client": "npm:^0.7.0"
     js-base64: "npm:^3.7.5"
-    libsql: "npm:^0.5.15"
+    libsql: "npm:^0.5.22"
     promise-limit: "npm:^2.7.0"
-  checksum: 10/1af471ae8a693256b3a735c75781c643f565a40ae529e19680d9819f222872bb3bb9eea242a7aa41e8e5b28cc3c53b2f75d336a54d4b73ca70d0ed0c0ff387af
+  checksum: 10/552be2745d46bcb15368f95f1c1777c014c5b0bb70185b09617153b12acaa2b211f3c99dcbe0d1520eb3b72151227a09f8a84f29604dcdd1befa603b5133576f
   languageName: node
   linkType: hard
 
-"@libsql/core@npm:^0.15.12":
-  version: 0.15.12
-  resolution: "@libsql/core@npm:0.15.12"
+"@libsql/core@npm:^0.15.14":
+  version: 0.15.15
+  resolution: "@libsql/core@npm:0.15.15"
   dependencies:
     js-base64: "npm:^3.7.5"
-  checksum: 10/24bd0345e9612d84549e38ce8be3232bd02bd73d59fe8ed25958dfc445de86df5b2609205e436bef7f1d41d0cc05e0947b45ef51659e861582ad8d530427eead
+  checksum: 10/6cd84bf27f6739342a962114d82828e5d7203633078693f8b039c8f65be865c826be46e9d0a7a908ab4a687910224cbad9b51052f4c3d47f52d9cd910e6ca93b
   languageName: node
   linkType: hard
 
-"@libsql/darwin-arm64@npm:0.5.17":
-  version: 0.5.17
-  resolution: "@libsql/darwin-arm64@npm:0.5.17"
+"@libsql/darwin-arm64@npm:0.5.22":
+  version: 0.5.22
+  resolution: "@libsql/darwin-arm64@npm:0.5.22"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@libsql/darwin-x64@npm:0.5.17":
-  version: 0.5.17
-  resolution: "@libsql/darwin-x64@npm:0.5.17"
+"@libsql/darwin-x64@npm:0.5.22":
+  version: 0.5.22
+  resolution: "@libsql/darwin-x64@npm:0.5.22"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
@@ -1967,51 +1967,51 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@libsql/linux-arm-gnueabihf@npm:0.5.17":
-  version: 0.5.17
-  resolution: "@libsql/linux-arm-gnueabihf@npm:0.5.17"
+"@libsql/linux-arm-gnueabihf@npm:0.5.22":
+  version: 0.5.22
+  resolution: "@libsql/linux-arm-gnueabihf@npm:0.5.22"
   conditions: os=linux & cpu=arm
   languageName: node
   linkType: hard
 
-"@libsql/linux-arm-musleabihf@npm:0.5.17":
-  version: 0.5.17
-  resolution: "@libsql/linux-arm-musleabihf@npm:0.5.17"
+"@libsql/linux-arm-musleabihf@npm:0.5.22":
+  version: 0.5.22
+  resolution: "@libsql/linux-arm-musleabihf@npm:0.5.22"
   conditions: os=linux & cpu=arm
   languageName: node
   linkType: hard
 
-"@libsql/linux-arm64-gnu@npm:0.5.17":
-  version: 0.5.17
-  resolution: "@libsql/linux-arm64-gnu@npm:0.5.17"
+"@libsql/linux-arm64-gnu@npm:0.5.22":
+  version: 0.5.22
+  resolution: "@libsql/linux-arm64-gnu@npm:0.5.22"
   conditions: os=linux & cpu=arm64
   languageName: node
   linkType: hard
 
-"@libsql/linux-arm64-musl@npm:0.5.17":
-  version: 0.5.17
-  resolution: "@libsql/linux-arm64-musl@npm:0.5.17"
+"@libsql/linux-arm64-musl@npm:0.5.22":
+  version: 0.5.22
+  resolution: "@libsql/linux-arm64-musl@npm:0.5.22"
   conditions: os=linux & cpu=arm64
   languageName: node
   linkType: hard
 
-"@libsql/linux-x64-gnu@npm:0.5.17":
-  version: 0.5.17
-  resolution: "@libsql/linux-x64-gnu@npm:0.5.17"
+"@libsql/linux-x64-gnu@npm:0.5.22":
+  version: 0.5.22
+  resolution: "@libsql/linux-x64-gnu@npm:0.5.22"
   conditions: os=linux & cpu=x64
   languageName: node
   linkType: hard
 
-"@libsql/linux-x64-musl@npm:0.5.17":
-  version: 0.5.17
-  resolution: "@libsql/linux-x64-musl@npm:0.5.17"
+"@libsql/linux-x64-musl@npm:0.5.22":
+  version: 0.5.22
+  resolution: "@libsql/linux-x64-musl@npm:0.5.22"
   conditions: os=linux & cpu=x64
   languageName: node
   linkType: hard
 
-"@libsql/win32-x64-msvc@npm:0.5.17":
-  version: 0.5.17
-  resolution: "@libsql/win32-x64-msvc@npm:0.5.17"
+"@libsql/win32-x64-msvc@npm:0.5.22":
+  version: 0.5.22
+  resolution: "@libsql/win32-x64-msvc@npm:0.5.22"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -7207,19 +7207,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"libsql@npm:^0.5.15":
-  version: 0.5.17
-  resolution: "libsql@npm:0.5.17"
+"libsql@npm:^0.5.22":
+  version: 0.5.22
+  resolution: "libsql@npm:0.5.22"
   dependencies:
-    "@libsql/darwin-arm64": "npm:0.5.17"
-    "@libsql/darwin-x64": "npm:0.5.17"
-    "@libsql/linux-arm-gnueabihf": "npm:0.5.17"
-    "@libsql/linux-arm-musleabihf": "npm:0.5.17"
-    "@libsql/linux-arm64-gnu": "npm:0.5.17"
-    "@libsql/linux-arm64-musl": "npm:0.5.17"
-    "@libsql/linux-x64-gnu": "npm:0.5.17"
-    "@libsql/linux-x64-musl": "npm:0.5.17"
-    "@libsql/win32-x64-msvc": "npm:0.5.17"
+    "@libsql/darwin-arm64": "npm:0.5.22"
+    "@libsql/darwin-x64": "npm:0.5.22"
+    "@libsql/linux-arm-gnueabihf": "npm:0.5.22"
+    "@libsql/linux-arm-musleabihf": "npm:0.5.22"
+    "@libsql/linux-arm64-gnu": "npm:0.5.22"
+    "@libsql/linux-arm64-musl": "npm:0.5.22"
+    "@libsql/linux-x64-gnu": "npm:0.5.22"
+    "@libsql/linux-x64-musl": "npm:0.5.22"
+    "@libsql/win32-x64-msvc": "npm:0.5.22"
     "@neon-rs/load": "npm:^0.0.4"
     detect-libc: "npm:2.0.2"
   dependenciesMeta:
@@ -7241,7 +7241,7 @@ __metadata:
       optional: true
     "@libsql/win32-x64-msvc":
       optional: true
-  checksum: 10/54bac84e880e53f4bccd38541cc94694fc2e13f0d3fef3911896ed840de98693f23302280b7907015a9d84c53fdcf6e18eb7d6c5c5c3bce69ea021f5d152e7fe
+  checksum: 10/089225702beda85fe0fed073a540ab48f63c8c64857b0012c0a7d81a3c92e3595ea7bd7732d5147d0521f8928f97d3e44198125dddfebe0b5789a6738ab1a3c1
   conditions: (os=darwin | os=linux | os=win32) & (cpu=x64 | cpu=arm64 | cpu=wasm32 | cpu=arm)
   languageName: node
   linkType: hard
@@ -9475,7 +9475,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "shanghai-place-view@workspace:."
   dependencies:
-    "@libsql/client": "npm:0.15.12"
+    "@libsql/client": "npm:0.15.15"
     "@million/lint": "npm:^1.0.14"
     "@tailwindcss/postcss": "npm:^4.1.13"
     "@total-typescript/ts-reset": "npm:^0.6.1"
