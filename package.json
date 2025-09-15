@@ -36,7 +36,7 @@
     "sharp": "^0.34.3",
     "swr": "^2.3.6",
     "ts-pattern": "^5.8.0",
-    "zod": "^3.25.75",
+    "zod": "^4.1.8",
     "zustand": "^5.0.8"
   },
   "devDependencies": {
