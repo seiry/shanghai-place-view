@@ -18,7 +18,7 @@
     "clsx": "^2.1.1",
     "dayjs": "^1.11.18",
     "drizzle-orm": "^0.44.5",
-    "drizzle-zod": "^0.7.1",
+    "drizzle-zod": "^0.8.3",
     "esbuild-runner": "^2.2.2",
     "flatpickr": "^4.6.13",
     "jotai": "^2.15.0",
