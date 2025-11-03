@@ -4581,9 +4581,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"drizzle-kit@npm:^0.31.5":
-  version: 0.31.5
-  resolution: "drizzle-kit@npm:0.31.5"
+"drizzle-kit@npm:^0.31.6":
+  version: 0.31.6
+  resolution: "drizzle-kit@npm:0.31.6"
   dependencies:
     "@drizzle-team/brocli": "npm:^0.10.2"
     "@esbuild-kit/esm-loader": "npm:^2.5.5"
@@ -4591,7 +4591,7 @@ __metadata:
     esbuild-register: "npm:^3.5.0"
   bin:
     drizzle-kit: bin.cjs
-  checksum: 10/facd41b91d2d07e03b1ee9ebc29b7b967b2af0529474b077afa396ba055f789c10ee3ada2ca14577049cfd2735e6bd81d42341bf5f876c023d51869ec6f89bd8
+  checksum: 10/1090f5cb9c0d5fb9cdbf5a44262300a289df98acb69978d303da434744be335e543d5f59ef755321f330e676527ac4b061f0d5c2bf63d7e3c901ec851b94fe63
   languageName: node
   linkType: hard
 
@@ -9690,7 +9690,7 @@ __metadata:
     daisyui: "npm:^5.3.10"
     dayjs: "npm:^1.11.18"
     dotenv: "npm:^16.5.0"
-    drizzle-kit: "npm:^0.31.5"
+    drizzle-kit: "npm:^0.31.6"
     drizzle-orm: "npm:^0.44.7"
     drizzle-zod: "npm:^0.7.1"
     esbuild-runner: "npm:^2.2.2"
@@ -10403,13 +10403,6 @@ __metadata:
     "@pkgr/utils": "npm:^2.3.1"
     tslib: "npm:^2.5.0"
   checksum: 10/fb6798a2db2650ca3a2435ad32d4fc14842da807993a1a350b64d267e0e770aa7f26492b119aa7500892d3d07a5af1eec7bfbd6e23a619451558be0f226a6094
-  languageName: node
-  linkType: hard
-
-"tailwindcss@npm:4.1.15":
-  version: 4.1.15
-  resolution: "tailwindcss@npm:4.1.15"
-  checksum: 10/43764458378fa4c83a3cf433c16ee3c279c775a9fe2fdf4aee2a1965d645b4c7a3a17ebb69018282e8a75248cb8d64984fc9e2d278d7231014d776981371e9c9
   languageName: node
   linkType: hard
 
