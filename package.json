@@ -16,7 +16,7 @@
     "beautiful-react-hooks": "^5.0.3",
     "chart.js": "^4.5.1",
     "clsx": "^2.1.1",
-    "dayjs": "^1.11.18",
+    "dayjs": "^1.11.19",
     "drizzle-orm": "^0.44.7",
     "drizzle-zod": "^0.7.1",
     "esbuild-runner": "^2.2.2",
