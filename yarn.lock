@@ -3154,12 +3154,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:19.0.12":
-  version: 19.0.12
-  resolution: "@types/react@npm:19.0.12"
+"@types/react@npm:19.2.2":
+  version: 19.2.2
+  resolution: "@types/react@npm:19.2.2"
   dependencies:
     csstype: "npm:^3.0.2"
-  checksum: 10/2476295f27371ea67f0ba3ca8fae3c683fc8d086b8b387e0519e67ff5731072c6ff0372fbd5a4c6d760895b1e7dc8997ac518f07bf6b6a8d1e40aeb5d2068b9e
+  checksum: 10/d6adf8fd4bb23a7e04da5700d96b15dc0f59653727a9c6e940c151d7232fa1dbbab98417d5ac830dcfb6cba3f206efbd4cd83647e6f9a688d7363a90e607f6bf
   languageName: node
   linkType: hard
 
@@ -9135,10 +9135,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:19.0.0":
-  version: 19.0.0
-  resolution: "react@npm:19.0.0"
-  checksum: 10/2490969c503f644703c88990d20e4011fa6119ddeca451e9de48f6d7ab058d670d2852a5fcd3aa3cd90a923ab2815d532637bd4a814add402ae5c0d4f129ee71
+"react@npm:19.2.0":
+  version: 19.2.0
+  resolution: "react@npm:19.2.0"
+  checksum: 10/e13bcdb8e994c3cfa922743cb75ca8deb60531bf02f584d2d8dab940a8132ce8a2e6ef16f8ed7f372b4072e7a7eeff589b2812dabbedfa73e6e46201dac8a9d0
   languageName: node
   linkType: hard
 
@@ -9679,7 +9679,7 @@ __metadata:
     "@tailwindcss/postcss": "npm:^4.1.16"
     "@total-typescript/ts-reset": "npm:^0.6.1"
     "@types/pinyin-engine": "npm:^1.1.2"
-    "@types/react": "npm:19.0.12"
+    "@types/react": "npm:19.2.2"
     "@types/react-dom": "npm:^19.0.4"
     "@types/react-flatpickr": "npm:^3.8.11"
     autoprefixer: "npm:^10.4.21"
@@ -9706,7 +9706,7 @@ __metadata:
     postcss-flexbugs-fixes: "npm:^5.0.2"
     postcss-preset-env: "npm:^10.4.0"
     prettier: "npm:3.6.2"
-    react: "npm:19.0.0"
+    react: "npm:19.2.0"
     react-chartjs-2: "npm:^5.3.1"
     react-dom: "npm:19.0.0"
     react-error-boundary: "npm:^5.0.0"
