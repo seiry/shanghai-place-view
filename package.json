@@ -21,7 +21,7 @@
     "drizzle-zod": "^0.7.1",
     "esbuild-runner": "^2.2.2",
     "flatpickr": "^4.6.13",
-    "jotai": "^2.15.1",
+    "jotai": "^2.15.2",
     "next": "^15.5.6",
     "pinyin-engine": "^1.2.2",
     "postcss-flexbugs-fixes": "^5.0.2",
