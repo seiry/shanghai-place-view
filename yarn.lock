@@ -4382,10 +4382,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"daisyui@npm:^5.5.5":
-  version: 5.5.5
-  resolution: "daisyui@npm:5.5.5"
-  checksum: 10/cb766eb2e2a3e27f6da486dc078e489e86d561e9468b4a2e322541fdbccf2edb419d25356c365ab6b2219835efa882056694f43e29c999a4041eb08d156289fa
+"daisyui@npm:^5.5.8":
+  version: 5.5.8
+  resolution: "daisyui@npm:5.5.8"
+  checksum: 10/2167c219400091422668ae5f7d7c0837e343998dc182ac44ee4ec7ba451c4c066112d8a1fb0963a2f0f6870c915c9a0de2a2fa4063b51b131b704e72db6f4b34
   languageName: node
   linkType: hard
 
@@ -9804,7 +9804,7 @@ __metadata:
     beautiful-react-hooks: "npm:^5.0.3"
     chart.js: "npm:^4.5.1"
     clsx: "npm:^2.1.1"
-    daisyui: "npm:^5.5.5"
+    daisyui: "npm:^5.5.8"
     dayjs: "npm:^1.11.19"
     dotenv: "npm:^16.5.0"
     drizzle-kit: "npm:^0.31.8"
