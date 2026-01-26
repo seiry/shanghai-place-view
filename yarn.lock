@@ -2173,25 +2173,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@libsql/client@npm:0.15.15":
-  version: 0.15.15
-  resolution: "@libsql/client@npm:0.15.15"
+"@libsql/client@npm:0.17.0":
+  version: 0.17.0
+  resolution: "@libsql/client@npm:0.17.0"
   dependencies:
-    "@libsql/core": "npm:^0.15.14"
-    "@libsql/hrana-client": "npm:^0.7.0"
+    "@libsql/core": "npm:^0.17.0"
+    "@libsql/hrana-client": "npm:^0.9.0"
     js-base64: "npm:^3.7.5"
     libsql: "npm:^0.5.22"
     promise-limit: "npm:^2.7.0"
-  checksum: 10/552be2745d46bcb15368f95f1c1777c014c5b0bb70185b09617153b12acaa2b211f3c99dcbe0d1520eb3b72151227a09f8a84f29604dcdd1befa603b5133576f
+  checksum: 10/ebaca5246a612b40859ca133ebb74c5f336748328c3c07e3c43afd5c536e746b112480379cb51092273f31afe0d1e746343df337b23087112f59a6caf095ec77
   languageName: node
   linkType: hard
 
-"@libsql/core@npm:^0.15.14":
-  version: 0.15.15
-  resolution: "@libsql/core@npm:0.15.15"
+"@libsql/core@npm:^0.17.0":
+  version: 0.17.0
+  resolution: "@libsql/core@npm:0.17.0"
   dependencies:
     js-base64: "npm:^3.7.5"
-  checksum: 10/6cd84bf27f6739342a962114d82828e5d7203633078693f8b039c8f65be865c826be46e9d0a7a908ab4a687910224cbad9b51052f4c3d47f52d9cd910e6ca93b
+  checksum: 10/6e7a8516b1c26eaf509bbcb91e799527889fa6d505701f6822737a806a6f2e21b5404ea643598c45279e775209cbb71359552692db12422800b3b473162ab038
   languageName: node
   linkType: hard
 
@@ -2209,22 +2209,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@libsql/hrana-client@npm:^0.7.0":
-  version: 0.7.0
-  resolution: "@libsql/hrana-client@npm:0.7.0"
+"@libsql/hrana-client@npm:^0.9.0":
+  version: 0.9.0
+  resolution: "@libsql/hrana-client@npm:0.9.0"
   dependencies:
-    "@libsql/isomorphic-fetch": "npm:^0.3.1"
     "@libsql/isomorphic-ws": "npm:^0.1.5"
+    cross-fetch: "npm:^4.0.0"
     js-base64: "npm:^3.7.5"
     node-fetch: "npm:^3.3.2"
-  checksum: 10/55eb20bf0513f594fda162708acaea276ab60b6181ca071505fd0392d74741c6fb8400bb4ec9ee019a6d97300f64cc1aea44eddd1f1b7576f95fb871b9f0190c
-  languageName: node
-  linkType: hard
-
-"@libsql/isomorphic-fetch@npm:^0.3.1":
-  version: 0.3.1
-  resolution: "@libsql/isomorphic-fetch@npm:0.3.1"
-  checksum: 10/29b347ac6288a567b38b3cfa584a56497ee6915acc177548c66c12a81224961bb45984aa04f7e125dda1f7a1413d15473ff1097e6a0284d21edcad192ca3e78b
+  checksum: 10/e104075263bc3b1857bffe28dffe375b9317d0d59314de91a9240de8e093284577eecf77a2d48a4f3d508d1cc9284aca36aeaf586eeb0a7275bdb020f731dfb1
   languageName: node
   linkType: hard
 
@@ -4268,6 +4261,15 @@ __metadata:
     object-assign: "npm:^4"
     vary: "npm:^1"
   checksum: 10/66e88e08edee7cbce9d92b4d28a2028c88772a4c73e02f143ed8ca76789f9b59444eed6b1c167139e76fa662998c151322720093ba229f9941365ada5a6fc2c6
+  languageName: node
+  linkType: hard
+
+"cross-fetch@npm:^4.0.0":
+  version: 4.1.0
+  resolution: "cross-fetch@npm:4.1.0"
+  dependencies:
+    node-fetch: "npm:^2.7.0"
+  checksum: 10/07624940607b64777d27ec9c668ddb6649e8c59ee0a5a10e63a51ce857e2bbb1294a45854a31c10eccb91b65909a5b199fcb0217339b44156f85900a7384f489
   languageName: node
   linkType: hard
 
@@ -8061,7 +8063,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-fetch@npm:^2.6.1":
+"node-fetch@npm:^2.6.1, node-fetch@npm:^2.7.0":
   version: 2.7.0
   resolution: "node-fetch@npm:2.7.0"
   dependencies:
@@ -9716,7 +9718,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "shanghai-place-view@workspace:."
   dependencies:
-    "@libsql/client": "npm:0.15.15"
+    "@libsql/client": "npm:0.17.0"
     "@million/lint": "npm:^1.0.14"
     "@tailwindcss/postcss": "npm:^4.1.18"
     "@total-typescript/ts-reset": "npm:^0.6.1"
